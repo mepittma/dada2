@@ -10,57 +10,64 @@ my $cmd;
 my $path;
 
 # Quit unless we have the correct number of command-line args
-$num_args = $#ARGV + 1;
+my $num_args = $#ARGV + 1;
 if ($num_args != 1) {
     print "\nUsage: download_data.pl -(l|r)\n Where -l indicates running locally, -r remotely.\n";
     exit;
 }
 
-if ($ARGV[0] == "-r") {
+if ($ARGV[0] eq "-r") {
     my $base_dir = "/pollard/home/mpittman/dada2";
 
     # 1. Download the data from Texas A&M TNBS study
-    @run_list = ["SRR1238685","SRR1238686","SRR1238687","SRR1238688","SRR1238689",
+    @run_list = ("SRR1238685","SRR1238686","SRR1238687","SRR1238688","SRR1238689",
     "SRR1238690","SRR1238691","SRR1238692","SRR1238693","SRR1238694","SRR1238695",
-    "SRR1238696"];
+    "SRR1238696");
     $path = "$base_dir/Data/raw_16S/UTA_TNBS";
-    download_data(@run_list, $path);
+    download_data(\@run_list, $path);
+
+    foreach my $run(@run_list) {
+        my $pre = substr($run, 0, 3);
+        my $six = substr($run, 0, 6);
+        $cmd = "wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/$pre/$six/$run/$run.sra -P $path";
+        system($cmd);
+    }
 
     # 2. Download the data from UCSD TNBS study
-    @run_list = ["ERR1897923", "ERR1897921", "ERR1897919", "ERR1897917", "ERR1897915", "ERR1897913",
+    @run_list = ("ERR1897923", "ERR1897921", "ERR1897919", "ERR1897917", "ERR1897915", "ERR1897913",
     "ERR1897911", "ERR1897909", "ERR1897907", "ERR1897905", "ERR1897903", "ERR1897901", "ERR1897899",
     "ERR1897897", "ERR1897896", "ERR1897894", "ERR1897892", "ERR1897890", "ERR1897888", "ERR1897887",
     "ERR1897885", "ERR1897883", "ERR1897881", "ERR1897879", "ERR1897877", "ERR1897875", "ERR1897873",
     "ERR1897871", "ERR1897869", "ERR1897867", "ERR1897865", "ERR1897863", "ERR1897861", "ERR1897859",
-    "ERR1897857", "ERR1897855", "ERR1897851", "ERR1897853", "ERR1897849"];
+    "ERR1897857", "ERR1897855", "ERR1897851", "ERR1897853", "ERR1897849");
     $path = "$base_dir/Data/raw_16S/UCSD_TNBS";
-    download_data(@run_list, $path);
+    download_data(\@run_list, $path);
 
     # 3. Download the data from the Third Military Medical University AOM/DSS 2014
-    @run_list = ["SRR4000172", "SRR4003589", "SRR4003590", "SRR4003591", "SRR4004428",
+    @run_list = ("SRR4000172", "SRR4003589", "SRR4003590", "SRR4003591", "SRR4004428",
     "SRR4004672", "SRR4004892", "SRR4004921", "SRR4004949", "SRR4004993", "SRR4006161",
     "SRR4006162", "SRR4006163", "SRR4006164", "SRR4006213", "SRR4007122", "SRR4007124",
     "SRR4007234", "SRR4007286", "SRR4007287", "SRR4007290", "SRR4007292", "SRR4007293",
     "SRR4007295", "SRR4007299", "SRR4007302", "SRR4007332", "SRR4007386", "SRR4007387",
     "SRR4007389", "SRR4007390", "SRR4007391", "SRR4007392", "SRR4007394", "SRR4007395",
-    "SRR4007396", "SRR4007397", "SRR4007398", "SRR4007399", "SRR4007442"];
+    "SRR4007396", "SRR4007397", "SRR4007398", "SRR4007399", "SRR4007442");
     $path = "$base_dir/Data/raw_16S/TMM_AOMDSS_2014";
-    download_data(@run_list, $path);
+    download_data(\@run_list, $path);
 
     # 4. Download the data from the Third Military Medical University AOM/DSS 2016
-    @run_list = ["SRR4417597", "SRR4417588", "SRR4417584", "SRR4417576", "SRR4417580",
-    "SRR4417568", "SRR4417495", "SRR4417483", "SRR4417473", "SRR4417470", "SRR4417459", "SRR4417463"];
+    @run_list = ("SRR4417597", "SRR4417588", "SRR4417584", "SRR4417576", "SRR4417580",
+    "SRR4417568", "SRR4417495", "SRR4417483", "SRR4417473", "SRR4417470", "SRR4417459", "SRR4417463");
     $path = "$base_dir/Data/raw_16S/TMM_AOMDSS_2016";
-    download_data(@run_list, $path);
+    download_data(\@run_list, $path);
 
 
     # 5. Download the data from the Third Military Medical University DSS
-    @run_list = ["SRR4419852","SRR4419853","SRR4419854","SRR4419855","SRR4419856","SRR4423081"];
+    @run_list = ("SRR4419852","SRR4419853","SRR4419854","SRR4419855","SRR4419856","SRR4423081");
     $path = "$base_dir/Data/raw_16S/TMM_DSS";
-    download_data(@run_list, $path);
+    download_data(\@run_list, $path);
 
     # 6. Download the data from the Mount Sinai DSS study
-    @run_list = ["SRR6121940", "SRR6121939", "SRR6121938", "SRR6121936", "SRR6121937", "SRR6121935",
+    @run_list = ("SRR6121940", "SRR6121939", "SRR6121938", "SRR6121936", "SRR6121937", "SRR6121935",
     "SRR6121933", "SRR6121934", "SRR6121932", "SRR6121931", "SRR6121929", "SRR6121930", "SRR6121928",
     "SRR6121927", "SRR6121926", "SRR6121925", "SRR6121924", "SRR6121923", "SRR6121922", "SRR6121920",
     "SRR6121921", "SRR6121919", "SRR6121918", "SRR6121917", "SRR6121916", "SRR6121915", "SRR6121914",
@@ -72,21 +79,21 @@ if ($ARGV[0] == "-r") {
     "SRR6121878", "SRR6121877", "SRR6121876", "SRR6121875", "SRR6121873", "SRR6121874", "SRR6121872",
     "SRR6121871", "SRR6121869", "SRR6121870", "SRR6121868", "SRR6121867", "SRR6121865", "SRR6121864",
     "SRR6121863", "SRR6121862", "SRR6121861", "SRR6121860", "SRR6121859", "SRR6121858", "SRR6121857",
-    "SRR6121856", "SRR6121855", "SRR6121854", "SRR6121853", "SRR6121852", "SRR6121866"];
+    "SRR6121856", "SRR6121855", "SRR6121854", "SRR6121853", "SRR6121852", "SRR6121866");
     $path = "$base_dir/Data/raw_16S/MS_DSS";
-    download_data(@run_list, $path);
+    download_data(\@run_list, $path);
 
     # 7. Download the data from the UT Southwestern DSS study
-    @run_list = ["ERR1806583", "ERR1806584", "ERR1806585", "ERR1806586", "ERR1806587", "ERR1806588",
+    @run_list = ("ERR1806583", "ERR1806584", "ERR1806585", "ERR1806586", "ERR1806587", "ERR1806588",
     "ERR1806589", "ERR1806590", "ERR1806591", "ERR1806592", "ERR1806593", "ERR1806594", "ERR1806595",
     "ERR1806596", "ERR1806597", "ERR1806598", "ERR1806599", "ERR1806600", "ERR1806601", "ERR1806602",
-    "ERR1806603", "ERR1806604", "ERR1806605", "ERR1806606"];
+    "ERR1806603", "ERR1806604", "ERR1806605", "ERR1806606");
     $path = "$base_dir/Data/raw_16S/UTS_DSS";
-    download_data(@run_list, $path);
+    download_data(\@run_list, $path);
 
 
     # 8. Download the data from the Helmholtz study
-    @run_list = ["SRR6127255", "SRR6127254", "SRR6127251", "SRR6127250", "SRR6127239",
+    @run_list = ("SRR6127255", "SRR6127254", "SRR6127251", "SRR6127250", "SRR6127239",
     "SRR6127238", "SRR6127236", "SRR6127235", "SRR6127234", "SRR6127233", "SRR6127232",
     "SRR6127231", "SRR6127230", "SRR6127229", "SRR6127228", "SRR6127227", "SRR6127226",
     "SRR6127225", "SRR6127224", "SRR6127223", "SRR6127222", "SRR6127221", "SRR6127220",
@@ -137,12 +144,12 @@ if ($ARGV[0] == "-r") {
     "SRR6127286", "SRR6127285", "SRR6127284", "SRR6127282", "SRR6127281", "SRR6127280",
     "SRR6127279", "SRR6127278", "SRR6127277", "SRR6127275", "SRR6127273", "SRR6127272",
     "SRR6127271", "SRR6127270", "SRR6127268", "SRR6127265", "SRR6127260", "SRR6127283",
-    "SRR6127295", "SRR6127123", "SRR6126969"];
+    "SRR6127295", "SRR6127123", "SRR6126969");
     $path = "$base_dir/Data/raw_16S/Helm_DSS";
-    download_data(@run_list, $path);
+    download_data(\@run_list, $path);
 
     # 9. Download data from the UMichigan Ann Arbor DSS study
-    @run_list = ["SRR1914518", "SRR1914517", "SRR1914516", "SRR1914515", "SRR1914514", "SRR1914513",
+    @run_list = ("SRR1914518", "SRR1914517", "SRR1914516", "SRR1914515", "SRR1914514", "SRR1914513",
     "SRR1914542", "SRR1914541", "SRR1914540", "SRR1914539", "SRR1914538", "SRR1914537", "SRR1914536",
     "SRR1914535", "SRR1914534", "SRR1914533", "SRR1914532", "SRR1914531", "SRR1914530", "SRR1914529",
     "SRR1914526", "SRR1914525", "SRR1914524", "SRR1914523", "SRR1914522", "SRR1914521", "SRR1914520",
@@ -163,11 +170,12 @@ if ($ARGV[0] == "-r") {
     "SRR1914913", "SRR1914912", "SRR1914911", "SRR1914910", "SRR1914909", "SRR1914908", "SRR1914907",
     "SRR1914906", "SRR1914905", "SRR1914904", "SRR1914903", "SRR1914902", "SRR1914901", "SRR1914900",
     "SRR1914899", "SRR1914898", "SRR1914897", "SRR1914884", "SRR1914877", "SRR1914876", "SRR1914875",
-    "SRR1914874", "SRR1914873", "SRR1914872", "SRR1914871", "SRR1914870", "SRR1914861"];
+    "SRR1914874", "SRR1914873", "SRR1914872", "SRR1914871", "SRR1914870", "SRR1914861");
     $path = "$base_dir/Data/raw_16S/UMAA_DSS";
-    download_data(@run_list, $path);
+    download_data(\@run_list, $path);
 
-} elsif ($ARGV[0] == "-r") {
+} elsif ($ARGV[0] eq "-l") {
+    print("Local route...\n");
     my $base_dir = "/Users/student/Documents/PollardRotation/dada2";
     download_one("SRR1238685", "$base_dir/Data/raw_16S/TexasAM_TNBS.sra");
     download_one("ERR1897923", "$base_dir/Data/raw_16S/UCSD_TNBS.sra");
@@ -182,16 +190,33 @@ if ($ARGV[0] == "-r") {
 }
 
 # # # # # # # # SUBROUTINE FOR DOWNLOADING DATA # # # # # # #
-sub download_data(@run_list, $path) {
+sub download_data {
+    my ($run_ref, $path) = @_;
+    my @run_list = @$run_ref;
+
+    print("\n", $run_ref, "\n");
+    print(@$run_ref, "\n");
+    print($path,"\n");
+
+    # If the path doesn't exist, create it
+    if ( !-d $path ) {
+        make_path $path or die "Failed to create path: $path";
+    }
+
     foreach my $run(@run_list) {
+        my $pre = substr($run, 0, 3);
         my $six = substr($run, 0, 6);
-        $cmd = "wget ftp://ftp-trace.ncbi.nih.gove/sra/sra-instant/read/ByRun/sra/SRR/$six/$run/$run.sra -P $path";
+        print("Six: $six\n");
+        print("Run ID: $run\n");
+        $cmd = "wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/$pre/$six/$run/$run.sra -P $path";
         system($cmd);
     }
 }
 
-sub download_one($run_id, $filename) {
+sub download_one {
+    my ($run_id, $filename) = @_;
+    my $pre = substr($run_id, 0, 3);
     my $six = substr($run_id, 0, 6);
-    $cmd = "wget -O $filename ftp://ftp-trace.ncbi.nih.gove/sra/sra-instant/read/ByRun/sra/SRR/$six/$run_id/$run_id.sra";
+    $cmd = "wget -O $filename ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/$pre/$six/$run_id/$run_id.sra";
     system($cmd);
 }
