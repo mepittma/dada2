@@ -26,13 +26,6 @@ if ($ARGV[0] eq "-r") {
     $path = "$base_dir/Data/raw_16S/UTA_TNBS";
     download_data(\@run_list, $path);
 
-    foreach my $run(@run_list) {
-        my $pre = substr($run, 0, 3);
-        my $six = substr($run, 0, 6);
-        $cmd = "wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/$pre/$six/$run/$run.sra -P $path";
-        system($cmd);
-    }
-
     # 2. Download the data from UCSD TNBS study
     @run_list = ("ERR1897923", "ERR1897921", "ERR1897919", "ERR1897917", "ERR1897915", "ERR1897913",
     "ERR1897911", "ERR1897909", "ERR1897907", "ERR1897905", "ERR1897903", "ERR1897901", "ERR1897899",
@@ -177,15 +170,11 @@ if ($ARGV[0] eq "-r") {
 } elsif ($ARGV[0] eq "-l") {
     print("Local route...\n");
     my $base_dir = "/Users/student/Documents/PollardRotation/dada2";
-    download_one("SRR1238685", "$base_dir/Data/raw_16S/TexasAM_TNBS.sra");
-    download_one("ERR1897923", "$base_dir/Data/raw_16S/UCSD_TNBS.sra");
-    download_one("SRR4004921", "$base_dir/Data/raw_16S/TMM_AOMDSS_2014.sra");
-    download_one("SRR4417483", "$base_dir/Data/raw_16S/TMM_AOMDSS_2016.sra");
-    download_one("SRR6121940", "$base_dir/Data/raw_16S/TMM_DSS.sra");
-    download_one("SRR6121890", "$base_dir/Data/raw_16S/MS_DSS.sra");
-    download_one("ERR1806597", "$base_dir/Data/raw_16S/UTS_DSS.sra");
-    download_one("SRR6127305", "$base_dir/Data/raw_16S/Helm_DSS.sra");
-    download_one("SRR1914841", "$base_dir/Data/raw_16S/UMAA_DSS.sra");
+    $path = "$base_dir/Data/raw_16S";
+    @run_list = ("SRR1238685", "ERR1897923", "SRR4004921", "SRR4417483", "SRR6121940",
+    "SRR6121890", "ERR1806597", "SRR6127305", "SRR1914841");
+
+    download_data(\@run_list, $path);
 
 }
 
@@ -194,8 +183,7 @@ sub download_data {
     my ($run_ref, $path) = @_;
     my @run_list = @$run_ref;
 
-    print("\n", $run_ref, "\n");
-    print(@$run_ref, "\n");
+    print(join(", ",@run_list), "\n");
     print($path,"\n");
 
     # If the path doesn't exist, create it
@@ -204,19 +192,8 @@ sub download_data {
     }
 
     foreach my $run(@run_list) {
-        my $pre = substr($run, 0, 3);
-        my $six = substr($run, 0, 6);
-        print("Six: $six\n");
-        print("Run ID: $run\n");
-        $cmd = "wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/$pre/$six/$run/$run.sra -P $path";
+        print "Run ID: $run\n";
+        $cmd = "fastq-dump --outdir $path --gzip --skip-technical  --readids --read-filter pass --dumpbase --split-files --clip $run";
         system($cmd);
     }
-}
-
-sub download_one {
-    my ($run_id, $filename) = @_;
-    my $pre = substr($run_id, 0, 3);
-    my $six = substr($run_id, 0, 6);
-    $cmd = "wget -O $filename ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/$pre/$six/$run_id/$run_id.sra";
-    system($cmd);
 }
