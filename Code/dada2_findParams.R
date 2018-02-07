@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
 
+.libPaths( c( .libPaths(), "/pollard/home/mpittman/apps/R_pkg") )
+
 library(dada2)
 library(ShortRead)
 library(ggplot2)
