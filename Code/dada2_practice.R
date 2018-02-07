@@ -15,8 +15,8 @@ library(ggplot2)
 #R1 <- paste0("/pollard/home/slyalina/work/projects/mouse_ibd_16s/demult/",sample,"-R1.fastq")
 #R2 <- paste0("/pollard/home/slyalina/work/projects/mouse_ibd_16s/demult/",sample,"-R2.fastq")
 
-R1 <- "/Users/student/Documents/PollardRotation/InputData/42_27-R1.fastq"
-R2 <- "/Users/student/Documents/PollardRotation/InputData/42_27-R2.fastq"
+#R1 <- "/Users/student/Documents/PollardRotation/InputData/42_27-R1.fastq"
+#R2 <- "/Users/student/Documents/PollardRotation/InputData/42_27-R2.fastq"
 
 sName <- (strsplit(basename(R1), "-"))[[1]][1]
 

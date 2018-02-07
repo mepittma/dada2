@@ -19,14 +19,14 @@ if ($num_args != 1) {
 if ($ARGV[0] eq "-r") {
     my $base_dir = "/pollard/home/mpittman/dada2";
 
-    # 1. Download the data from Texas A&M TNBS study
+    # 1. Download the data from Texas A&M TNBS study - but wait it's not paired-end
     @run_list = ("SRR1238685","SRR1238686","SRR1238687","SRR1238688","SRR1238689",
     "SRR1238690","SRR1238691","SRR1238692","SRR1238693","SRR1238694","SRR1238695",
     "SRR1238696");
     $path = "$base_dir/Data/raw_16S/UTA_TNBS";
     download_data(\@run_list, $path);
 
-    # 2. Download the data from UCSD TNBS study
+    # 2. Download the data from UCSD TNBS study - also not paired-end
     @run_list = ("ERR1897923", "ERR1897921", "ERR1897919", "ERR1897917", "ERR1897915", "ERR1897913",
     "ERR1897911", "ERR1897909", "ERR1897907", "ERR1897905", "ERR1897903", "ERR1897901", "ERR1897899",
     "ERR1897897", "ERR1897896", "ERR1897894", "ERR1897892", "ERR1897890", "ERR1897888", "ERR1897887",
@@ -172,7 +172,7 @@ if ($ARGV[0] eq "-r") {
     my $base_dir = "/Users/student/Documents/PollardRotation/dada2";
     $path = "$base_dir/Data/raw_16S";
     @run_list = ("SRR1238685", "ERR1897923", "SRR4004921", "SRR4417483", "SRR6121940",
-    "SRR6121890", "ERR1806597", "SRR6127305", "SRR1914841");
+    "SRR6121890", "ERR1806597", "SRR6127305", "SRR1914841", "SRR4423081", "SRR6121931");
 
     download_data(\@run_list, $path);
 
