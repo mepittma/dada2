@@ -7,7 +7,8 @@ library(ggplot2)
 # # # # # # # # # # # # MAIN FUNCTION # # # # # # # # # # # # # # # # 
 find_params <- function(R1,R2,name){
   # Where R1 and R2 are the file locations for the sequence files for a paired-end read
-  setwd("/Users/student/Documents/PollardRotation/dada2/Data/test_img")
+  #setwd("/Users/student/Documents/PollardRotation/dada2/Data/test_img")
+  setwd("/pollard/home/mpittman/dada2/Data/test_img")
   
   # # # # # # # # # # # # # # # # # # # # # # # # 
   # Look at quality profiles - everything look normal?
@@ -18,7 +19,8 @@ find_params <- function(R1,R2,name){
   
   # # # # # # # # # # # # # # # # # # # # # # # # 
   # Filtering - choose a range of truncation lengths and plot
-  filt_path <- "/Users/student/Documents/PollardRotation/InputData/filt_16S"
+  #filt_path <- "/Users/student/Documents/PollardRotation/InputData/filt_16S"
+  filt_path <- "/pollard/home/mpittman/dada2/Data/filt_16S/test_filt"
   
   trunc_list = c(75, 100, 125, 150, 200, 250)
   
@@ -50,46 +52,54 @@ find_params <- function(R1,R2,name){
 
 # # # # # # # # # # # # RUN FUNCTION # # # # # # # # # # # # # # # # 
 
-path = "/Users/student/Documents/PollardRotation/dada2/Data/raw_16S"
+#path = "/Users/student/Documents/PollardRotation/dada2/Data/raw_16S"
+base = "/pollard/home/mpittman/dada2/Data/raw_16S"
 
 #TMM_AOMDSS_2014
 R1 = "SRR4004921_pass_1.fastq.gz"
 R2 = "SRR4004921_pass_2.fastq.gz"
 name = "TMM_AOMDSS_2014"
+path = paste0(base,"/",name)
 find_params(paste0(path, "/",R1),paste0(path, "/", R2),name)
 
 #TMM_AOMDSS_2016
 R1 = "SRR4417483_pass_1.fastq.gz"
 R2 = "SRR4417483_pass_2.fastq.gz"
 name = "TMM_AOMDSS_2016"
+path = paste0(base,"/",name)
 find_params(paste0(path, "/",R1),paste0(path, "/", R2),name)
 
 #Baxter_AOMDSS
 R1 = "c1a_1399_d00.R1.fastq.gz"
 R2 = "c1a_1399_d00.R2.fastq.gz"
 name = "Baxter_AOMDSS"
+path = paste0(base,"/",name)
 find_params(paste0(path, "/",R1),paste0(path, "/", R2),name)
 
 #TMM_DSS
 R1 = "SRR4423081_pass_1.fastq.gz"
 R2 = "SRR4423081_pass_2.fastq.gz"
 name = "TMM_DSS"
+path = paste0(base,"/",name)
 find_params(paste0(path, "/",R1),paste0(path, "/", R2),name)
 
 #UTS_DSS
 R1 = "ERR1806597_pass_1.fastq.gz"
 R2 = "ERR1806597_pass_2.fastq.gz"
 name = "UTS_DSS"
+path = paste0(base,"/",name)
 find_params(paste0(path, "/",R1),paste0(path, "/", R2),name)
 
 # Helm_DSS
 R1 = "SRR6127305_pass_1.fastq.gz"
 R2 = "SRR6127305_pass_2.fastq.gz"
 name = "Helm_DSS"
+path = paste0(base,"/",name)
 find_params(paste0(path, "/",R1),paste0(path, "/", R2),name)
 
 # UMAA_DSS
 R1 = "SRR1914841_pass_1.fastq.gz"
 R2 = "SRR1914841_pass_2.fastq.gz"
 name = "UMAA_DSS"
+path = paste0(base,"/",name)
 find_params(paste0(path, "/",R1),paste0(path, "/", R2),name)
