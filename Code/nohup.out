@@ -1,0 +1,2498 @@
+Loading required package: Rcpp
+Loading required package: methods
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
+    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
+    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which, which.max, which.min
+
+Loading required package: BiocParallel
+Loading required package: Biostrings
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+Loading required package: GenomicRanges
+Loading required package: GenomicAlignments
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following object is masked from ‘package:base’:
+
+    apply
+
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914513_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914514_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914515_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914516_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914517_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914518_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914519_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914520_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914521_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914522_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914523_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914524_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914525_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914526_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914529_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914530_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914531_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914532_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914533_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914534_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914535_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914536_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914537_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914538_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914539_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914540_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914541_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914542_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914598_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914599_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914600_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914601_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914602_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914603_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914791_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914793_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914794_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914795_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914796_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914797_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914799_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914800_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914801_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914802_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914803_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914804_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914805_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914806_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914807_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914808_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914809_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914810_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914811_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914812_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914813_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914814_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914815_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914816_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914817_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914818_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914819_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914820_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914821_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914822_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914823_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914824_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914825_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914826_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914827_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914828_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914829_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914830_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914831_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914832_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914833_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914834_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914835_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914836_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914837_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914838_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914839_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914840_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914841_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914842_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914843_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914844_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914845_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914846_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914847_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914848_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914849_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914850_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914851_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914852_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914853_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914854_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914855_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914856_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914857_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914858_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914859_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914860_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914861_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914870_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914871_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914872_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914873_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914874_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914875_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914876_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914877_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914884_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914897_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914898_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914899_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914900_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914901_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914902_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914903_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914904_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914905_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914906_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914907_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914908_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914909_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914910_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914911_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914912_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914913_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914914_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914915_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914916_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914917_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914918_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914919_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914920_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914921_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914922_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914923_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914924_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914925_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914926_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914927_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914928_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914929_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914930_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914931_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914932_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914933_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914934_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914935_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914936_pass_1.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914513_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914514_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914515_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914516_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914517_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914518_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914519_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914520_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914521_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914522_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914523_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914524_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914525_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914526_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914529_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914530_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914531_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914532_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914533_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914534_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914535_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914536_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914537_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914538_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914539_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914540_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914541_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914542_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914598_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914599_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914600_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914601_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914602_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914603_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914791_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914793_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914794_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914795_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914796_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914797_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914799_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914800_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914801_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914802_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914803_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914804_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914805_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914806_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914807_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914808_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914809_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914810_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914811_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914812_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914813_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914814_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914815_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914816_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914817_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914818_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914819_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914820_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914821_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914822_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914823_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914824_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914825_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914826_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914827_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914828_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914829_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914830_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914831_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914832_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914833_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914834_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914835_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914836_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914837_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914838_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914839_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914840_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914841_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914842_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914843_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914844_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914845_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914846_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914847_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914848_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914849_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914850_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914851_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914852_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914853_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914854_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914855_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914856_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914857_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914858_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914859_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914860_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914861_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914870_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914871_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914872_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914873_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914874_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914875_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914876_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914877_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914884_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914897_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914898_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914899_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914900_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914901_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914902_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914903_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914904_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914905_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914906_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914907_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914908_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914909_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914910_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914911_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914912_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914913_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914914_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914915_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914916_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914917_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914918_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914919_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914920_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914921_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914922_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914923_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914924_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914925_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914926_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914927_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914928_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914929_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914930_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914931_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914932_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914933_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914934_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914935_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914936_F_filt.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914513_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914514_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914515_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914516_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914517_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914518_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914519_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914520_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914521_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914522_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914523_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914524_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914525_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914526_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914529_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914530_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914531_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914532_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914533_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914534_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914535_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914536_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914537_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914538_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914539_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914540_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914541_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914542_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914598_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914599_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914600_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914601_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914602_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914603_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914791_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914793_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914794_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914795_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914796_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914797_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914799_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914800_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914801_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914802_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914803_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914804_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914805_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914806_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914807_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914808_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914809_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914810_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914811_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914812_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914813_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914814_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914815_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914816_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914817_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914818_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914819_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914820_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914821_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914822_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914823_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914824_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914825_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914826_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914827_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914828_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914829_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914830_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914831_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914832_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914833_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914834_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914835_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914836_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914837_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914838_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914839_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914840_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914841_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914842_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914843_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914844_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914845_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914846_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914847_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914848_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914849_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914850_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914851_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914852_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914853_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914854_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914855_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914856_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914857_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914858_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914859_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914860_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914861_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914870_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914871_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914872_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914873_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914874_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914875_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914876_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914877_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914884_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914897_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914898_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914899_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914900_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914901_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914902_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914903_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914904_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914905_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914906_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914907_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914908_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914909_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914910_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914911_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914912_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914913_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914914_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914915_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914916_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914917_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914918_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914919_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914920_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914921_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914922_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914923_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914924_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914925_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914926_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914927_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914928_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914929_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914930_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914931_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914932_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914933_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914934_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914935_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/UMAA_DSS/SRR1914936_pass_2.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914513_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914514_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914515_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914516_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914517_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914518_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914519_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914520_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914521_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914522_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914523_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914524_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914525_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914526_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914529_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914530_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914531_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914532_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914533_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914534_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914535_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914536_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914537_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914538_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914539_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914540_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914541_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914542_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914598_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914599_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914600_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914601_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914602_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914603_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914791_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914793_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914794_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914795_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914796_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914797_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914799_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914800_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914801_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914802_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914803_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914804_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914805_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914806_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914807_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914808_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914809_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914810_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914811_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914812_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914813_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914814_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914815_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914816_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914817_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914818_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914819_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914820_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914821_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914822_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914823_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914824_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914825_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914826_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914827_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914828_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914829_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914830_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914831_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914832_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914833_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914834_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914835_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914836_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914837_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914838_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914839_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914840_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914841_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914842_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914843_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914844_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914845_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914846_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914847_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914848_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914849_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914850_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914851_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914852_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914853_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914854_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914855_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914856_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914857_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914858_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914859_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914860_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914861_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914870_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914871_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914872_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914873_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914874_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914875_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914876_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914877_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914884_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914897_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914898_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914899_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914900_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914901_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914902_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914903_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914904_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914905_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914906_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914907_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914908_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914909_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914910_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914911_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914912_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914913_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914914_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914915_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914916_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914917_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914918_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914919_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914920_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914921_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914922_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914923_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914924_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914925_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914926_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914927_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914928_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914929_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914930_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914931_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914932_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914933_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914934_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914935_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914936_R_filt.fastq.gz
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Initializing error rates to maximum possible estimate.
+Sample 1 - 9811 reads in 2134 unique sequences.
+Sample 2 - 5673 reads in 1383 unique sequences.
+Sample 3 - 10649 reads in 2303 unique sequences.
+Sample 4 - 5646 reads in 1217 unique sequences.
+Sample 5 - 12700 reads in 2460 unique sequences.
+Sample 6 - 13154 reads in 2598 unique sequences.
+Sample 7 - 11099 reads in 2049 unique sequences.
+Sample 8 - 5421 reads in 1272 unique sequences.
+Sample 9 - 9099 reads in 1837 unique sequences.
+Sample 10 - 11506 reads in 2224 unique sequences.
+Sample 11 - 6752 reads in 1415 unique sequences.
+Sample 12 - 13213 reads in 2249 unique sequences.
+Sample 13 - 9445 reads in 1695 unique sequences.
+Sample 14 - 8704 reads in 1812 unique sequences.
+Sample 15 - 11807 reads in 2343 unique sequences.
+Sample 16 - 28444 reads in 4864 unique sequences.
+Sample 17 - 8349 reads in 1661 unique sequences.
+Sample 18 - 11931 reads in 2225 unique sequences.
+Sample 19 - 11238 reads in 2180 unique sequences.
+Sample 20 - 11281 reads in 2239 unique sequences.
+Sample 21 - 9277 reads in 1971 unique sequences.
+Sample 22 - 8602 reads in 1915 unique sequences.
+Sample 23 - 7937 reads in 1552 unique sequences.
+Sample 24 - 11265 reads in 2366 unique sequences.
+Sample 25 - 10830 reads in 2323 unique sequences.
+Sample 26 - 10381 reads in 2280 unique sequences.
+Sample 27 - 6533 reads in 1421 unique sequences.
+Sample 28 - 6739 reads in 1462 unique sequences.
+Sample 29 - 7726 reads in 1784 unique sequences.
+Sample 30 - 9149 reads in 1871 unique sequences.
+Sample 31 - 9613 reads in 2124 unique sequences.
+Sample 32 - 10761 reads in 2539 unique sequences.
+Sample 33 - 4565 reads in 1272 unique sequences.
+Sample 34 - 6207 reads in 1451 unique sequences.
+Sample 35 - 7139 reads in 1605 unique sequences.
+Sample 36 - 4522 reads in 1024 unique sequences.
+Sample 37 - 6500 reads in 1654 unique sequences.
+Sample 38 - 6148 reads in 1516 unique sequences.
+Sample 39 - 9178 reads in 1895 unique sequences.
+Sample 40 - 4994 reads in 1263 unique sequences.
+Sample 41 - 10521 reads in 2180 unique sequences.
+Sample 42 - 11930 reads in 2294 unique sequences.
+Sample 43 - 9660 reads in 2255 unique sequences.
+Sample 44 - 5948 reads in 1398 unique sequences.
+Sample 45 - 7877 reads in 1845 unique sequences.
+Sample 46 - 4821 reads in 1228 unique sequences.
+Sample 47 - 7017 reads in 1586 unique sequences.
+Sample 48 - 5871 reads in 1321 unique sequences.
+Sample 49 - 9640 reads in 2090 unique sequences.
+Sample 50 - 8577 reads in 1878 unique sequences.
+Sample 51 - 9252 reads in 2126 unique sequences.
+Sample 52 - 8426 reads in 1811 unique sequences.
+Sample 53 - 163 reads in 84 unique sequences.
+Sample 54 - 7878 reads in 1709 unique sequences.
+Sample 55 - 11613 reads in 2427 unique sequences.
+Sample 56 - 6956 reads in 1642 unique sequences.
+Sample 57 - 439 reads in 154 unique sequences.
+Sample 58 - 8390 reads in 1783 unique sequences.
+Sample 59 - 7974 reads in 1874 unique sequences.
+Sample 60 - 10856 reads in 2159 unique sequences.
+Sample 61 - 7588 reads in 1756 unique sequences.
+Sample 62 - 7778 reads in 1896 unique sequences.
+Sample 63 - 7322 reads in 1818 unique sequences.
+Sample 64 - 3023 reads in 818 unique sequences.
+Sample 65 - 504 reads in 186 unique sequences.
+Sample 66 - 8128 reads in 1798 unique sequences.
+Sample 67 - 13432 reads in 2693 unique sequences.
+Sample 68 - 9361 reads in 2053 unique sequences.
+Sample 69 - 14591 reads in 2862 unique sequences.
+Sample 70 - 166969 reads in 22154 unique sequences.
+Sample 71 - 9516 reads in 2166 unique sequences.
+Sample 72 - 8138 reads in 1779 unique sequences.
+Sample 73 - 78 reads in 43 unique sequences.
+Sample 74 - 6944 reads in 1697 unique sequences.
+Sample 75 - 7550 reads in 1804 unique sequences.
+Sample 76 - 9764 reads in 2114 unique sequences.
+Sample 77 - 9866 reads in 2159 unique sequences.
+Sample 78 - 4286 reads in 913 unique sequences.
+Sample 79 - 8393 reads in 1667 unique sequences.
+Sample 80 - 4049 reads in 990 unique sequences.
+Sample 81 - 9601 reads in 2049 unique sequences.
+Sample 82 - 9309 reads in 2322 unique sequences.
+Sample 83 - 11964 reads in 2227 unique sequences.
+Sample 84 - 11027 reads in 2226 unique sequences.
+Sample 85 - 10612 reads in 2050 unique sequences.
+Sample 86 - 8245 reads in 2198 unique sequences.
+Sample 87 - 8672 reads in 2108 unique sequences.
+Sample 88 - 8374 reads in 2037 unique sequences.
+Sample 89 - 6989 reads in 1635 unique sequences.
+Sample 90 - 2214 reads in 632 unique sequences.
+Sample 91 - 22 reads in 20 unique sequences.
+Sample 92 - 7652 reads in 1816 unique sequences.
+Sample 93 - 14087 reads in 3507 unique sequences.
+Sample 94 - 7660 reads in 1787 unique sequences.
+Sample 95 - 10260 reads in 2663 unique sequences.
+Sample 96 - 10263 reads in 2179 unique sequences.
+Sample 97 - 8960 reads in 1777 unique sequences.
+Sample 98 - 8074 reads in 2137 unique sequences.
+Sample 99 - 8259 reads in 1700 unique sequences.
+Sample 100 - 481 reads in 147 unique sequences.
+Sample 101 - 39 reads in 28 unique sequences.
+Sample 102 - 8791 reads in 1533 unique sequences.
+   selfConsist step 2 
+   selfConsist step 3 
+   selfConsist step 4 
+   selfConsist step 5 
+   selfConsist step 6 
+   selfConsist step 7 
+   selfConsist step 8 
+Convergence after  8  rounds.
+Total reads used:  1006632 
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Not all sequences were the same length.
+Initializing error rates to maximum possible estimate.
+Sample 1 - 9811 reads in 3723 unique sequences.
+Sample 2 - 5673 reads in 2298 unique sequences.
+Sample 3 - 10649 reads in 4077 unique sequences.
+Sample 4 - 5646 reads in 2325 unique sequences.
+Sample 5 - 12700 reads in 3914 unique sequences.
+Sample 6 - 13154 reads in 4608 unique sequences.
+Sample 7 - 11099 reads in 4390 unique sequences.
+Sample 8 - 5421 reads in 2423 unique sequences.
+Sample 9 - 9099 reads in 3965 unique sequences.
+Sample 10 - 11506 reads in 4958 unique sequences.
+Sample 11 - 6752 reads in 3167 unique sequences.
+Sample 12 - 13213 reads in 4950 unique sequences.
+Sample 13 - 9445 reads in 3649 unique sequences.
+Sample 14 - 8704 reads in 3690 unique sequences.
+Sample 15 - 11807 reads in 5260 unique sequences.
+Sample 16 - 28444 reads in 10982 unique sequences.
+Sample 17 - 8349 reads in 3267 unique sequences.
+Sample 18 - 11931 reads in 5183 unique sequences.
+Sample 19 - 11238 reads in 5104 unique sequences.
+Sample 20 - 11281 reads in 3950 unique sequences.
+Sample 21 - 9277 reads in 3218 unique sequences.
+Sample 22 - 8602 reads in 3317 unique sequences.
+Sample 23 - 7937 reads in 2864 unique sequences.
+Sample 24 - 11265 reads in 4405 unique sequences.
+Sample 25 - 10830 reads in 4417 unique sequences.
+Sample 26 - 10381 reads in 3980 unique sequences.
+Sample 27 - 6533 reads in 2626 unique sequences.
+Sample 28 - 6739 reads in 2630 unique sequences.
+Sample 29 - 7726 reads in 2822 unique sequences.
+Sample 30 - 9149 reads in 3124 unique sequences.
+Sample 31 - 9613 reads in 3682 unique sequences.
+Sample 32 - 10761 reads in 4406 unique sequences.
+Sample 33 - 4565 reads in 1840 unique sequences.
+Sample 34 - 6207 reads in 2496 unique sequences.
+Sample 35 - 7139 reads in 2754 unique sequences.
+Sample 36 - 4522 reads in 1528 unique sequences.
+Sample 37 - 6500 reads in 2443 unique sequences.
+Sample 38 - 6148 reads in 2426 unique sequences.
+Sample 39 - 9178 reads in 3477 unique sequences.
+Sample 40 - 4994 reads in 2200 unique sequences.
+Sample 41 - 10521 reads in 3603 unique sequences.
+Sample 42 - 11930 reads in 2921 unique sequences.
+Sample 43 - 9660 reads in 3355 unique sequences.
+Sample 44 - 5948 reads in 2134 unique sequences.
+Sample 45 - 7877 reads in 3075 unique sequences.
+Sample 46 - 4821 reads in 1868 unique sequences.
+Sample 47 - 7017 reads in 2584 unique sequences.
+Sample 48 - 5871 reads in 2111 unique sequences.
+Sample 49 - 9640 reads in 3325 unique sequences.
+Sample 50 - 8577 reads in 3315 unique sequences.
+Sample 51 - 9252 reads in 3232 unique sequences.
+Sample 52 - 8426 reads in 3012 unique sequences.
+Sample 53 - 163 reads in 90 unique sequences.
+Sample 54 - 7878 reads in 2769 unique sequences.
+Sample 55 - 11613 reads in 3854 unique sequences.
+Sample 56 - 6956 reads in 2548 unique sequences.
+Sample 57 - 439 reads in 232 unique sequences.
+Sample 58 - 8390 reads in 3124 unique sequences.
+Sample 59 - 7974 reads in 2973 unique sequences.
+Sample 60 - 10856 reads in 4096 unique sequences.
+Sample 61 - 7588 reads in 2827 unique sequences.
+Sample 62 - 7778 reads in 3175 unique sequences.
+Sample 63 - 7322 reads in 2753 unique sequences.
+Sample 64 - 3023 reads in 1277 unique sequences.
+Sample 65 - 504 reads in 292 unique sequences.
+Sample 66 - 8128 reads in 3212 unique sequences.
+Sample 67 - 13432 reads in 4839 unique sequences.
+Sample 68 - 9361 reads in 3707 unique sequences.
+Sample 69 - 14591 reads in 5417 unique sequences.
+Sample 70 - 166969 reads in 43406 unique sequences.
+Sample 71 - 9516 reads in 3646 unique sequences.
+Sample 72 - 8138 reads in 3204 unique sequences.
+Sample 73 - 78 reads in 57 unique sequences.
+Sample 74 - 6944 reads in 2907 unique sequences.
+Sample 75 - 7550 reads in 2970 unique sequences.
+Sample 76 - 9764 reads in 3731 unique sequences.
+Sample 77 - 9866 reads in 3807 unique sequences.
+Sample 78 - 4286 reads in 1812 unique sequences.
+Sample 79 - 8393 reads in 3224 unique sequences.
+Sample 80 - 4049 reads in 1707 unique sequences.
+Sample 81 - 9601 reads in 3778 unique sequences.
+Sample 82 - 9309 reads in 3880 unique sequences.
+Sample 83 - 11964 reads in 3699 unique sequences.
+Sample 84 - 11027 reads in 3759 unique sequences.
+Sample 85 - 10612 reads in 3696 unique sequences.
+Sample 86 - 8245 reads in 3458 unique sequences.
+Sample 87 - 8672 reads in 3210 unique sequences.
+Sample 88 - 8374 reads in 3151 unique sequences.
+Sample 89 - 6989 reads in 2436 unique sequences.
+Sample 90 - 2214 reads in 979 unique sequences.
+Sample 91 - 22 reads in 21 unique sequences.
+Sample 92 - 7652 reads in 2651 unique sequences.
+Sample 93 - 14087 reads in 5431 unique sequences.
+Sample 94 - 7660 reads in 2688 unique sequences.
+Sample 95 - 10260 reads in 3934 unique sequences.
+Sample 96 - 10263 reads in 3391 unique sequences.
+Sample 97 - 8960 reads in 2261 unique sequences.
+Sample 98 - 8074 reads in 3392 unique sequences.
+Sample 99 - 8259 reads in 2420 unique sequences.
+Sample 100 - 481 reads in 193 unique sequences.
+Sample 101 - 39 reads in 31 unique sequences.
+Sample 102 - 8791 reads in 2516 unique sequences.
+   selfConsist step 2 
+   selfConsist step 3 
+   selfConsist step 4 
+   selfConsist step 5 
+   selfConsist step 6 
+   selfConsist step 7 
+Convergence after  7  rounds.
+Total reads used:  1006632 
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914513_F_filt.fastq.gz
+Encountered 2134 unique sequences from 9811 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914514_F_filt.fastq.gz
+Encountered 1383 unique sequences from 5673 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914515_F_filt.fastq.gz
+Encountered 2303 unique sequences from 10649 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914516_F_filt.fastq.gz
+Encountered 1217 unique sequences from 5646 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914517_F_filt.fastq.gz
+Encountered 2460 unique sequences from 12700 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914518_F_filt.fastq.gz
+Encountered 2598 unique sequences from 13154 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914519_F_filt.fastq.gz
+Encountered 2049 unique sequences from 11099 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914520_F_filt.fastq.gz
+Encountered 1272 unique sequences from 5421 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914521_F_filt.fastq.gz
+Encountered 1837 unique sequences from 9099 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914522_F_filt.fastq.gz
+Encountered 2224 unique sequences from 11506 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914523_F_filt.fastq.gz
+Encountered 1415 unique sequences from 6752 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914524_F_filt.fastq.gz
+Encountered 2249 unique sequences from 13213 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914525_F_filt.fastq.gz
+Encountered 1695 unique sequences from 9445 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914526_F_filt.fastq.gz
+Encountered 1812 unique sequences from 8704 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914529_F_filt.fastq.gz
+Encountered 2343 unique sequences from 11807 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914530_F_filt.fastq.gz
+Encountered 4864 unique sequences from 28444 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914531_F_filt.fastq.gz
+Encountered 1661 unique sequences from 8349 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914532_F_filt.fastq.gz
+Encountered 2225 unique sequences from 11931 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914533_F_filt.fastq.gz
+Encountered 2180 unique sequences from 11238 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914534_F_filt.fastq.gz
+Encountered 2239 unique sequences from 11281 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914535_F_filt.fastq.gz
+Encountered 1971 unique sequences from 9277 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914536_F_filt.fastq.gz
+Encountered 1915 unique sequences from 8602 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914537_F_filt.fastq.gz
+Encountered 1552 unique sequences from 7937 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914538_F_filt.fastq.gz
+Encountered 2366 unique sequences from 11265 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914539_F_filt.fastq.gz
+Encountered 2323 unique sequences from 10830 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914540_F_filt.fastq.gz
+Encountered 2280 unique sequences from 10381 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914541_F_filt.fastq.gz
+Encountered 1421 unique sequences from 6533 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914542_F_filt.fastq.gz
+Encountered 1462 unique sequences from 6739 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914598_F_filt.fastq.gz
+Encountered 1784 unique sequences from 7726 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914599_F_filt.fastq.gz
+Encountered 1871 unique sequences from 9149 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914600_F_filt.fastq.gz
+Encountered 2124 unique sequences from 9613 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914601_F_filt.fastq.gz
+Encountered 2539 unique sequences from 10761 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914602_F_filt.fastq.gz
+Encountered 1272 unique sequences from 4565 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914603_F_filt.fastq.gz
+Encountered 1451 unique sequences from 6207 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914791_F_filt.fastq.gz
+Encountered 1605 unique sequences from 7139 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914793_F_filt.fastq.gz
+Encountered 1024 unique sequences from 4522 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914794_F_filt.fastq.gz
+Encountered 1654 unique sequences from 6500 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914795_F_filt.fastq.gz
+Encountered 1516 unique sequences from 6148 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914796_F_filt.fastq.gz
+Encountered 1895 unique sequences from 9178 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914797_F_filt.fastq.gz
+Encountered 1263 unique sequences from 4994 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914799_F_filt.fastq.gz
+Encountered 2180 unique sequences from 10521 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914800_F_filt.fastq.gz
+Encountered 2294 unique sequences from 11930 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914801_F_filt.fastq.gz
+Encountered 2255 unique sequences from 9660 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914802_F_filt.fastq.gz
+Encountered 1398 unique sequences from 5948 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914803_F_filt.fastq.gz
+Encountered 1845 unique sequences from 7877 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914804_F_filt.fastq.gz
+Encountered 1228 unique sequences from 4821 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914805_F_filt.fastq.gz
+Encountered 1586 unique sequences from 7017 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914806_F_filt.fastq.gz
+Encountered 1321 unique sequences from 5871 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914807_F_filt.fastq.gz
+Encountered 2090 unique sequences from 9640 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914808_F_filt.fastq.gz
+Encountered 1878 unique sequences from 8577 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914809_F_filt.fastq.gz
+Encountered 2126 unique sequences from 9252 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914810_F_filt.fastq.gz
+Encountered 1811 unique sequences from 8426 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914811_F_filt.fastq.gz
+Encountered 84 unique sequences from 163 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914812_F_filt.fastq.gz
+Encountered 1709 unique sequences from 7878 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914813_F_filt.fastq.gz
+Encountered 2427 unique sequences from 11613 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914814_F_filt.fastq.gz
+Encountered 1642 unique sequences from 6956 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914815_F_filt.fastq.gz
+Encountered 154 unique sequences from 439 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914816_F_filt.fastq.gz
+Encountered 1783 unique sequences from 8390 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914817_F_filt.fastq.gz
+Encountered 1874 unique sequences from 7974 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914818_F_filt.fastq.gz
+Encountered 2159 unique sequences from 10856 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914819_F_filt.fastq.gz
+Encountered 1756 unique sequences from 7588 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914820_F_filt.fastq.gz
+Encountered 1896 unique sequences from 7778 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914821_F_filt.fastq.gz
+Encountered 1818 unique sequences from 7322 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914822_F_filt.fastq.gz
+Encountered 818 unique sequences from 3023 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914823_F_filt.fastq.gz
+Encountered 186 unique sequences from 504 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914824_F_filt.fastq.gz
+Encountered 1798 unique sequences from 8128 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914825_F_filt.fastq.gz
+Encountered 2693 unique sequences from 13432 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914826_F_filt.fastq.gz
+Encountered 2053 unique sequences from 9361 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914827_F_filt.fastq.gz
+Encountered 2862 unique sequences from 14591 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914828_F_filt.fastq.gz
+Encountered 22154 unique sequences from 166969 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914829_F_filt.fastq.gz
+Encountered 2166 unique sequences from 9516 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914830_F_filt.fastq.gz
+Encountered 1779 unique sequences from 8138 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914831_F_filt.fastq.gz
+Encountered 43 unique sequences from 78 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914832_F_filt.fastq.gz
+Encountered 1697 unique sequences from 6944 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914833_F_filt.fastq.gz
+Encountered 1804 unique sequences from 7550 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914834_F_filt.fastq.gz
+Encountered 2114 unique sequences from 9764 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914835_F_filt.fastq.gz
+Encountered 2159 unique sequences from 9866 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914836_F_filt.fastq.gz
+Encountered 913 unique sequences from 4286 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914837_F_filt.fastq.gz
+Encountered 1667 unique sequences from 8393 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914838_F_filt.fastq.gz
+Encountered 990 unique sequences from 4049 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914839_F_filt.fastq.gz
+Encountered 2049 unique sequences from 9601 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914840_F_filt.fastq.gz
+Encountered 2322 unique sequences from 9309 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914841_F_filt.fastq.gz
+Encountered 2227 unique sequences from 11964 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914842_F_filt.fastq.gz
+Encountered 2226 unique sequences from 11027 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914843_F_filt.fastq.gz
+Encountered 2050 unique sequences from 10612 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914844_F_filt.fastq.gz
+Encountered 2198 unique sequences from 8245 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914845_F_filt.fastq.gz
+Encountered 2108 unique sequences from 8672 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914846_F_filt.fastq.gz
+Encountered 2037 unique sequences from 8374 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914847_F_filt.fastq.gz
+Encountered 1635 unique sequences from 6989 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914848_F_filt.fastq.gz
+Encountered 632 unique sequences from 2214 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914849_F_filt.fastq.gz
+Encountered 20 unique sequences from 22 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914850_F_filt.fastq.gz
+Encountered 1816 unique sequences from 7652 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914851_F_filt.fastq.gz
+Encountered 3507 unique sequences from 14087 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914852_F_filt.fastq.gz
+Encountered 1787 unique sequences from 7660 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914853_F_filt.fastq.gz
+Encountered 2663 unique sequences from 10260 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914854_F_filt.fastq.gz
+Encountered 2179 unique sequences from 10263 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914855_F_filt.fastq.gz
+Encountered 1777 unique sequences from 8960 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914856_F_filt.fastq.gz
+Encountered 2137 unique sequences from 8074 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914857_F_filt.fastq.gz
+Encountered 1700 unique sequences from 8259 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914858_F_filt.fastq.gz
+Encountered 147 unique sequences from 481 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914859_F_filt.fastq.gz
+Encountered 28 unique sequences from 39 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914860_F_filt.fastq.gz
+Encountered 1533 unique sequences from 8791 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914861_F_filt.fastq.gz
+Encountered 1769 unique sequences from 8232 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914870_F_filt.fastq.gz
+Encountered 1088 unique sequences from 5614 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914871_F_filt.fastq.gz
+Encountered 1804 unique sequences from 9592 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914872_F_filt.fastq.gz
+Encountered 1943 unique sequences from 9760 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914873_F_filt.fastq.gz
+Encountered 1931 unique sequences from 7045 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914874_F_filt.fastq.gz
+Encountered 1572 unique sequences from 6900 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914875_F_filt.fastq.gz
+Encountered 2344 unique sequences from 11010 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914876_F_filt.fastq.gz
+Encountered 1453 unique sequences from 6268 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914877_F_filt.fastq.gz
+Encountered 1933 unique sequences from 8518 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914884_F_filt.fastq.gz
+Encountered 2432 unique sequences from 9814 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914897_F_filt.fastq.gz
+Encountered 1216 unique sequences from 5077 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914898_F_filt.fastq.gz
+Encountered 1338 unique sequences from 5988 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914899_F_filt.fastq.gz
+Encountered 33 unique sequences from 41 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914900_F_filt.fastq.gz
+Encountered 1318 unique sequences from 5021 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914901_F_filt.fastq.gz
+Encountered 921 unique sequences from 4033 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914902_F_filt.fastq.gz
+Encountered 1610 unique sequences from 7110 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914903_F_filt.fastq.gz
+Encountered 895 unique sequences from 4385 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914904_F_filt.fastq.gz
+Encountered 1754 unique sequences from 7731 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914905_F_filt.fastq.gz
+Encountered 2083 unique sequences from 8894 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914906_F_filt.fastq.gz
+Encountered 1337 unique sequences from 5524 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914907_F_filt.fastq.gz
+Encountered 2039 unique sequences from 9619 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914908_F_filt.fastq.gz
+Encountered 912 unique sequences from 3646 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914909_F_filt.fastq.gz
+Encountered 1513 unique sequences from 6320 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914910_F_filt.fastq.gz
+Encountered 502 unique sequences from 2337 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914911_F_filt.fastq.gz
+Encountered 1518 unique sequences from 5915 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914912_F_filt.fastq.gz
+Encountered 1149 unique sequences from 4510 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914913_F_filt.fastq.gz
+Encountered 597 unique sequences from 3182 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914914_F_filt.fastq.gz
+Encountered 1583 unique sequences from 8660 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914915_F_filt.fastq.gz
+Encountered 1325 unique sequences from 5210 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914916_F_filt.fastq.gz
+Encountered 1586 unique sequences from 6797 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914917_F_filt.fastq.gz
+Encountered 825 unique sequences from 3514 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914918_F_filt.fastq.gz
+Encountered 1657 unique sequences from 7148 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914919_F_filt.fastq.gz
+Encountered 1997 unique sequences from 9253 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914920_F_filt.fastq.gz
+Encountered 2168 unique sequences from 11152 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914921_F_filt.fastq.gz
+Encountered 1213 unique sequences from 5397 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914922_F_filt.fastq.gz
+Encountered 2440 unique sequences from 10655 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914923_F_filt.fastq.gz
+Encountered 1451 unique sequences from 6341 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914924_F_filt.fastq.gz
+Encountered 1706 unique sequences from 7432 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914925_F_filt.fastq.gz
+Encountered 2505 unique sequences from 10299 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914926_F_filt.fastq.gz
+Encountered 2139 unique sequences from 10139 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914927_F_filt.fastq.gz
+Encountered 765 unique sequences from 3520 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914928_F_filt.fastq.gz
+Encountered 1374 unique sequences from 5276 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914929_F_filt.fastq.gz
+Encountered 2258 unique sequences from 12662 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914930_F_filt.fastq.gz
+Encountered 1705 unique sequences from 8434 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914931_F_filt.fastq.gz
+Encountered 1268 unique sequences from 5703 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914932_F_filt.fastq.gz
+Encountered 17651 unique sequences from 154553 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914933_F_filt.fastq.gz
+Encountered 1442 unique sequences from 5264 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914934_F_filt.fastq.gz
+Encountered 1647 unique sequences from 7481 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914935_F_filt.fastq.gz
+Encountered 2863 unique sequences from 13572 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914936_F_filt.fastq.gz
+Encountered 8324 unique sequences from 60065 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914513_R_filt.fastq.gz
+Encountered 3723 unique sequences from 9811 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914514_R_filt.fastq.gz
+Encountered 2298 unique sequences from 5673 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914515_R_filt.fastq.gz
+Encountered 4077 unique sequences from 10649 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914516_R_filt.fastq.gz
+Encountered 2325 unique sequences from 5646 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914517_R_filt.fastq.gz
+Encountered 3914 unique sequences from 12700 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914518_R_filt.fastq.gz
+Encountered 4608 unique sequences from 13154 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914519_R_filt.fastq.gz
+Encountered 4390 unique sequences from 11099 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914520_R_filt.fastq.gz
+Encountered 2423 unique sequences from 5421 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914521_R_filt.fastq.gz
+Encountered 3965 unique sequences from 9099 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914522_R_filt.fastq.gz
+Encountered 4958 unique sequences from 11506 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914523_R_filt.fastq.gz
+Encountered 3167 unique sequences from 6752 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914524_R_filt.fastq.gz
+Encountered 4950 unique sequences from 13213 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914525_R_filt.fastq.gz
+Encountered 3649 unique sequences from 9445 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914526_R_filt.fastq.gz
+Encountered 3690 unique sequences from 8704 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914529_R_filt.fastq.gz
+Encountered 5260 unique sequences from 11807 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914530_R_filt.fastq.gz
+Encountered 10982 unique sequences from 28444 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914531_R_filt.fastq.gz
+Encountered 3267 unique sequences from 8349 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914532_R_filt.fastq.gz
+Encountered 5183 unique sequences from 11931 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914533_R_filt.fastq.gz
+Encountered 5104 unique sequences from 11238 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914534_R_filt.fastq.gz
+Encountered 3950 unique sequences from 11281 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914535_R_filt.fastq.gz
+Encountered 3218 unique sequences from 9277 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914536_R_filt.fastq.gz
+Encountered 3317 unique sequences from 8602 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914537_R_filt.fastq.gz
+Encountered 2864 unique sequences from 7937 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914538_R_filt.fastq.gz
+Encountered 4405 unique sequences from 11265 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914539_R_filt.fastq.gz
+Encountered 4417 unique sequences from 10830 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914540_R_filt.fastq.gz
+Encountered 3980 unique sequences from 10381 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914541_R_filt.fastq.gz
+Encountered 2626 unique sequences from 6533 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914542_R_filt.fastq.gz
+Encountered 2630 unique sequences from 6739 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914598_R_filt.fastq.gz
+Encountered 2822 unique sequences from 7726 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914599_R_filt.fastq.gz
+Encountered 3124 unique sequences from 9149 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914600_R_filt.fastq.gz
+Encountered 3682 unique sequences from 9613 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914601_R_filt.fastq.gz
+Encountered 4406 unique sequences from 10761 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914602_R_filt.fastq.gz
+Encountered 1840 unique sequences from 4565 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914603_R_filt.fastq.gz
+Encountered 2496 unique sequences from 6207 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914791_R_filt.fastq.gz
+Encountered 2754 unique sequences from 7139 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914793_R_filt.fastq.gz
+Encountered 1528 unique sequences from 4522 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914794_R_filt.fastq.gz
+Encountered 2443 unique sequences from 6500 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914795_R_filt.fastq.gz
+Encountered 2426 unique sequences from 6148 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914796_R_filt.fastq.gz
+Encountered 3477 unique sequences from 9178 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914797_R_filt.fastq.gz
+Encountered 2200 unique sequences from 4994 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914799_R_filt.fastq.gz
+Encountered 3603 unique sequences from 10521 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914800_R_filt.fastq.gz
+Encountered 2921 unique sequences from 11930 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914801_R_filt.fastq.gz
+Encountered 3355 unique sequences from 9660 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914802_R_filt.fastq.gz
+Encountered 2134 unique sequences from 5948 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914803_R_filt.fastq.gz
+Encountered 3075 unique sequences from 7877 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914804_R_filt.fastq.gz
+Encountered 1868 unique sequences from 4821 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914805_R_filt.fastq.gz
+Encountered 2584 unique sequences from 7017 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914806_R_filt.fastq.gz
+Encountered 2111 unique sequences from 5871 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914807_R_filt.fastq.gz
+Encountered 3325 unique sequences from 9640 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914808_R_filt.fastq.gz
+Encountered 3315 unique sequences from 8577 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914809_R_filt.fastq.gz
+Encountered 3232 unique sequences from 9252 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914810_R_filt.fastq.gz
+Encountered 3012 unique sequences from 8426 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914811_R_filt.fastq.gz
+Encountered 90 unique sequences from 163 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914812_R_filt.fastq.gz
+Encountered 2769 unique sequences from 7878 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914813_R_filt.fastq.gz
+Encountered 3854 unique sequences from 11613 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914814_R_filt.fastq.gz
+Encountered 2548 unique sequences from 6956 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914815_R_filt.fastq.gz
+Encountered 232 unique sequences from 439 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914816_R_filt.fastq.gz
+Encountered 3124 unique sequences from 8390 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914817_R_filt.fastq.gz
+Encountered 2973 unique sequences from 7974 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914818_R_filt.fastq.gz
+Encountered 4096 unique sequences from 10856 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914819_R_filt.fastq.gz
+Encountered 2827 unique sequences from 7588 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914820_R_filt.fastq.gz
+Encountered 3175 unique sequences from 7778 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914821_R_filt.fastq.gz
+Encountered 2753 unique sequences from 7322 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914822_R_filt.fastq.gz
+Encountered 1277 unique sequences from 3023 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914823_R_filt.fastq.gz
+Encountered 292 unique sequences from 504 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914824_R_filt.fastq.gz
+Encountered 3212 unique sequences from 8128 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914825_R_filt.fastq.gz
+Encountered 4839 unique sequences from 13432 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914826_R_filt.fastq.gz
+Encountered 3707 unique sequences from 9361 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914827_R_filt.fastq.gz
+Encountered 5417 unique sequences from 14591 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914828_R_filt.fastq.gz
+Encountered 43406 unique sequences from 166969 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914829_R_filt.fastq.gz
+Encountered 3646 unique sequences from 9516 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914830_R_filt.fastq.gz
+Encountered 3204 unique sequences from 8138 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914831_R_filt.fastq.gz
+Encountered 57 unique sequences from 78 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914832_R_filt.fastq.gz
+Encountered 2907 unique sequences from 6944 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914833_R_filt.fastq.gz
+Encountered 2970 unique sequences from 7550 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914834_R_filt.fastq.gz
+Encountered 3731 unique sequences from 9764 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914835_R_filt.fastq.gz
+Encountered 3807 unique sequences from 9866 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914836_R_filt.fastq.gz
+Encountered 1812 unique sequences from 4286 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914837_R_filt.fastq.gz
+Encountered 3224 unique sequences from 8393 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914838_R_filt.fastq.gz
+Encountered 1707 unique sequences from 4049 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914839_R_filt.fastq.gz
+Encountered 3778 unique sequences from 9601 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914840_R_filt.fastq.gz
+Encountered 3880 unique sequences from 9309 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914841_R_filt.fastq.gz
+Encountered 3699 unique sequences from 11964 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914842_R_filt.fastq.gz
+Encountered 3759 unique sequences from 11027 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914843_R_filt.fastq.gz
+Encountered 3696 unique sequences from 10612 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914844_R_filt.fastq.gz
+Encountered 3458 unique sequences from 8245 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914845_R_filt.fastq.gz
+Encountered 3210 unique sequences from 8672 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914846_R_filt.fastq.gz
+Encountered 3151 unique sequences from 8374 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914847_R_filt.fastq.gz
+Encountered 2436 unique sequences from 6989 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914848_R_filt.fastq.gz
+Encountered 979 unique sequences from 2214 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914849_R_filt.fastq.gz
+Encountered 21 unique sequences from 22 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914850_R_filt.fastq.gz
+Encountered 2651 unique sequences from 7652 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914851_R_filt.fastq.gz
+Encountered 5431 unique sequences from 14087 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914852_R_filt.fastq.gz
+Encountered 2688 unique sequences from 7660 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914853_R_filt.fastq.gz
+Encountered 3934 unique sequences from 10260 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914854_R_filt.fastq.gz
+Encountered 3391 unique sequences from 10263 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914855_R_filt.fastq.gz
+Encountered 2261 unique sequences from 8960 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914856_R_filt.fastq.gz
+Encountered 3392 unique sequences from 8074 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914857_R_filt.fastq.gz
+Encountered 2420 unique sequences from 8259 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914858_R_filt.fastq.gz
+Encountered 193 unique sequences from 481 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914859_R_filt.fastq.gz
+Encountered 31 unique sequences from 39 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914860_R_filt.fastq.gz
+Encountered 2516 unique sequences from 8791 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914861_R_filt.fastq.gz
+Encountered 2543 unique sequences from 8232 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914870_R_filt.fastq.gz
+Encountered 1739 unique sequences from 5614 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914871_R_filt.fastq.gz
+Encountered 3468 unique sequences from 9592 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914872_R_filt.fastq.gz
+Encountered 3843 unique sequences from 9760 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914873_R_filt.fastq.gz
+Encountered 3177 unique sequences from 7045 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914874_R_filt.fastq.gz
+Encountered 2873 unique sequences from 6900 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914875_R_filt.fastq.gz
+Encountered 4348 unique sequences from 11010 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914876_R_filt.fastq.gz
+Encountered 2513 unique sequences from 6268 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914877_R_filt.fastq.gz
+Encountered 3636 unique sequences from 8518 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914884_R_filt.fastq.gz
+Encountered 4386 unique sequences from 9814 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914897_R_filt.fastq.gz
+Encountered 2269 unique sequences from 5077 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914898_R_filt.fastq.gz
+Encountered 2811 unique sequences from 5988 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914899_R_filt.fastq.gz
+Encountered 36 unique sequences from 41 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914900_R_filt.fastq.gz
+Encountered 2328 unique sequences from 5021 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914901_R_filt.fastq.gz
+Encountered 1932 unique sequences from 4033 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914902_R_filt.fastq.gz
+Encountered 2617 unique sequences from 7110 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914903_R_filt.fastq.gz
+Encountered 1785 unique sequences from 4385 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914904_R_filt.fastq.gz
+Encountered 3054 unique sequences from 7731 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914905_R_filt.fastq.gz
+Encountered 3202 unique sequences from 8894 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914906_R_filt.fastq.gz
+Encountered 2208 unique sequences from 5524 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914907_R_filt.fastq.gz
+Encountered 3417 unique sequences from 9619 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914908_R_filt.fastq.gz
+Encountered 1492 unique sequences from 3646 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914909_R_filt.fastq.gz
+Encountered 2589 unique sequences from 6320 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914910_R_filt.fastq.gz
+Encountered 815 unique sequences from 2337 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914911_R_filt.fastq.gz
+Encountered 2335 unique sequences from 5915 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914912_R_filt.fastq.gz
+Encountered 805 unique sequences from 4510 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914913_R_filt.fastq.gz
+Encountered 740 unique sequences from 3182 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914914_R_filt.fastq.gz
+Encountered 3312 unique sequences from 8660 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914915_R_filt.fastq.gz
+Encountered 2076 unique sequences from 5210 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914916_R_filt.fastq.gz
+Encountered 2616 unique sequences from 6797 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914917_R_filt.fastq.gz
+Encountered 1385 unique sequences from 3514 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914918_R_filt.fastq.gz
+Encountered 2519 unique sequences from 7148 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914919_R_filt.fastq.gz
+Encountered 3380 unique sequences from 9253 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914920_R_filt.fastq.gz
+Encountered 3442 unique sequences from 11152 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914921_R_filt.fastq.gz
+Encountered 1954 unique sequences from 5397 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914922_R_filt.fastq.gz
+Encountered 3515 unique sequences from 10655 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914923_R_filt.fastq.gz
+Encountered 2271 unique sequences from 6341 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914924_R_filt.fastq.gz
+Encountered 2869 unique sequences from 7432 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914925_R_filt.fastq.gz
+Encountered 3611 unique sequences from 10299 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914926_R_filt.fastq.gz
+Encountered 3585 unique sequences from 10139 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914927_R_filt.fastq.gz
+Encountered 1334 unique sequences from 3520 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914928_R_filt.fastq.gz
+Encountered 2137 unique sequences from 5276 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914929_R_filt.fastq.gz
+Encountered 3273 unique sequences from 12662 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914930_R_filt.fastq.gz
+Encountered 2414 unique sequences from 8434 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914931_R_filt.fastq.gz
+Encountered 1434 unique sequences from 5703 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914932_R_filt.fastq.gz
+Encountered 27509 unique sequences from 154553 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914933_R_filt.fastq.gz
+Encountered 2152 unique sequences from 5264 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914934_R_filt.fastq.gz
+Encountered 2590 unique sequences from 7481 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914935_R_filt.fastq.gz
+Encountered 4129 unique sequences from 13572 total sequences read.
+Not all sequences were the same length.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/UMAA_DSS///SRR1914936_R_filt.fastq.gz
+Encountered 14399 unique sequences from 60065 total sequences read.
+Not all sequences were the same length.
+Sample 1 - 9811 reads in 2134 unique sequences.
+Sample 2 - 5673 reads in 1383 unique sequences.
+Sample 3 - 10649 reads in 2303 unique sequences.
+Sample 4 - 5646 reads in 1217 unique sequences.
+Sample 5 - 12700 reads in 2460 unique sequences.
+Sample 6 - 13154 reads in 2598 unique sequences.
+Sample 7 - 11099 reads in 2049 unique sequences.
+Sample 8 - 5421 reads in 1272 unique sequences.
+Sample 9 - 9099 reads in 1837 unique sequences.
+Sample 10 - 11506 reads in 2224 unique sequences.
+Sample 11 - 6752 reads in 1415 unique sequences.
+Sample 12 - 13213 reads in 2249 unique sequences.
+Sample 13 - 9445 reads in 1695 unique sequences.
+Sample 14 - 8704 reads in 1812 unique sequences.
+Sample 15 - 11807 reads in 2343 unique sequences.
+Sample 16 - 28444 reads in 4864 unique sequences.
+Sample 17 - 8349 reads in 1661 unique sequences.
+Sample 18 - 11931 reads in 2225 unique sequences.
+Sample 19 - 11238 reads in 2180 unique sequences.
+Sample 20 - 11281 reads in 2239 unique sequences.
+Sample 21 - 9277 reads in 1971 unique sequences.
+Sample 22 - 8602 reads in 1915 unique sequences.
+Sample 23 - 7937 reads in 1552 unique sequences.
+Sample 24 - 11265 reads in 2366 unique sequences.
+Sample 25 - 10830 reads in 2323 unique sequences.
+Sample 26 - 10381 reads in 2280 unique sequences.
+Sample 27 - 6533 reads in 1421 unique sequences.
+Sample 28 - 6739 reads in 1462 unique sequences.
+Sample 29 - 7726 reads in 1784 unique sequences.
+Sample 30 - 9149 reads in 1871 unique sequences.
+Sample 31 - 9613 reads in 2124 unique sequences.
+Sample 32 - 10761 reads in 2539 unique sequences.
+Sample 33 - 4565 reads in 1272 unique sequences.
+Sample 34 - 6207 reads in 1451 unique sequences.
+Sample 35 - 7139 reads in 1605 unique sequences.
+Sample 36 - 4522 reads in 1024 unique sequences.
+Sample 37 - 6500 reads in 1654 unique sequences.
+Sample 38 - 6148 reads in 1516 unique sequences.
+Sample 39 - 9178 reads in 1895 unique sequences.
+Sample 40 - 4994 reads in 1263 unique sequences.
+Sample 41 - 10521 reads in 2180 unique sequences.
+Sample 42 - 11930 reads in 2294 unique sequences.
+Sample 43 - 9660 reads in 2255 unique sequences.
+Sample 44 - 5948 reads in 1398 unique sequences.
+Sample 45 - 7877 reads in 1845 unique sequences.
+Sample 46 - 4821 reads in 1228 unique sequences.
+Sample 47 - 7017 reads in 1586 unique sequences.
+Sample 48 - 5871 reads in 1321 unique sequences.
+Sample 49 - 9640 reads in 2090 unique sequences.
+Sample 50 - 8577 reads in 1878 unique sequences.
+Sample 51 - 9252 reads in 2126 unique sequences.
+Sample 52 - 8426 reads in 1811 unique sequences.
+Sample 53 - 163 reads in 84 unique sequences.
+Sample 54 - 7878 reads in 1709 unique sequences.
+Sample 55 - 11613 reads in 2427 unique sequences.
+Sample 56 - 6956 reads in 1642 unique sequences.
+Sample 57 - 439 reads in 154 unique sequences.
+Sample 58 - 8390 reads in 1783 unique sequences.
+Sample 59 - 7974 reads in 1874 unique sequences.
+Sample 60 - 10856 reads in 2159 unique sequences.
+Sample 61 - 7588 reads in 1756 unique sequences.
+Sample 62 - 7778 reads in 1896 unique sequences.
+Sample 63 - 7322 reads in 1818 unique sequences.
+Sample 64 - 3023 reads in 818 unique sequences.
+Sample 65 - 504 reads in 186 unique sequences.
+Sample 66 - 8128 reads in 1798 unique sequences.
+Sample 67 - 13432 reads in 2693 unique sequences.
+Sample 68 - 9361 reads in 2053 unique sequences.
+Sample 69 - 14591 reads in 2862 unique sequences.
+Sample 70 - 166969 reads in 22154 unique sequences.
+Sample 71 - 9516 reads in 2166 unique sequences.
+Sample 72 - 8138 reads in 1779 unique sequences.
+Sample 73 - 78 reads in 43 unique sequences.
+Sample 74 - 6944 reads in 1697 unique sequences.
+Sample 75 - 7550 reads in 1804 unique sequences.
+Sample 76 - 9764 reads in 2114 unique sequences.
+Sample 77 - 9866 reads in 2159 unique sequences.
+Sample 78 - 4286 reads in 913 unique sequences.
+Sample 79 - 8393 reads in 1667 unique sequences.
+Sample 80 - 4049 reads in 990 unique sequences.
+Sample 81 - 9601 reads in 2049 unique sequences.
+Sample 82 - 9309 reads in 2322 unique sequences.
+Sample 83 - 11964 reads in 2227 unique sequences.
+Sample 84 - 11027 reads in 2226 unique sequences.
+Sample 85 - 10612 reads in 2050 unique sequences.
+Sample 86 - 8245 reads in 2198 unique sequences.
+Sample 87 - 8672 reads in 2108 unique sequences.
+Sample 88 - 8374 reads in 2037 unique sequences.
+Sample 89 - 6989 reads in 1635 unique sequences.
+Sample 90 - 2214 reads in 632 unique sequences.
+Sample 91 - 22 reads in 20 unique sequences.
+Sample 92 - 7652 reads in 1816 unique sequences.
+Sample 93 - 14087 reads in 3507 unique sequences.
+Sample 94 - 7660 reads in 1787 unique sequences.
+Sample 95 - 10260 reads in 2663 unique sequences.
+Sample 96 - 10263 reads in 2179 unique sequences.
+Sample 97 - 8960 reads in 1777 unique sequences.
+Sample 98 - 8074 reads in 2137 unique sequences.
+Sample 99 - 8259 reads in 1700 unique sequences.
+Sample 100 - 481 reads in 147 unique sequences.
+Sample 101 - 39 reads in 28 unique sequences.
+Sample 102 - 8791 reads in 1533 unique sequences.
+Sample 103 - 8232 reads in 1769 unique sequences.
+Sample 104 - 5614 reads in 1088 unique sequences.
+Sample 105 - 9592 reads in 1804 unique sequences.
+Sample 106 - 9760 reads in 1943 unique sequences.
+Sample 107 - 7045 reads in 1931 unique sequences.
+Sample 108 - 6900 reads in 1572 unique sequences.
+Sample 109 - 11010 reads in 2344 unique sequences.
+Sample 110 - 6268 reads in 1453 unique sequences.
+Sample 111 - 8518 reads in 1933 unique sequences.
+Sample 112 - 9814 reads in 2432 unique sequences.
+Sample 113 - 5077 reads in 1216 unique sequences.
+Sample 114 - 5988 reads in 1338 unique sequences.
+Sample 115 - 41 reads in 33 unique sequences.
+Sample 116 - 5021 reads in 1318 unique sequences.
+Sample 117 - 4033 reads in 921 unique sequences.
+Sample 118 - 7110 reads in 1610 unique sequences.
+Sample 119 - 4385 reads in 895 unique sequences.
+Sample 120 - 7731 reads in 1754 unique sequences.
+Sample 121 - 8894 reads in 2083 unique sequences.
+Sample 122 - 5524 reads in 1337 unique sequences.
+Sample 123 - 9619 reads in 2039 unique sequences.
+Sample 124 - 3646 reads in 912 unique sequences.
+Sample 125 - 6320 reads in 1513 unique sequences.
+Sample 126 - 2337 reads in 502 unique sequences.
+Sample 127 - 5915 reads in 1518 unique sequences.
+Sample 128 - 4510 reads in 1149 unique sequences.
+Sample 129 - 3182 reads in 597 unique sequences.
+Sample 130 - 8660 reads in 1583 unique sequences.
+Sample 131 - 5210 reads in 1325 unique sequences.
+Sample 132 - 6797 reads in 1586 unique sequences.
+Sample 133 - 3514 reads in 825 unique sequences.
+Sample 134 - 7148 reads in 1657 unique sequences.
+Sample 135 - 9253 reads in 1997 unique sequences.
+Sample 136 - 11152 reads in 2168 unique sequences.
+Sample 137 - 5397 reads in 1213 unique sequences.
+Sample 138 - 10655 reads in 2440 unique sequences.
+Sample 139 - 6341 reads in 1451 unique sequences.
+Sample 140 - 7432 reads in 1706 unique sequences.
+Sample 141 - 10299 reads in 2505 unique sequences.
+Sample 142 - 10139 reads in 2139 unique sequences.
+Sample 143 - 3520 reads in 765 unique sequences.
+Sample 144 - 5276 reads in 1374 unique sequences.
+Sample 145 - 12662 reads in 2258 unique sequences.
+Sample 146 - 8434 reads in 1705 unique sequences.
+Sample 147 - 5703 reads in 1268 unique sequences.
+Sample 148 - 154553 reads in 17651 unique sequences.
+Sample 149 - 5264 reads in 1442 unique sequences.
+Sample 150 - 7481 reads in 1647 unique sequences.
+Sample 151 - 13572 reads in 2863 unique sequences.
+Sample 152 - 60065 reads in 8324 unique sequences.
+Sample 1 - 9811 reads in 3723 unique sequences.
+Sample 2 - 5673 reads in 2298 unique sequences.
+Sample 3 - 10649 reads in 4077 unique sequences.
+Sample 4 - 5646 reads in 2325 unique sequences.
+Sample 5 - 12700 reads in 3914 unique sequences.
+Sample 6 - 13154 reads in 4608 unique sequences.
+Sample 7 - 11099 reads in 4390 unique sequences.
+Sample 8 - 5421 reads in 2423 unique sequences.
+Sample 9 - 9099 reads in 3965 unique sequences.
+Sample 10 - 11506 reads in 4958 unique sequences.
+Sample 11 - 6752 reads in 3167 unique sequences.
+Sample 12 - 13213 reads in 4950 unique sequences.
+Sample 13 - 9445 reads in 3649 unique sequences.
+Sample 14 - 8704 reads in 3690 unique sequences.
+Sample 15 - 11807 reads in 5260 unique sequences.
+Sample 16 - 28444 reads in 10982 unique sequences.
+Sample 17 - 8349 reads in 3267 unique sequences.
+Sample 18 - 11931 reads in 5183 unique sequences.
+Sample 19 - 11238 reads in 5104 unique sequences.
+Sample 20 - 11281 reads in 3950 unique sequences.
+Sample 21 - 9277 reads in 3218 unique sequences.
+Sample 22 - 8602 reads in 3317 unique sequences.
+Sample 23 - 7937 reads in 2864 unique sequences.
+Sample 24 - 11265 reads in 4405 unique sequences.
+Sample 25 - 10830 reads in 4417 unique sequences.
+Sample 26 - 10381 reads in 3980 unique sequences.
+Sample 27 - 6533 reads in 2626 unique sequences.
+Sample 28 - 6739 reads in 2630 unique sequences.
+Sample 29 - 7726 reads in 2822 unique sequences.
+Sample 30 - 9149 reads in 3124 unique sequences.
+Sample 31 - 9613 reads in 3682 unique sequences.
+Sample 32 - 10761 reads in 4406 unique sequences.
+Sample 33 - 4565 reads in 1840 unique sequences.
+Sample 34 - 6207 reads in 2496 unique sequences.
+Sample 35 - 7139 reads in 2754 unique sequences.
+Sample 36 - 4522 reads in 1528 unique sequences.
+Sample 37 - 6500 reads in 2443 unique sequences.
+Sample 38 - 6148 reads in 2426 unique sequences.
+Sample 39 - 9178 reads in 3477 unique sequences.
+Sample 40 - 4994 reads in 2200 unique sequences.
+Sample 41 - 10521 reads in 3603 unique sequences.
+Sample 42 - 11930 reads in 2921 unique sequences.
+Sample 43 - 9660 reads in 3355 unique sequences.
+Sample 44 - 5948 reads in 2134 unique sequences.
+Sample 45 - 7877 reads in 3075 unique sequences.
+Sample 46 - 4821 reads in 1868 unique sequences.
+Sample 47 - 7017 reads in 2584 unique sequences.
+Sample 48 - 5871 reads in 2111 unique sequences.
+Sample 49 - 9640 reads in 3325 unique sequences.
+Sample 50 - 8577 reads in 3315 unique sequences.
+Sample 51 - 9252 reads in 3232 unique sequences.
+Sample 52 - 8426 reads in 3012 unique sequences.
+Sample 53 - 163 reads in 90 unique sequences.
+Sample 54 - 7878 reads in 2769 unique sequences.
+Sample 55 - 11613 reads in 3854 unique sequences.
+Sample 56 - 6956 reads in 2548 unique sequences.
+Sample 57 - 439 reads in 232 unique sequences.
+Sample 58 - 8390 reads in 3124 unique sequences.
+Sample 59 - 7974 reads in 2973 unique sequences.
+Sample 60 - 10856 reads in 4096 unique sequences.
+Sample 61 - 7588 reads in 2827 unique sequences.
+Sample 62 - 7778 reads in 3175 unique sequences.
+Sample 63 - 7322 reads in 2753 unique sequences.
+Sample 64 - 3023 reads in 1277 unique sequences.
+Sample 65 - 504 reads in 292 unique sequences.
+Sample 66 - 8128 reads in 3212 unique sequences.
+Sample 67 - 13432 reads in 4839 unique sequences.
+Sample 68 - 9361 reads in 3707 unique sequences.
+Sample 69 - 14591 reads in 5417 unique sequences.
+Sample 70 - 166969 reads in 43406 unique sequences.
+Sample 71 - 9516 reads in 3646 unique sequences.
+Sample 72 - 8138 reads in 3204 unique sequences.
+Sample 73 - 78 reads in 57 unique sequences.
+Sample 74 - 6944 reads in 2907 unique sequences.
+Sample 75 - 7550 reads in 2970 unique sequences.
+Sample 76 - 9764 reads in 3731 unique sequences.
+Sample 77 - 9866 reads in 3807 unique sequences.
+Sample 78 - 4286 reads in 1812 unique sequences.
+Sample 79 - 8393 reads in 3224 unique sequences.
+Sample 80 - 4049 reads in 1707 unique sequences.
+Sample 81 - 9601 reads in 3778 unique sequences.
+Sample 82 - 9309 reads in 3880 unique sequences.
+Sample 83 - 11964 reads in 3699 unique sequences.
+Sample 84 - 11027 reads in 3759 unique sequences.
+Sample 85 - 10612 reads in 3696 unique sequences.
+Sample 86 - 8245 reads in 3458 unique sequences.
+Sample 87 - 8672 reads in 3210 unique sequences.
+Sample 88 - 8374 reads in 3151 unique sequences.
+Sample 89 - 6989 reads in 2436 unique sequences.
+Sample 90 - 2214 reads in 979 unique sequences.
+Sample 91 - 22 reads in 21 unique sequences.
+Sample 92 - 7652 reads in 2651 unique sequences.
+Sample 93 - 14087 reads in 5431 unique sequences.
+Sample 94 - 7660 reads in 2688 unique sequences.
+Sample 95 - 10260 reads in 3934 unique sequences.
+Sample 96 - 10263 reads in 3391 unique sequences.
+Sample 97 - 8960 reads in 2261 unique sequences.
+Sample 98 - 8074 reads in 3392 unique sequences.
+Sample 99 - 8259 reads in 2420 unique sequences.
+Sample 100 - 481 reads in 193 unique sequences.
+Sample 101 - 39 reads in 31 unique sequences.
+Sample 102 - 8791 reads in 2516 unique sequences.
+Sample 103 - 8232 reads in 2543 unique sequences.
+Sample 104 - 5614 reads in 1739 unique sequences.
+Sample 105 - 9592 reads in 3468 unique sequences.
+Sample 106 - 9760 reads in 3843 unique sequences.
+Sample 107 - 7045 reads in 3177 unique sequences.
+Sample 108 - 6900 reads in 2873 unique sequences.
+Sample 109 - 11010 reads in 4348 unique sequences.
+Sample 110 - 6268 reads in 2513 unique sequences.
+Sample 111 - 8518 reads in 3636 unique sequences.
+Sample 112 - 9814 reads in 4386 unique sequences.
+Sample 113 - 5077 reads in 2269 unique sequences.
+Sample 114 - 5988 reads in 2811 unique sequences.
+Sample 115 - 41 reads in 36 unique sequences.
+Sample 116 - 5021 reads in 2328 unique sequences.
+Sample 117 - 4033 reads in 1932 unique sequences.
+Sample 118 - 7110 reads in 2617 unique sequences.
+Sample 119 - 4385 reads in 1785 unique sequences.
+Sample 120 - 7731 reads in 3054 unique sequences.
+Sample 121 - 8894 reads in 3202 unique sequences.
+Sample 122 - 5524 reads in 2208 unique sequences.
+Sample 123 - 9619 reads in 3417 unique sequences.
+Sample 124 - 3646 reads in 1492 unique sequences.
+Sample 125 - 6320 reads in 2589 unique sequences.
+Sample 126 - 2337 reads in 815 unique sequences.
+Sample 127 - 5915 reads in 2335 unique sequences.
+Sample 128 - 4510 reads in 805 unique sequences.
+Sample 129 - 3182 reads in 740 unique sequences.
+Sample 130 - 8660 reads in 3312 unique sequences.
+Sample 131 - 5210 reads in 2076 unique sequences.
+Sample 132 - 6797 reads in 2616 unique sequences.
+Sample 133 - 3514 reads in 1385 unique sequences.
+Sample 134 - 7148 reads in 2519 unique sequences.
+Sample 135 - 9253 reads in 3380 unique sequences.
+Sample 136 - 11152 reads in 3442 unique sequences.
+Sample 137 - 5397 reads in 1954 unique sequences.
+Sample 138 - 10655 reads in 3515 unique sequences.
+Sample 139 - 6341 reads in 2271 unique sequences.
+Sample 140 - 7432 reads in 2869 unique sequences.
+Sample 141 - 10299 reads in 3611 unique sequences.
+Sample 142 - 10139 reads in 3585 unique sequences.
+Sample 143 - 3520 reads in 1334 unique sequences.
+Sample 144 - 5276 reads in 2137 unique sequences.
+Sample 145 - 12662 reads in 3273 unique sequences.
+Sample 146 - 8434 reads in 2414 unique sequences.
+Sample 147 - 5703 reads in 1434 unique sequences.
+Sample 148 - 154553 reads in 27509 unique sequences.
+Sample 149 - 5264 reads in 2152 unique sequences.
+Sample 150 - 7481 reads in 2590 unique sequences.
+Sample 151 - 13572 reads in 4129 unique sequences.
+Sample 152 - 60065 reads in 14399 unique sequences.
+9078 paired-reads (in 161 unique pairings) successfully merged out of 9811 (in 309 pairings) input.
+5278 paired-reads (in 139 unique pairings) successfully merged out of 5673 (in 249 pairings) input.
+9991 paired-reads (in 167 unique pairings) successfully merged out of 10649 (in 328 pairings) input.
+5240 paired-reads (in 112 unique pairings) successfully merged out of 5646 (in 180 pairings) input.
+12015 paired-reads (in 160 unique pairings) successfully merged out of 12700 (in 313 pairings) input.
+12277 paired-reads (in 144 unique pairings) successfully merged out of 13154 (in 300 pairings) input.
+10469 paired-reads (in 111 unique pairings) successfully merged out of 11099 (in 242 pairings) input.
+4970 paired-reads (in 108 unique pairings) successfully merged out of 5421 (in 220 pairings) input.
+8205 paired-reads (in 102 unique pairings) successfully merged out of 9099 (in 261 pairings) input.
+10806 paired-reads (in 138 unique pairings) successfully merged out of 11506 (in 325 pairings) input.
+6078 paired-reads (in 128 unique pairings) successfully merged out of 6752 (in 262 pairings) input.
+12534 paired-reads (in 133 unique pairings) successfully merged out of 13213 (in 308 pairings) input.
+8774 paired-reads (in 116 unique pairings) successfully merged out of 9445 (in 225 pairings) input.
+8178 paired-reads (in 128 unique pairings) successfully merged out of 8704 (in 279 pairings) input.
+10785 paired-reads (in 156 unique pairings) successfully merged out of 11807 (in 353 pairings) input.
+26731 paired-reads (in 194 unique pairings) successfully merged out of 28444 (in 493 pairings) input.
+7794 paired-reads (in 85 unique pairings) successfully merged out of 8349 (in 196 pairings) input.
+10845 paired-reads (in 146 unique pairings) successfully merged out of 11931 (in 333 pairings) input.
+10055 paired-reads (in 138 unique pairings) successfully merged out of 11238 (in 325 pairings) input.
+10696 paired-reads (in 137 unique pairings) successfully merged out of 11281 (in 285 pairings) input.
+8696 paired-reads (in 112 unique pairings) successfully merged out of 9277 (in 222 pairings) input.
+7974 paired-reads (in 151 unique pairings) successfully merged out of 8602 (in 318 pairings) input.
+7514 paired-reads (in 93 unique pairings) successfully merged out of 7937 (in 193 pairings) input.
+10269 paired-reads (in 131 unique pairings) successfully merged out of 11265 (in 316 pairings) input.
+10190 paired-reads (in 158 unique pairings) successfully merged out of 10830 (in 319 pairings) input.
+9241 paired-reads (in 143 unique pairings) successfully merged out of 10381 (in 300 pairings) input.
+6054 paired-reads (in 112 unique pairings) successfully merged out of 6533 (in 222 pairings) input.
+6203 paired-reads (in 110 unique pairings) successfully merged out of 6739 (in 234 pairings) input.
+7189 paired-reads (in 174 unique pairings) successfully merged out of 7726 (in 331 pairings) input.
+8677 paired-reads (in 110 unique pairings) successfully merged out of 9149 (in 227 pairings) input.
+8728 paired-reads (in 144 unique pairings) successfully merged out of 9613 (in 296 pairings) input.
+9840 paired-reads (in 174 unique pairings) successfully merged out of 10761 (in 358 pairings) input.
+4225 paired-reads (in 151 unique pairings) successfully merged out of 4565 (in 264 pairings) input.
+5764 paired-reads (in 156 unique pairings) successfully merged out of 6207 (in 269 pairings) input.
+6604 paired-reads (in 131 unique pairings) successfully merged out of 7139 (in 243 pairings) input.
+4247 paired-reads (in 94 unique pairings) successfully merged out of 4522 (in 173 pairings) input.
+5956 paired-reads (in 130 unique pairings) successfully merged out of 6500 (in 275 pairings) input.
+5627 paired-reads (in 123 unique pairings) successfully merged out of 6148 (in 248 pairings) input.
+8632 paired-reads (in 114 unique pairings) successfully merged out of 9178 (in 244 pairings) input.
+4539 paired-reads (in 115 unique pairings) successfully merged out of 4994 (in 205 pairings) input.
+9991 paired-reads (in 145 unique pairings) successfully merged out of 10521 (in 273 pairings) input.
+11634 paired-reads (in 91 unique pairings) successfully merged out of 11930 (in 170 pairings) input.
+9149 paired-reads (in 147 unique pairings) successfully merged out of 9660 (in 297 pairings) input.
+5509 paired-reads (in 104 unique pairings) successfully merged out of 5948 (in 204 pairings) input.
+7290 paired-reads (in 142 unique pairings) successfully merged out of 7877 (in 290 pairings) input.
+4449 paired-reads (in 107 unique pairings) successfully merged out of 4821 (in 202 pairings) input.
+6572 paired-reads (in 126 unique pairings) successfully merged out of 7017 (in 241 pairings) input.
+5428 paired-reads (in 115 unique pairings) successfully merged out of 5871 (in 220 pairings) input.
+9214 paired-reads (in 142 unique pairings) successfully merged out of 9640 (in 254 pairings) input.
+7945 paired-reads (in 128 unique pairings) successfully merged out of 8577 (in 271 pairings) input.
+8534 paired-reads (in 170 unique pairings) successfully merged out of 9252 (in 326 pairings) input.
+7853 paired-reads (in 148 unique pairings) successfully merged out of 8426 (in 276 pairings) input.
+129 paired-reads (in 15 unique pairings) successfully merged out of 163 (in 24 pairings) input.
+7434 paired-reads (in 107 unique pairings) successfully merged out of 7878 (in 230 pairings) input.
+11020 paired-reads (in 141 unique pairings) successfully merged out of 11613 (in 285 pairings) input.
+6524 paired-reads (in 120 unique pairings) successfully merged out of 6956 (in 221 pairings) input.
+334 paired-reads (in 28 unique pairings) successfully merged out of 439 (in 56 pairings) input.
+7802 paired-reads (in 142 unique pairings) successfully merged out of 8390 (in 271 pairings) input.
+7310 paired-reads (in 150 unique pairings) successfully merged out of 7974 (in 281 pairings) input.
+9872 paired-reads (in 144 unique pairings) successfully merged out of 10856 (in 296 pairings) input.
+7073 paired-reads (in 121 unique pairings) successfully merged out of 7588 (in 252 pairings) input.
+7220 paired-reads (in 128 unique pairings) successfully merged out of 7778 (in 289 pairings) input.
+6780 paired-reads (in 136 unique pairings) successfully merged out of 7322 (in 256 pairings) input.
+2750 paired-reads (in 101 unique pairings) successfully merged out of 3023 (in 185 pairings) input.
+395 paired-reads (in 37 unique pairings) successfully merged out of 504 (in 74 pairings) input.
+7361 paired-reads (in 130 unique pairings) successfully merged out of 8128 (in 253 pairings) input.
+12057 paired-reads (in 133 unique pairings) successfully merged out of 13432 (in 317 pairings) input.
+8597 paired-reads (in 138 unique pairings) successfully merged out of 9361 (in 283 pairings) input.
+13343 paired-reads (in 157 unique pairings) successfully merged out of 14591 (in 313 pairings) input.
+155311 paired-reads (in 493 unique pairings) successfully merged out of 166969 (in 1408 pairings) input.
+8778 paired-reads (in 152 unique pairings) successfully merged out of 9516 (in 288 pairings) input.
+7581 paired-reads (in 137 unique pairings) successfully merged out of 8138 (in 260 pairings) input.
+44 paired-reads (in 8 unique pairings) successfully merged out of 78 (in 17 pairings) input.
+6325 paired-reads (in 136 unique pairings) successfully merged out of 6944 (in 268 pairings) input.
+7063 paired-reads (in 124 unique pairings) successfully merged out of 7550 (in 243 pairings) input.
+9102 paired-reads (in 154 unique pairings) successfully merged out of 9764 (in 313 pairings) input.
+9116 paired-reads (in 148 unique pairings) successfully merged out of 9866 (in 307 pairings) input.
+3852 paired-reads (in 89 unique pairings) successfully merged out of 4286 (in 159 pairings) input.
+7622 paired-reads (in 119 unique pairings) successfully merged out of 8393 (in 253 pairings) input.
+3590 paired-reads (in 95 unique pairings) successfully merged out of 4049 (in 188 pairings) input.
+9171 paired-reads (in 132 unique pairings) successfully merged out of 9601 (in 255 pairings) input.
+8413 paired-reads (in 169 unique pairings) successfully merged out of 9309 (in 345 pairings) input.
+11442 paired-reads (in 135 unique pairings) successfully merged out of 11964 (in 252 pairings) input.
+10505 paired-reads (in 116 unique pairings) successfully merged out of 11027 (in 233 pairings) input.
+10060 paired-reads (in 142 unique pairings) successfully merged out of 10612 (in 248 pairings) input.
+7430 paired-reads (in 161 unique pairings) successfully merged out of 8245 (in 381 pairings) input.
+8188 paired-reads (in 149 unique pairings) successfully merged out of 8672 (in 289 pairings) input.
+7741 paired-reads (in 166 unique pairings) successfully merged out of 8374 (in 312 pairings) input.
+6565 paired-reads (in 132 unique pairings) successfully merged out of 6989 (in 240 pairings) input.
+1940 paired-reads (in 71 unique pairings) successfully merged out of 2214 (in 138 pairings) input.
+22 paired-reads (in 1 unique pairings) successfully merged out of 22 (in 1 pairings) input.
+7253 paired-reads (in 138 unique pairings) successfully merged out of 7652 (in 253 pairings) input.
+13297 paired-reads (in 239 unique pairings) successfully merged out of 14087 (in 449 pairings) input.
+Duplicate sequences in merged output.
+7263 paired-reads (in 125 unique pairings) successfully merged out of 7660 (in 240 pairings) input.
+9546 paired-reads (in 167 unique pairings) successfully merged out of 10260 (in 337 pairings) input.
+Duplicate sequences in merged output.
+9717 paired-reads (in 126 unique pairings) successfully merged out of 10263 (in 248 pairings) input.
+8807 paired-reads (in 56 unique pairings) successfully merged out of 8960 (in 97 pairings) input.
+7381 paired-reads (in 153 unique pairings) successfully merged out of 8074 (in 325 pairings) input.
+8019 paired-reads (in 56 unique pairings) successfully merged out of 8259 (in 104 pairings) input.
+448 paired-reads (in 14 unique pairings) successfully merged out of 481 (in 29 pairings) input.
+33 paired-reads (in 3 unique pairings) successfully merged out of 39 (in 7 pairings) input.
+8498 paired-reads (in 75 unique pairings) successfully merged out of 8791 (in 148 pairings) input.
+7803 paired-reads (in 109 unique pairings) successfully merged out of 8232 (in 207 pairings) input.
+5411 paired-reads (in 70 unique pairings) successfully merged out of 5614 (in 128 pairings) input.
+9142 paired-reads (in 135 unique pairings) successfully merged out of 9592 (in 252 pairings) input.
+9241 paired-reads (in 134 unique pairings) successfully merged out of 9760 (in 268 pairings) input.
+6502 paired-reads (in 126 unique pairings) successfully merged out of 7045 (in 283 pairings) input.
+6421 paired-reads (in 117 unique pairings) successfully merged out of 6900 (in 224 pairings) input.
+10369 paired-reads (in 162 unique pairings) successfully merged out of 11010 (in 317 pairings) input.
+5717 paired-reads (in 118 unique pairings) successfully merged out of 6268 (in 223 pairings) input.
+7894 paired-reads (in 118 unique pairings) successfully merged out of 8518 (in 247 pairings) input.
+8947 paired-reads (in 172 unique pairings) successfully merged out of 9814 (in 353 pairings) input.
+4676 paired-reads (in 115 unique pairings) successfully merged out of 5077 (in 228 pairings) input.
+5464 paired-reads (in 112 unique pairings) successfully merged out of 5988 (in 241 pairings) input.
+30 paired-reads (in 3 unique pairings) successfully merged out of 41 (in 4 pairings) input.
+4648 paired-reads (in 135 unique pairings) successfully merged out of 5021 (in 247 pairings) input.
+3618 paired-reads (in 86 unique pairings) successfully merged out of 4033 (in 172 pairings) input.
+6661 paired-reads (in 107 unique pairings) successfully merged out of 7110 (in 208 pairings) input.
+4058 paired-reads (in 85 unique pairings) successfully merged out of 4385 (in 155 pairings) input.
+7209 paired-reads (in 108 unique pairings) successfully merged out of 7731 (in 225 pairings) input.
+8242 paired-reads (in 149 unique pairings) successfully merged out of 8894 (in 313 pairings) input.
+5092 paired-reads (in 103 unique pairings) successfully merged out of 5524 (in 228 pairings) input.
+9241 paired-reads (in 149 unique pairings) successfully merged out of 9619 (in 264 pairings) input.
+3296 paired-reads (in 99 unique pairings) successfully merged out of 3646 (in 185 pairings) input.
+5912 paired-reads (in 138 unique pairings) successfully merged out of 6320 (in 261 pairings) input.
+2247 paired-reads (in 44 unique pairings) successfully merged out of 2337 (in 76 pairings) input.
+5268 paired-reads (in 111 unique pairings) successfully merged out of 5915 (in 284 pairings) input.
+4463 paired-reads (in 34 unique pairings) successfully merged out of 4510 (in 57 pairings) input.
+3141 paired-reads (in 30 unique pairings) successfully merged out of 3182 (in 42 pairings) input.
+8145 paired-reads (in 101 unique pairings) successfully merged out of 8660 (in 203 pairings) input.
+4749 paired-reads (in 102 unique pairings) successfully merged out of 5210 (in 211 pairings) input.
+6210 paired-reads (in 99 unique pairings) successfully merged out of 6797 (in 235 pairings) input.
+3257 paired-reads (in 88 unique pairings) successfully merged out of 3514 (in 162 pairings) input.
+6791 paired-reads (in 138 unique pairings) successfully merged out of 7148 (in 247 pairings) input.
+8555 paired-reads (in 151 unique pairings) successfully merged out of 9253 (in 304 pairings) input.
+10668 paired-reads (in 132 unique pairings) successfully merged out of 11152 (in 261 pairings) input.
+5037 paired-reads (in 85 unique pairings) successfully merged out of 5397 (in 170 pairings) input.
+10027 paired-reads (in 166 unique pairings) successfully merged out of 10655 (in 312 pairings) input.
+5883 paired-reads (in 115 unique pairings) successfully merged out of 6341 (in 228 pairings) input.
+6923 paired-reads (in 134 unique pairings) successfully merged out of 7432 (in 288 pairings) input.
+9537 paired-reads (in 182 unique pairings) successfully merged out of 10299 (in 338 pairings) input.
+9472 paired-reads (in 138 unique pairings) successfully merged out of 10139 (in 291 pairings) input.
+3235 paired-reads (in 85 unique pairings) successfully merged out of 3520 (in 149 pairings) input.
+4721 paired-reads (in 115 unique pairings) successfully merged out of 5276 (in 251 pairings) input.
+12394 paired-reads (in 107 unique pairings) successfully merged out of 12662 (in 192 pairings) input.
+8073 paired-reads (in 83 unique pairings) successfully merged out of 8434 (in 156 pairings) input.
+5616 paired-reads (in 48 unique pairings) successfully merged out of 5703 (in 82 pairings) input.
+148224 paired-reads (in 240 unique pairings) successfully merged out of 154553 (in 809 pairings) input.
+4760 paired-reads (in 119 unique pairings) successfully merged out of 5264 (in 238 pairings) input.
+6949 paired-reads (in 102 unique pairings) successfully merged out of 7481 (in 217 pairings) input.
+12868 paired-reads (in 150 unique pairings) successfully merged out of 13572 (in 302 pairings) input.
+56936 paired-reads (in 174 unique pairings) successfully merged out of 60065 (in 434 pairings) input.
+Duplicate sequences detected and merged.
+Duplicate sequences detected and merged.
+The sequences being tabled vary in length.
+Identified 480 bimeras out of 2223 input sequences.
+Duplicate sequences detected and merged.
+Duplicate sequences detected and merged.
+Warning messages:
+1: Transformation introduced infinite values in continuous y-axis 
+2: Transformation introduced infinite values in continuous y-axis 
+3: Transformation introduced infinite values in continuous y-axis 
+4: Transformation introduced infinite values in continuous y-axis 

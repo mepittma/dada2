@@ -57,9 +57,14 @@ dada2 <- function(name, f_trunc, r_trunc, f_EE, r_EE){
   # Filter the data
   filt_path <- paste0(base_path,"Data/filt_16S/",name)
   
-  filtFs <- file.path(filt_path, paste0(sample.names, "_F_filt.fastq.gz"))
-  filtRs <- file.path(filt_path, paste0(sample.names, "_R_filt.fastq.gz"))
+  filtFs <- file.path(filt_path,"/", paste0(sample.names, "_F_filt.fastq.gz"))
+  filtRs <- file.path(filt_path,"/", paste0(sample.names, "_R_filt.fastq.gz"))
   
+  write(paste0("fnFs: ", fnFs),stderr())
+  write(paste0("filtFs: ", filtFs), stderr())
+  write(paste0("fnRs: ", fnRs), stderr())
+  write(paste0("filtRs: ", filtRs), stderr())
+
   out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen=c(f_trunc,r_trunc),
                        maxN=0, maxEE=c(f_EE,r_EE), truncQ=2, rm.phix=TRUE,
                        compress=TRUE, multithread=TRUE)
@@ -124,9 +129,14 @@ dada2 <- function(name, f_trunc, r_trunc, f_EE, r_EE){
 
 # # # # # # # # COMMANDS # # # # # # # # 
 
-folders = c("Baxter_AOMDSS", "Helm_DSS", "TMM_AOMDSS_2014", 
+folders = c("Helm_DSS", "TMM_AOMDSS_2014", 
             "TMM_AOMDSS_2016", "TMM_DSS", "UTS_DSS", "UMAA_DSS")
 
-for (folder in folder) {
-  dada2(folder, 100, 50, 2, 2)
-}
+# Completed: Helm_DSS
+# dada2("Helm_DSS", 100, 50, 2, 2)
+
+#dada2("TMM_AOMDSS_2014", 0, 0, 2, 2)
+#dada2("TMM_AOMDSS_2016", 0, 0, 2, 2)
+#dada2("TMM_DSS", 0, 0, 2, 2)
+#dada2("UTS_DSS", 100, 100, 2, 2)
+dada2("UMAA_DSS", 0, 0, 2, 2)
