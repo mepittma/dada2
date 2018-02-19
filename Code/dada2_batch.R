@@ -129,14 +129,19 @@ dada2 <- function(name, f_trunc, r_trunc, f_EE, r_EE){
 
 # # # # # # # # COMMANDS # # # # # # # # 
 
-folders = c("Helm_DSS", "TMM_AOMDSS_2014", 
+folders = c("Helm_DSS", "TMM_AOMDSS_2014", "UCSF_DNR", "Baxter_AOMDSS",
             "TMM_AOMDSS_2016", "TMM_DSS", "UTS_DSS", "UMAA_DSS")
 
 # Completed: Helm_DSS
 # dada2("Helm_DSS", 100, 50, 2, 2)
-
 #dada2("TMM_AOMDSS_2014", 0, 0, 2, 2)
 #dada2("TMM_AOMDSS_2016", 0, 0, 2, 2)
 #dada2("TMM_DSS", 0, 0, 2, 2)
 #dada2("UTS_DSS", 100, 100, 2, 2)
-dada2("UMAA_DSS", 0, 0, 2, 2)
+#dada2("UMAA_DSS", 0, 0, 2, 2)
+
+# Rerun: Helm and UTS; try running Baxter and UCSF
+dada2("Helm_DSS", 25, 25, 2, 2)
+dada2("UTS_DSS", 25, 25, 2, 2)
+dada2("Baxter_AOMDSS", 25, 25, 2, 2)
+dada2("UCSF_DNR", 200, 150, 2, 2)
