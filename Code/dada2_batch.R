@@ -120,11 +120,11 @@ dada2 <- function(name, f_trunc, r_trunc, f_EE, r_EE){
   
   # # # # # # # # # # # # # # # # # # # # # # # # 
   # 7. Assign taxonomy
-  taxa <- assignTaxonomy(seqtab.nochim, 
-                         paste0(silva_path,"/silva_nr_v128_train_set.fa.gz"), multithread=TRUE)
-  taxa <- addSpecies(taxa, 
-                     paste0(silva_path,"/silva_species_assignment_v128.fa.gz"))
-  saveRDS(taxa, file = paste0(out_path, "/Taxa/",name,"_taxa_silva_plus.rds"))
+#  taxa <- assignTaxonomy(seqtab.nochim, 
+#                         paste0(silva_path,"/silva_nr_v128_train_set.fa.gz"), multithread=TRUE)
+#  taxa <- addSpecies(taxa, 
+#                     paste0(silva_path,"/silva_species_assignment_v128.fa.gz"))
+#  saveRDS(taxa, file = paste0(out_path, "/Taxa/",name,"_taxa_silva_plus.rds"))
 }
 
 # # # # # # # # # # # # # # # # # # # # # ## # # # # # # # # # #
@@ -205,11 +205,11 @@ dada2_single <- function(name, trunc, EE){
   
   # # # # # # # # # # # # # # # # # # # # # # # # 
   # 7. Assign taxonomy
-  taxa <- assignTaxonomy(seqtab.nochim, 
-                         paste0(silva_path,"/silva_nr_v128_train_set.fa.gz"), multithread=TRUE)
-  taxa <- addSpecies(taxa, 
-                     paste0(silva_path,"/silva_species_assignment_v128.fa.gz"))
-  saveRDS(taxa, file = paste0(out_path, "/Taxa/",name,"_taxa_silva_plus.rds"))
+ # taxa <- assignTaxonomy(seqtab.nochim, 
+ #                        paste0(silva_path,"/silva_nr_v128_train_set.fa.gz"), multithread=TRUE)
+ # taxa <- addSpecies(taxa, 
+ #                    paste0(silva_path,"/silva_species_assignment_v128.fa.gz"))
+ # saveRDS(taxa, file = paste0(out_path, "/Taxa/",name,"_taxa_silva_plus.rds"))
 }
 
 # # # # # # # # COMMANDS # # # # # # # # 
