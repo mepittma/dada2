@@ -225,12 +225,12 @@ folders = c("Helm_DSS", "TMM_AOMDSS_2014", "UCSF_DNR", "Baxter_AOMDSS",
 #dada2("UTS_DSS", 100, 100, 2, 2)
 #dada2("UMAA_DSS", 0, 0, 2, 2)
 
-# Rerun: Helm and UTS; try running Baxter and UCSF
-dada2("Helm_DSS", 0, 0, 2, 2)
-dada2("UTS_DSS", 25, 25, 2, 2)
-dada2("Baxter_AOMDSS", 0, 0, 2, 2)
-dada2("UCSF_DNR", 200, 150, 2, 2)
-
 # Run for first time: TNBS single-end samples
 dada2_single("UTA_TNBS",25,2)
 dada2_single("UCSD_TNBS",0,2)
+
+# Rerun: Helm and UTS; try running Baxter and UCSF
+#dada2("Helm_DSS", 0, 0, 2, 2)
+dada2("UTS_DSS", 25, 25, 2, 2)
+dada2("Baxter_AOMDSS", 0, 0, 2, 2)
+dada2("UCSF_DNR", 200, 150, 2, 2)
