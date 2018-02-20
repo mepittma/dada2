@@ -3,7 +3,6 @@
 base_dir = "/Users/student/Documents/PollardRotation/dada2"
 
 
-# # # # # # RERUN WITH LESS STRICT MERGING # # # # # # # # # #
 # Load in the Helm data
 name = "Helm_DSS"
 
@@ -27,7 +26,6 @@ seqs <- readRDS(paste0(base_dir, "/Output/SeqTables/",name,"_seqtab_nochim.rds")
 responses <- data[,c("SRA_Sample","Treatment")]
 
 
-# # # # # # # # # # ACTUALLY READY # # # # # # # # # # 
 # Load in the TMM_DSS data
 name = "TMM_DSS"
 data = read.table(paste0(base_dir, "/MetaData/",name,"_metadata.txt"), sep = '\t', header = TRUE)
