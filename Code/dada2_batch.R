@@ -198,7 +198,7 @@ dada2_single <- function(name, trunc, EE){
   getN <- function(x) sum(getUniques(x))
   track <- cbind(out, sapply(dadaFs, getN), rowSums(seqtab), rowSums(seqtab.nochim))
   # If processing a single sample, remove the sapply calls: e.g. replace sapply(dadaFs, getN) with getN(dadaFs)
-  colnames(track) <- c("input", "filtered", "denoised", "merged", "tabled", "nonchim")
+  colnames(track) <- c("input", "filtered", "denoised", "tabled", "nonchim")
   rownames(track) <- sample.names
   saveRDS(track, file=paste0(out_path,"/QC/",name,"_trackedReads.rds"))
   
