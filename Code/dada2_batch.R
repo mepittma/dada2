@@ -229,6 +229,6 @@ folders = c("Helm_DSS", "TMM_AOMDSS_2014", "UCSF_DNR", "Baxter_AOMDSS",
 
 # Rerun: Helm and UTS; try running Baxter and UCSF
 #dada2("Helm_DSS", 0, 0, 2, 2)
-dada2("UTS_DSS", 10, 10, 2, 2)
+dada2("UTS_DSS", 0, 0, 2, 2)
 dada2("Baxter_AOMDSS", 0, 0, 2, 2)
 dada2("UCSF_DNR", 200, 150, 2, 2)
