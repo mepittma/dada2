@@ -43,16 +43,16 @@ dada2 <- function(name, f_trunc, r_trunc, f_EE, r_EE){
   # 2. QC/Filtering
   
   # Save an image to summarize quality profiles of the samples
-  img_path = paste0(base_path,"Data/test_img")
+#  img_path = paste0(base_path,"Data/test_img")
   
-  pdf(paste0(img_path,"/QualityProfiles/",name,"_QP.pdf"))
-  for (sample in sample.names){
-    print(plotQualityProfile(
-      c(paste0(path,"/", sample ,"_pass_1.fastq.gz"), 
-        paste0(path,"/", sample ,"_pass_2.fastq.gz"))
-      ))
-  }
-  dev.off()
+#  pdf(paste0(img_path,"/QualityProfiles/",name,"_QP.pdf"))
+#  for (sample in sample.names){
+#    print(plotQualityProfile(
+#      c(paste0(path,"/", sample ,"_pass_1.fastq.gz"), 
+#        paste0(path,"/", sample ,"_pass_2.fastq.gz"))
+#      ))
+#  }
+#  dev.off()
   
   # Filter the data
   filt_path <- paste0(base_path,"Data/filt_16S/",name)
@@ -145,13 +145,13 @@ dada2_single <- function(name, trunc, EE){
   # Save an image to summarize quality profiles of the samples
   img_path = paste0(base_path,"Data/test_img")
   
-  pdf(paste0(img_path,"/QualityProfiles/",name,"_QP.pdf"))
-  for (sample in sample.names){
-    print(plotQualityProfile(
-      paste0(path,"/", sample ,"_pass_1.fastq.gz")
-    ))
-  }
-  dev.off()
+  #pdf(paste0(img_path,"/QualityProfiles/",name,"_QP.pdf"))
+  #for (sample in sample.names){
+  #  print(plotQualityProfile(
+  #    paste0(path,"/", sample ,"_pass_1.fastq.gz")
+  #  ))
+  #}
+  #dev.off()
   
   # Filter the data
   filt_path <- paste0(base_path,"Data/filt_16S/",name)
@@ -214,21 +214,14 @@ dada2_single <- function(name, trunc, EE){
 
 # # # # # # # # COMMANDS # # # # # # # # 
 
-folders = c("Helm_DSS", "TMM_AOMDSS_2014", "UCSF_DNR", "Baxter_AOMDSS",
-            "TMM_AOMDSS_2016", "TMM_DSS", "UTS_DSS", "UMAA_DSS")
+dada2("Baxter_AOMDSS", 190, 170, 2, 2)
+dada2("Helm_DSS", 200, 150, 2, 2)
+dada2("TMM_AOMDSS_2014", 250, 160, 2, 2)
+dada2("TMM_AOMDSS_2016", 250, 200, 2, 2)
+dada2("TMM_DSS", 250, 200, 2, 2)
+dada2_single("UCSD_TNBS",240,2)
+dada2("UCSF_DNR", 230, 175, 2, 2)
+dada2("UMAA_DSS", 240, 170, 2, 2)
+dada2_single("UTA_TNBS",300,2)
+dada2("UTS_DSS", 160, 230, 2, 2)
 
-# Completed: Helm_DSS
-#dada2("TMM_AOMDSS_2014", 0, 0, 2, 2)
-#dada2("TMM_AOMDSS_2016", 0, 0, 2, 2)
-#dada2("TMM_DSS", 0, 0, 2, 2)
-#dada2("UMAA_DSS", 0, 0, 2, 2)
-
-# Run for first time: TNBS single-end samples
-#dada2_single("UTA_TNBS",25,2)
-#dada2_single("UCSD_TNBS",0,2)
-
-# Rerun: Helm and UTS; try running Baxter and UCSF
-#dada2("Helm_DSS", 0, 0, 2, 2)
-dada2("UTS_DSS", 0, 0, 2, 2)
-dada2("Baxter_AOMDSS", 0, 0, 2, 2)
-dada2("UCSF_DNR", 200, 150, 2, 2)
