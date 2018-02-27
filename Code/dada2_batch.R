@@ -43,7 +43,7 @@ dada2 <- function(name, f_trunc, r_trunc, f_EE, r_EE){
   # 2. QC/Filtering
   
   # Save an image to summarize quality profiles of the samples
-#  img_path = paste0(base_path,"Data/test_img")
+  img_path = paste0(base_path,"Data/test_img")
   
 #  pdf(paste0(img_path,"/QualityProfiles/",name,"_QP.pdf"))
 #  for (sample in sample.names){
