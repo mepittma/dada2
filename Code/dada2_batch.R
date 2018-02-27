@@ -190,9 +190,9 @@ dada2_single <- function(name, trunc, EE){
   
   # Create and save out sequence tables
   seqtab <- makeSequenceTable(dadaFs)
-  seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE)
-  saveRDS(seqtab.nochim, 
-          file = paste0(out_path,"/SeqTables/",name,"_seqtab_nochim.rds"))
+  seqtab.nochim <- try(removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE),TRUE)
+  try(saveRDS(seqtab.nochim, 
+          file = paste0(out_path,"/SeqTables/",name,"_seqtab_nochim.rds")),TRUE)
   
   # Track reads through pipeline
   getN <- function(x) sum(getUniques(x))
@@ -205,18 +205,18 @@ dada2_single <- function(name, trunc, EE){
   
   # # # # # # # # # # # # # # # # # # # # # # # # 
   # 7. Assign taxonomy
- # taxa <- assignTaxonomy(seqtab.nochim, 
- #                        paste0(silva_path,"/silva_nr_v128_train_set.fa.gz"), multithread=TRUE)
- # taxa <- addSpecies(taxa, 
- #                    paste0(silva_path,"/silva_species_assignment_v128.fa.gz"))
- # saveRDS(taxa, file = paste0(out_path, "/Taxa/",name,"_taxa_silva_plus.rds"))
+  taxa <- try(assignTaxonomy(seqtab.nochim, 
+                         paste0(silva_path,"/silva_nr_v128_train_set.fa.gz"), multithread=TRUE), TRUE)
+  taxa <- try(addSpecies(taxa, 
+                     paste0(silva_path,"/silva_species_assignment_v128.fa.gz")), TRUE)
+  try(saveRDS(taxa, file = paste0(out_path, "/Taxa/",name,"_taxa_silva_plus.rds")), TRUE)
 }
 
 # # # # # # # # COMMANDS # # # # # # # # 
 
 dada2("Baxter_AOMDSS", 190, 170, 2, 2)
 dada2("Helm_DSS", 200, 150, 2, 2)
-dada2("TMM_AOMDSS_2014", 250, 160, 2, 2)
+dada2("TMM_AOMDSS_2014", 275, 200, 2, 2)
 dada2("TMM_AOMDSS_2016", 250, 200, 2, 2)
 dada2("TMM_DSS", 250, 200, 2, 2)
 dada2_single("UCSD_TNBS",240,2)
