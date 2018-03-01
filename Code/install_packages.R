@@ -7,3 +7,7 @@ install.packages("ggplot2",repos = "http://cran.us.r-project.org")
 biocLite("dada2")
 biocLite("ShortRead")
 biocLite("phyloseq")
+biocLite("decontam")
+
+library(devtools)
+install_github("benjjneb/decontam")
