@@ -214,14 +214,77 @@ dada2_single <- function(name, trunc, EE){
 
 # # # # # # # # COMMANDS # # # # # # # # 
 
-dada2("Baxter_AOMDSS", 190, 170, 2, 5)
-dada2("Helm_DSS", 200, 150, 2, 5)
+dada2("Baxter_AOMDSS", 190, 170, 2, 2)
+dada2("Helm_DSS", 200, 150, 2, 2)
 dada2_single("UCSD_TNBS",240,2)
 #dada2("UCSF_DNR", 230, 175, 2, 5)
-dada2("UMAA_DSS", 240, 170, 2, 5)
+dada2("UMAA_DSS", 240, 170, 2, 2)
 dada2_single("UTA_TNBS",300,2)
-dada2("UTS_DSS", 160, 230, 2, 5)
-dada2("TMM_AOMDSS_2014", 275, 200, 2, 5)
-dada2("TMM_AOMDSS_2016", 275, 200, 2, 5)
+dada2("UTS_DSS", 160, 230, 2, 2)
 dada2("TMM_DSS", 275, 200, 2, 5)
+dada2("TMM_AOMDSS_2014", 275, 200, 2, 2)
+dada2("TMM_AOMDSS_2016", 290, 220, 2, 5)
 
+
+# # # # # # # # # # # # # # # # # # # # # # # # 
+# Run for our data, which has already been filtered:
+
+name = "UCSF_DNR"
+filt_path <- paste0(base_path,"Data/filt_16S/sl_",name)
+img_path = paste0(base_path,"Data/test_img")
+
+filtFs <- file.path(filt_path,"/", paste0(sample.names, "_F_filt.fastq.gz"))
+filtRs <- file.path(filt_path,"/", paste0(sample.names, "_R_filt.fastq.gz"))
+
+write(paste0("fnFs: ", fnFs),stderr())
+write(paste0("filtFs: ", filtFs), stderr())
+write(paste0("fnRs: ", fnRs), stderr())
+write(paste0("filtRs: ", filtRs), stderr())
+
+# Save an image to summarize the error rates of the samples after filtering
+errF <- learnErrors(filtFs, multithread=TRUE)
+errR <- learnErrors(filtRs, multithread=TRUE)
+
+pdf(paste0(img_path,"/ErrorRates/",name,"_ER.pdf"))
+print(plotErrors(errF, nominalQ=TRUE))
+print(plotErrors(errR, nominalQ=TRUE))
+dev.off()
+
+# 3. Dereplication
+derepFs <- derepFastq(filtFs, verbose=TRUE)
+derepRs <- derepFastq(filtRs, verbose=TRUE)
+names(derepFs) <- sample.names
+names(derepRs) <- sample.names
+
+# 4. Sample inference
+dadaFs <- dada(derepFs, err=errF, multithread=TRUE)
+dadaRs <- dada(derepRs, err=errR, multithread=TRUE)
+
+# 5. Merge paired reads
+mergers <- mergePairs(dadaFs, derepFs, dadaRs, derepRs, verbose=TRUE)
+
+# 6. Construct tables
+out_path = paste0(base_path,"Output")
+silva_path = paste0(base_path,"Data/taxon")
+seqtab <- makeSequenceTable(mergers)
+seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE)
+saveRDS(seqtab.nochim, 
+        file = paste0(out_path,"/SeqTables/",name,"_seqtab_nochim.rds"))
+
+# Track reads through pipeline
+getN <- function(x) sum(getUniques(x))
+track <- cbind(out, sapply(dadaFs, getN), sapply(mergers, getN), rowSums(seqtab), rowSums(seqtab.nochim))
+# If processing a single sample, remove the sapply calls: e.g. replace sapply(dadaFs, getN) with getN(dadaFs)
+colnames(track) <- c("input", "filtered", "denoised", "merged", "tabled", "nonchim")
+rownames(track) <- sample.names
+saveRDS(track, file=paste0(out_path,"/QC/",name,"_trackedReads.rds"))
+
+# 7. Assign taxonomy
+taxa <- try(assignTaxonomy(seqtab.nochim, 
+                           paste0(silva_path,"/silva_nr_v128_train_set.fa.gz"), multithread=TRUE), TRUE)
+taxa <- try(addSpecies(taxa, 
+                       paste0(silva_path,"/silva_species_assignment_v128.fa.gz")), TRUE)
+try(saveRDS(taxa, file = paste0(out_path, "/Taxa/",name,"_taxa_silva_plus.rds")), TRUE)
+
+
+# # # # # # # # # # # # # # # # # # # # # ## # # # # # # # # # #

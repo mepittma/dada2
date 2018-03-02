@@ -10,6 +10,7 @@ library(decontam)
 base_path = "/Users/student/Documents/PollardRotation/dada2/"
 
 name = "Baxter_AOMDSS"
+
 # # # # # # # # # # # # # # # # # # # # # # # # 
 # 1. Load in the seqtab_nochim files and attach metadata
 
