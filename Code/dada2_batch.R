@@ -217,7 +217,7 @@ dada2_single <- function(name, trunc, EE){
 dada2("Baxter_AOMDSS", 190, 170, 2, 5)
 dada2("Helm_DSS", 200, 150, 2, 5)
 dada2_single("UCSD_TNBS",240,2)
-dada2("UCSF_DNR", 230, 175, 2, 5)
+#dada2("UCSF_DNR", 230, 175, 2, 5)
 dada2("UMAA_DSS", 240, 170, 2, 5)
 dada2_single("UTA_TNBS",300,2)
 dada2("UTS_DSS", 160, 230, 2, 5)
