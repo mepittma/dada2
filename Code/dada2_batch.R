@@ -220,9 +220,9 @@ dada2_single <- function(name, trunc, EE){
 #dada2("UMAA_DSS", 240, 170, 2, 2)
 #dada2_single("UTA_TNBS",300,2)
 #dada2("UTS_DSS", 160, 230, 2, 2)
-dada2("TMM_AOMDSS_2014", 275, 200, 2, 2)
-dada2("TMM_AOMDSS_2016", 290, 220, 2, 5)
-dada2("TMM_DSS", 290, 200, 2, 5)
+#dada2("TMM_AOMDSS_2014", 275, 200, 2, 2)
+#dada2("TMM_AOMDSS_2016", 290, 220, 2, 5)
+#dada2("TMM_DSS", 290, 200, 2, 5)
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # 
@@ -232,8 +232,9 @@ name = "UCSF_DNR"
 filt_path <- paste0(base_path,"Data/filt_16S/sl_",name)
 img_path = paste0(base_path,"Data/test_img")
 
-filtFs <- file.path(filt_path,"/", paste0(sample.names, "_F_filt.fastq.gz"))
-filtRs <- file.path(filt_path,"/", paste0(sample.names, "_R_filt.fastq.gz"))
+# Forward and reverse filenames have format RUNID_pass_1 for forward, RUNID_pass_2 for reverse
+filtFs <- sort(list.files(path, pattern="_F_filt.fastq.gz", full.names = TRUE))
+filtRs <- sort(list.files(path, pattern="_R_filt.fastq.gz", full.names = TRUE))
 
 write(paste0("fnFs: ", fnFs),stderr())
 write(paste0("filtFs: ", filtFs), stderr())
