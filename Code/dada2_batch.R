@@ -233,8 +233,8 @@ filt_path <- paste0(base_path,"Data/filt_16S/sl_",name)
 img_path = paste0(base_path,"Data/test_img")
 
 # Forward and reverse filenames have format RUNID_pass_1 for forward, RUNID_pass_2 for reverse
-filtFs <- sort(list.files(path, pattern="_F_filt.fastq.gz", full.names = TRUE))
-filtRs <- sort(list.files(path, pattern="_R_filt.fastq.gz", full.names = TRUE))
+filtFs <- sort(list.files(filt_path, pattern="_F_filt.fastq.gz", full.names = TRUE))
+filtRs <- sort(list.files(filt_path, pattern="_R_filt.fastq.gz", full.names = TRUE))
 
 write(paste0("fnFs: ", fnFs),stderr())
 write(paste0("filtFs: ", filtFs), stderr())
