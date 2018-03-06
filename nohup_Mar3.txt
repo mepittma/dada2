@@ -1,0 +1,911 @@
+Loading required package: Rcpp
+Loading required package: methods
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
+    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
+    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which, which.max, which.min
+
+Loading required package: BiocParallel
+Loading required package: Biostrings
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+Loading required package: GenomicRanges
+Loading required package: GenomicAlignments
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following object is masked from ‘package:base’:
+
+    apply
+
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4000172_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4003589_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4003590_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4003591_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004428_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004672_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004892_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004921_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004949_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004993_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006161_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006162_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006163_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006164_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006213_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007122_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007124_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007234_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007286_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007287_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007290_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007292_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007293_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007295_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007299_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007302_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007332_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007386_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007387_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007389_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007390_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007391_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007392_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007394_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007395_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007396_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007397_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007398_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007399_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007442_pass_1.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4000172_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003589_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003590_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003591_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004428_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004672_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004892_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004921_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004949_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004993_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006161_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006162_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006163_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006164_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006213_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007122_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007124_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007234_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007286_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007287_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007290_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007292_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007293_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007295_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007299_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007302_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007332_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007386_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007387_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007389_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007390_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007391_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007392_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007394_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007395_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007396_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007397_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007398_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007399_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007442_F_filt.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4000172_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4003589_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4003590_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4003591_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004428_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004672_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004892_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004921_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004949_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4004993_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006161_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006162_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006163_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006164_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4006213_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007122_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007124_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007234_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007286_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007287_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007290_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007292_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007293_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007295_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007299_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007302_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007332_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007386_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007387_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007389_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007390_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007391_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007392_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007394_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007395_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007396_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007397_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007398_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007399_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2014/SRR4007442_pass_2.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4000172_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003589_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003590_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003591_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004428_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004672_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004892_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004921_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004949_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004993_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006161_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006162_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006163_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006164_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006213_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007122_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007124_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007234_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007286_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007287_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007290_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007292_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007293_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007295_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007299_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007302_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007332_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007386_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007387_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007389_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007390_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007391_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007392_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007394_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007395_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007396_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007397_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007398_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007399_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007442_R_filt.fastq.gz
+Initializing error rates to maximum possible estimate.
+Sample 1 - 10340 reads in 5320 unique sequences.
+Sample 2 - 11893 reads in 6749 unique sequences.
+Sample 3 - 11893 reads in 6749 unique sequences.
+Sample 4 - 16629 reads in 9211 unique sequences.
+Sample 5 - 12792 reads in 7109 unique sequences.
+Sample 6 - 16039 reads in 8308 unique sequences.
+Sample 7 - 13168 reads in 6530 unique sequences.
+Sample 8 - 14119 reads in 6884 unique sequences.
+Sample 9 - 14023 reads in 6356 unique sequences.
+Sample 10 - 12566 reads in 5996 unique sequences.
+Sample 11 - 18799 reads in 8279 unique sequences.
+Sample 12 - 12469 reads in 5262 unique sequences.
+Sample 13 - 12029 reads in 4835 unique sequences.
+Sample 14 - 12154 reads in 6116 unique sequences.
+Sample 15 - 12119 reads in 5472 unique sequences.
+Sample 16 - 12306 reads in 5183 unique sequences.
+Sample 17 - 10833 reads in 4864 unique sequences.
+Sample 18 - 12388 reads in 5392 unique sequences.
+Sample 19 - 14353 reads in 7188 unique sequences.
+Sample 20 - 11419 reads in 4362 unique sequences.
+Sample 21 - 15127 reads in 5173 unique sequences.
+Sample 22 - 12345 reads in 5075 unique sequences.
+Sample 23 - 15476 reads in 6553 unique sequences.
+Sample 24 - 16017 reads in 7485 unique sequences.
+Sample 25 - 13543 reads in 7156 unique sequences.
+Sample 26 - 9619 reads in 4164 unique sequences.
+Sample 27 - 10331 reads in 5012 unique sequences.
+Sample 28 - 10823 reads in 5785 unique sequences.
+Sample 29 - 12880 reads in 7184 unique sequences.
+Sample 30 - 10765 reads in 5649 unique sequences.
+Sample 31 - 12225 reads in 6092 unique sequences.
+Sample 32 - 10381 reads in 5635 unique sequences.
+Sample 33 - 17212 reads in 6053 unique sequences.
+Sample 34 - 15815 reads in 9011 unique sequences.
+Sample 35 - 13982 reads in 5862 unique sequences.
+Sample 36 - 12838 reads in 5477 unique sequences.
+Sample 37 - 12932 reads in 5581 unique sequences.
+Sample 38 - 14647 reads in 7457 unique sequences.
+Sample 39 - 16086 reads in 7318 unique sequences.
+Sample 40 - 13222 reads in 6572 unique sequences.
+   selfConsist step 2 
+   selfConsist step 3 
+   selfConsist step 4 
+   selfConsist step 5 
+   selfConsist step 6 
+   selfConsist step 7 
+Convergence after  7  rounds.
+Total reads used:  528597 
+Initializing error rates to maximum possible estimate.
+Sample 1 - 10340 reads in 6605 unique sequences.
+Sample 2 - 11893 reads in 7997 unique sequences.
+Sample 3 - 11893 reads in 7997 unique sequences.
+Sample 4 - 16629 reads in 11319 unique sequences.
+Sample 5 - 12792 reads in 8539 unique sequences.
+Sample 6 - 16039 reads in 10528 unique sequences.
+Sample 7 - 13168 reads in 8660 unique sequences.
+Sample 8 - 14119 reads in 8325 unique sequences.
+Sample 9 - 14023 reads in 7868 unique sequences.
+Sample 10 - 12566 reads in 7281 unique sequences.
+Sample 11 - 18799 reads in 11229 unique sequences.
+Sample 12 - 12469 reads in 7283 unique sequences.
+Sample 13 - 12029 reads in 6213 unique sequences.
+Sample 14 - 12154 reads in 7343 unique sequences.
+Sample 15 - 12119 reads in 6546 unique sequences.
+Sample 16 - 12306 reads in 6905 unique sequences.
+Sample 17 - 10833 reads in 6301 unique sequences.
+Sample 18 - 12388 reads in 7231 unique sequences.
+Sample 19 - 14353 reads in 8802 unique sequences.
+Sample 20 - 11419 reads in 5758 unique sequences.
+Sample 21 - 15127 reads in 7343 unique sequences.
+Sample 22 - 12345 reads in 6737 unique sequences.
+Sample 23 - 15476 reads in 8907 unique sequences.
+Sample 24 - 16017 reads in 9731 unique sequences.
+Sample 25 - 13543 reads in 9094 unique sequences.
+Sample 26 - 9619 reads in 5736 unique sequences.
+Sample 27 - 10331 reads in 6542 unique sequences.
+Sample 28 - 10823 reads in 7363 unique sequences.
+Sample 29 - 12880 reads in 8581 unique sequences.
+Sample 30 - 10765 reads in 7185 unique sequences.
+Sample 31 - 12225 reads in 7315 unique sequences.
+Sample 32 - 10381 reads in 6942 unique sequences.
+Sample 33 - 17212 reads in 7806 unique sequences.
+Sample 34 - 15815 reads in 10817 unique sequences.
+Sample 35 - 13982 reads in 7838 unique sequences.
+Sample 36 - 12838 reads in 6818 unique sequences.
+Sample 37 - 12932 reads in 6758 unique sequences.
+Sample 38 - 14647 reads in 8877 unique sequences.
+Sample 39 - 16086 reads in 8939 unique sequences.
+Sample 40 - 13222 reads in 7844 unique sequences.
+   selfConsist step 2 
+   selfConsist step 3 
+   selfConsist step 4 
+   selfConsist step 5 
+   selfConsist step 6 
+   selfConsist step 7 
+Convergence after  7  rounds.
+Total reads used:  528597 
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4000172_F_filt.fastq.gz
+Encountered 5320 unique sequences from 10340 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003589_F_filt.fastq.gz
+Encountered 6749 unique sequences from 11893 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003590_F_filt.fastq.gz
+Encountered 6749 unique sequences from 11893 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003591_F_filt.fastq.gz
+Encountered 9211 unique sequences from 16629 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004428_F_filt.fastq.gz
+Encountered 7109 unique sequences from 12792 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004672_F_filt.fastq.gz
+Encountered 8308 unique sequences from 16039 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004892_F_filt.fastq.gz
+Encountered 6530 unique sequences from 13168 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004921_F_filt.fastq.gz
+Encountered 6884 unique sequences from 14119 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004949_F_filt.fastq.gz
+Encountered 6356 unique sequences from 14023 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004993_F_filt.fastq.gz
+Encountered 5996 unique sequences from 12566 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006161_F_filt.fastq.gz
+Encountered 8279 unique sequences from 18799 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006162_F_filt.fastq.gz
+Encountered 5262 unique sequences from 12469 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006163_F_filt.fastq.gz
+Encountered 4835 unique sequences from 12029 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006164_F_filt.fastq.gz
+Encountered 6116 unique sequences from 12154 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006213_F_filt.fastq.gz
+Encountered 5472 unique sequences from 12119 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007122_F_filt.fastq.gz
+Encountered 5183 unique sequences from 12306 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007124_F_filt.fastq.gz
+Encountered 4864 unique sequences from 10833 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007234_F_filt.fastq.gz
+Encountered 5392 unique sequences from 12388 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007286_F_filt.fastq.gz
+Encountered 7188 unique sequences from 14353 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007287_F_filt.fastq.gz
+Encountered 4362 unique sequences from 11419 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007290_F_filt.fastq.gz
+Encountered 5173 unique sequences from 15127 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007292_F_filt.fastq.gz
+Encountered 5075 unique sequences from 12345 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007293_F_filt.fastq.gz
+Encountered 6553 unique sequences from 15476 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007295_F_filt.fastq.gz
+Encountered 7485 unique sequences from 16017 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007299_F_filt.fastq.gz
+Encountered 7156 unique sequences from 13543 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007302_F_filt.fastq.gz
+Encountered 4164 unique sequences from 9619 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007332_F_filt.fastq.gz
+Encountered 5012 unique sequences from 10331 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007386_F_filt.fastq.gz
+Encountered 5785 unique sequences from 10823 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007387_F_filt.fastq.gz
+Encountered 7184 unique sequences from 12880 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007389_F_filt.fastq.gz
+Encountered 5649 unique sequences from 10765 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007390_F_filt.fastq.gz
+Encountered 6092 unique sequences from 12225 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007391_F_filt.fastq.gz
+Encountered 5635 unique sequences from 10381 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007392_F_filt.fastq.gz
+Encountered 6053 unique sequences from 17212 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007394_F_filt.fastq.gz
+Encountered 9011 unique sequences from 15815 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007395_F_filt.fastq.gz
+Encountered 5862 unique sequences from 13982 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007396_F_filt.fastq.gz
+Encountered 5477 unique sequences from 12838 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007397_F_filt.fastq.gz
+Encountered 5581 unique sequences from 12932 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007398_F_filt.fastq.gz
+Encountered 7457 unique sequences from 14647 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007399_F_filt.fastq.gz
+Encountered 7318 unique sequences from 16086 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007442_F_filt.fastq.gz
+Encountered 6572 unique sequences from 13222 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4000172_R_filt.fastq.gz
+Encountered 6605 unique sequences from 10340 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003589_R_filt.fastq.gz
+Encountered 7997 unique sequences from 11893 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003590_R_filt.fastq.gz
+Encountered 7997 unique sequences from 11893 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4003591_R_filt.fastq.gz
+Encountered 11319 unique sequences from 16629 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004428_R_filt.fastq.gz
+Encountered 8539 unique sequences from 12792 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004672_R_filt.fastq.gz
+Encountered 10528 unique sequences from 16039 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004892_R_filt.fastq.gz
+Encountered 8660 unique sequences from 13168 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004921_R_filt.fastq.gz
+Encountered 8325 unique sequences from 14119 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004949_R_filt.fastq.gz
+Encountered 7868 unique sequences from 14023 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4004993_R_filt.fastq.gz
+Encountered 7281 unique sequences from 12566 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006161_R_filt.fastq.gz
+Encountered 11229 unique sequences from 18799 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006162_R_filt.fastq.gz
+Encountered 7283 unique sequences from 12469 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006163_R_filt.fastq.gz
+Encountered 6213 unique sequences from 12029 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006164_R_filt.fastq.gz
+Encountered 7343 unique sequences from 12154 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4006213_R_filt.fastq.gz
+Encountered 6546 unique sequences from 12119 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007122_R_filt.fastq.gz
+Encountered 6905 unique sequences from 12306 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007124_R_filt.fastq.gz
+Encountered 6301 unique sequences from 10833 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007234_R_filt.fastq.gz
+Encountered 7231 unique sequences from 12388 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007286_R_filt.fastq.gz
+Encountered 8802 unique sequences from 14353 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007287_R_filt.fastq.gz
+Encountered 5758 unique sequences from 11419 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007290_R_filt.fastq.gz
+Encountered 7343 unique sequences from 15127 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007292_R_filt.fastq.gz
+Encountered 6737 unique sequences from 12345 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007293_R_filt.fastq.gz
+Encountered 8907 unique sequences from 15476 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007295_R_filt.fastq.gz
+Encountered 9731 unique sequences from 16017 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007299_R_filt.fastq.gz
+Encountered 9094 unique sequences from 13543 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007302_R_filt.fastq.gz
+Encountered 5736 unique sequences from 9619 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007332_R_filt.fastq.gz
+Encountered 6542 unique sequences from 10331 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007386_R_filt.fastq.gz
+Encountered 7363 unique sequences from 10823 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007387_R_filt.fastq.gz
+Encountered 8581 unique sequences from 12880 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007389_R_filt.fastq.gz
+Encountered 7185 unique sequences from 10765 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007390_R_filt.fastq.gz
+Encountered 7315 unique sequences from 12225 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007391_R_filt.fastq.gz
+Encountered 6942 unique sequences from 10381 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007392_R_filt.fastq.gz
+Encountered 7806 unique sequences from 17212 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007394_R_filt.fastq.gz
+Encountered 10817 unique sequences from 15815 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007395_R_filt.fastq.gz
+Encountered 7838 unique sequences from 13982 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007396_R_filt.fastq.gz
+Encountered 6818 unique sequences from 12838 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007397_R_filt.fastq.gz
+Encountered 6758 unique sequences from 12932 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007398_R_filt.fastq.gz
+Encountered 8877 unique sequences from 14647 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007399_R_filt.fastq.gz
+Encountered 8939 unique sequences from 16086 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2014///SRR4007442_R_filt.fastq.gz
+Encountered 7844 unique sequences from 13222 total sequences read.
+Sample 1 - 10340 reads in 5320 unique sequences.
+Sample 2 - 11893 reads in 6749 unique sequences.
+Sample 3 - 11893 reads in 6749 unique sequences.
+Sample 4 - 16629 reads in 9211 unique sequences.
+Sample 5 - 12792 reads in 7109 unique sequences.
+Sample 6 - 16039 reads in 8308 unique sequences.
+Sample 7 - 13168 reads in 6530 unique sequences.
+Sample 8 - 14119 reads in 6884 unique sequences.
+Sample 9 - 14023 reads in 6356 unique sequences.
+Sample 10 - 12566 reads in 5996 unique sequences.
+Sample 11 - 18799 reads in 8279 unique sequences.
+Sample 12 - 12469 reads in 5262 unique sequences.
+Sample 13 - 12029 reads in 4835 unique sequences.
+Sample 14 - 12154 reads in 6116 unique sequences.
+Sample 15 - 12119 reads in 5472 unique sequences.
+Sample 16 - 12306 reads in 5183 unique sequences.
+Sample 17 - 10833 reads in 4864 unique sequences.
+Sample 18 - 12388 reads in 5392 unique sequences.
+Sample 19 - 14353 reads in 7188 unique sequences.
+Sample 20 - 11419 reads in 4362 unique sequences.
+Sample 21 - 15127 reads in 5173 unique sequences.
+Sample 22 - 12345 reads in 5075 unique sequences.
+Sample 23 - 15476 reads in 6553 unique sequences.
+Sample 24 - 16017 reads in 7485 unique sequences.
+Sample 25 - 13543 reads in 7156 unique sequences.
+Sample 26 - 9619 reads in 4164 unique sequences.
+Sample 27 - 10331 reads in 5012 unique sequences.
+Sample 28 - 10823 reads in 5785 unique sequences.
+Sample 29 - 12880 reads in 7184 unique sequences.
+Sample 30 - 10765 reads in 5649 unique sequences.
+Sample 31 - 12225 reads in 6092 unique sequences.
+Sample 32 - 10381 reads in 5635 unique sequences.
+Sample 33 - 17212 reads in 6053 unique sequences.
+Sample 34 - 15815 reads in 9011 unique sequences.
+Sample 35 - 13982 reads in 5862 unique sequences.
+Sample 36 - 12838 reads in 5477 unique sequences.
+Sample 37 - 12932 reads in 5581 unique sequences.
+Sample 38 - 14647 reads in 7457 unique sequences.
+Sample 39 - 16086 reads in 7318 unique sequences.
+Sample 40 - 13222 reads in 6572 unique sequences.
+Sample 1 - 10340 reads in 6605 unique sequences.
+Sample 2 - 11893 reads in 7997 unique sequences.
+Sample 3 - 11893 reads in 7997 unique sequences.
+Sample 4 - 16629 reads in 11319 unique sequences.
+Sample 5 - 12792 reads in 8539 unique sequences.
+Sample 6 - 16039 reads in 10528 unique sequences.
+Sample 7 - 13168 reads in 8660 unique sequences.
+Sample 8 - 14119 reads in 8325 unique sequences.
+Sample 9 - 14023 reads in 7868 unique sequences.
+Sample 10 - 12566 reads in 7281 unique sequences.
+Sample 11 - 18799 reads in 11229 unique sequences.
+Sample 12 - 12469 reads in 7283 unique sequences.
+Sample 13 - 12029 reads in 6213 unique sequences.
+Sample 14 - 12154 reads in 7343 unique sequences.
+Sample 15 - 12119 reads in 6546 unique sequences.
+Sample 16 - 12306 reads in 6905 unique sequences.
+Sample 17 - 10833 reads in 6301 unique sequences.
+Sample 18 - 12388 reads in 7231 unique sequences.
+Sample 19 - 14353 reads in 8802 unique sequences.
+Sample 20 - 11419 reads in 5758 unique sequences.
+Sample 21 - 15127 reads in 7343 unique sequences.
+Sample 22 - 12345 reads in 6737 unique sequences.
+Sample 23 - 15476 reads in 8907 unique sequences.
+Sample 24 - 16017 reads in 9731 unique sequences.
+Sample 25 - 13543 reads in 9094 unique sequences.
+Sample 26 - 9619 reads in 5736 unique sequences.
+Sample 27 - 10331 reads in 6542 unique sequences.
+Sample 28 - 10823 reads in 7363 unique sequences.
+Sample 29 - 12880 reads in 8581 unique sequences.
+Sample 30 - 10765 reads in 7185 unique sequences.
+Sample 31 - 12225 reads in 7315 unique sequences.
+Sample 32 - 10381 reads in 6942 unique sequences.
+Sample 33 - 17212 reads in 7806 unique sequences.
+Sample 34 - 15815 reads in 10817 unique sequences.
+Sample 35 - 13982 reads in 7838 unique sequences.
+Sample 36 - 12838 reads in 6818 unique sequences.
+Sample 37 - 12932 reads in 6758 unique sequences.
+Sample 38 - 14647 reads in 8877 unique sequences.
+Sample 39 - 16086 reads in 8939 unique sequences.
+Sample 40 - 13222 reads in 7844 unique sequences.
+0 paired-reads (in 0 unique pairings) successfully merged out of 10340 (in 2652 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 11893 (in 2484 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 11893 (in 2484 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 16629 (in 3655 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12792 (in 2860 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 16039 (in 3891 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 13168 (in 2682 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 14119 (in 2848 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 14023 (in 2742 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12566 (in 2588 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 18799 (in 4221 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12469 (in 1662 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12029 (in 1836 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12154 (in 2697 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12119 (in 2035 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12306 (in 2409 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 10833 (in 1788 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12388 (in 2348 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 14353 (in 3099 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 11419 (in 1474 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 15127 (in 1978 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12345 (in 1982 pairings) input.
+3 paired-reads (in 2 unique pairings) successfully merged out of 15476 (in 2522 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 16017 (in 2775 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 13543 (in 2881 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 9619 (in 1372 pairings) input.
+4 paired-reads (in 4 unique pairings) successfully merged out of 10331 (in 2141 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 10823 (in 2347 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12880 (in 2723 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 10765 (in 2471 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12225 (in 2633 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 10381 (in 2708 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 17212 (in 2841 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 15815 (in 3736 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 13982 (in 2524 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12838 (in 2247 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 12932 (in 2580 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 14647 (in 3074 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 16086 (in 3261 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 13222 (in 2738 pairings) input.
+Identified 0 bimeras out of 6 input sequences.
+Warning messages:
+1: Transformation introduced infinite values in continuous y-axis 
+2: Transformation introduced infinite values in continuous y-axis 
+3: Transformation introduced infinite values in continuous y-axis 
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417459_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417463_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417470_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417473_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417483_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417495_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417568_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417576_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417580_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417584_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417588_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417597_pass_1.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417459_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417463_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417470_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417473_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417483_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417495_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417568_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417576_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417580_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417584_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417588_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417597_F_filt.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417459_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417463_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417470_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417473_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417483_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417495_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417568_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417576_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417580_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417584_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417588_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_AOMDSS_2016/SRR4417597_pass_2.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417459_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417463_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417470_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417473_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417483_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417495_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417568_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417576_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417580_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417584_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417588_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417597_R_filt.fastq.gz
+Initializing error rates to maximum possible estimate.
+Sample 1 - 28629 reads in 10122 unique sequences.
+Sample 2 - 26317 reads in 10362 unique sequences.
+Sample 3 - 23397 reads in 10531 unique sequences.
+Sample 4 - 31721 reads in 9976 unique sequences.
+Sample 5 - 29248 reads in 10211 unique sequences.
+Sample 6 - 27626 reads in 8920 unique sequences.
+Sample 7 - 27590 reads in 11780 unique sequences.
+Sample 8 - 24481 reads in 8179 unique sequences.
+Sample 9 - 29698 reads in 9343 unique sequences.
+Sample 10 - 33953 reads in 10486 unique sequences.
+Sample 11 - 25025 reads in 10134 unique sequences.
+Sample 12 - 27866 reads in 11829 unique sequences.
+   selfConsist step 2 
+   selfConsist step 3 
+   selfConsist step 4 
+   selfConsist step 5 
+   selfConsist step 6 
+Convergence after  6  rounds.
+Total reads used:  335551 
+Initializing error rates to maximum possible estimate.
+Sample 1 - 28629 reads in 17037 unique sequences.
+Sample 2 - 26317 reads in 16263 unique sequences.
+Sample 3 - 23397 reads in 15010 unique sequences.
+Sample 4 - 31721 reads in 17275 unique sequences.
+Sample 5 - 29248 reads in 16260 unique sequences.
+Sample 6 - 27626 reads in 13845 unique sequences.
+Sample 7 - 27590 reads in 17308 unique sequences.
+Sample 8 - 24481 reads in 15014 unique sequences.
+Sample 9 - 29698 reads in 17263 unique sequences.
+Sample 10 - 33953 reads in 20380 unique sequences.
+Sample 11 - 25025 reads in 16891 unique sequences.
+Sample 12 - 27866 reads in 17649 unique sequences.
+   selfConsist step 2 
+   selfConsist step 3 
+   selfConsist step 4 
+   selfConsist step 5 
+   selfConsist step 6 
+   selfConsist step 7 
+   selfConsist step 8 
+Convergence after  8  rounds.
+Total reads used:  335551 
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417459_F_filt.fastq.gz
+Encountered 10122 unique sequences from 28629 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417463_F_filt.fastq.gz
+Encountered 10362 unique sequences from 26317 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417470_F_filt.fastq.gz
+Encountered 10531 unique sequences from 23397 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417473_F_filt.fastq.gz
+Encountered 9976 unique sequences from 31721 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417483_F_filt.fastq.gz
+Encountered 10211 unique sequences from 29248 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417495_F_filt.fastq.gz
+Encountered 8920 unique sequences from 27626 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417568_F_filt.fastq.gz
+Encountered 11780 unique sequences from 27590 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417576_F_filt.fastq.gz
+Encountered 8179 unique sequences from 24481 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417580_F_filt.fastq.gz
+Encountered 9343 unique sequences from 29698 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417584_F_filt.fastq.gz
+Encountered 10486 unique sequences from 33953 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417588_F_filt.fastq.gz
+Encountered 10134 unique sequences from 25025 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417597_F_filt.fastq.gz
+Encountered 11829 unique sequences from 27866 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417459_R_filt.fastq.gz
+Encountered 17037 unique sequences from 28629 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417463_R_filt.fastq.gz
+Encountered 16263 unique sequences from 26317 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417470_R_filt.fastq.gz
+Encountered 15010 unique sequences from 23397 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417473_R_filt.fastq.gz
+Encountered 17275 unique sequences from 31721 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417483_R_filt.fastq.gz
+Encountered 16260 unique sequences from 29248 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417495_R_filt.fastq.gz
+Encountered 13845 unique sequences from 27626 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417568_R_filt.fastq.gz
+Encountered 17308 unique sequences from 27590 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417576_R_filt.fastq.gz
+Encountered 15014 unique sequences from 24481 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417580_R_filt.fastq.gz
+Encountered 17263 unique sequences from 29698 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417584_R_filt.fastq.gz
+Encountered 20380 unique sequences from 33953 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417588_R_filt.fastq.gz
+Encountered 16891 unique sequences from 25025 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_AOMDSS_2016///SRR4417597_R_filt.fastq.gz
+Encountered 17649 unique sequences from 27866 total sequences read.
+Sample 1 - 28629 reads in 10122 unique sequences.
+Sample 2 - 26317 reads in 10362 unique sequences.
+Sample 3 - 23397 reads in 10531 unique sequences.
+Sample 4 - 31721 reads in 9976 unique sequences.
+Sample 5 - 29248 reads in 10211 unique sequences.
+Sample 6 - 27626 reads in 8920 unique sequences.
+Sample 7 - 27590 reads in 11780 unique sequences.
+Sample 8 - 24481 reads in 8179 unique sequences.
+Sample 9 - 29698 reads in 9343 unique sequences.
+Sample 10 - 33953 reads in 10486 unique sequences.
+Sample 11 - 25025 reads in 10134 unique sequences.
+Sample 12 - 27866 reads in 11829 unique sequences.
+Sample 1 - 28629 reads in 17037 unique sequences.
+Sample 2 - 26317 reads in 16263 unique sequences.
+Sample 3 - 23397 reads in 15010 unique sequences.
+Sample 4 - 31721 reads in 17275 unique sequences.
+Sample 5 - 29248 reads in 16260 unique sequences.
+Sample 6 - 27626 reads in 13845 unique sequences.
+Sample 7 - 27590 reads in 17308 unique sequences.
+Sample 8 - 24481 reads in 15014 unique sequences.
+Sample 9 - 29698 reads in 17263 unique sequences.
+Sample 10 - 33953 reads in 20380 unique sequences.
+Sample 11 - 25025 reads in 16891 unique sequences.
+Sample 12 - 27866 reads in 17649 unique sequences.
+24589 paired-reads (in 513 unique pairings) successfully merged out of 28629 (in 1919 pairings) input.
+21580 paired-reads (in 520 unique pairings) successfully merged out of 26317 (in 2121 pairings) input.
+17794 paired-reads (in 496 unique pairings) successfully merged out of 23397 (in 2662 pairings) input.
+28254 paired-reads (in 599 unique pairings) successfully merged out of 31721 (in 1975 pairings) input.
+25320 paired-reads (in 1312 unique pairings) successfully merged out of 29248 (in 3352 pairings) input.
+24623 paired-reads (in 682 unique pairings) successfully merged out of 27626 (in 2078 pairings) input.
+23807 paired-reads (in 364 unique pairings) successfully merged out of 27590 (in 1881 pairings) input.
+21849 paired-reads (in 358 unique pairings) successfully merged out of 24481 (in 914 pairings) input.
+26755 paired-reads (in 358 unique pairings) successfully merged out of 29698 (in 1670 pairings) input.
+30857 paired-reads (in 469 unique pairings) successfully merged out of 33953 (in 1511 pairings) input.
+20298 paired-reads (in 632 unique pairings) successfully merged out of 25025 (in 2975 pairings) input.
+22967 paired-reads (in 478 unique pairings) successfully merged out of 27866 (in 2756 pairings) input.
+The sequences being tabled vary in length.
+Identified 4234 bimeras out of 6699 input sequences.
+Warning messages:
+1: Transformation introduced infinite values in continuous y-axis 
+2: Transformation introduced infinite values in continuous y-axis 
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419852_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419853_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419854_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419855_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419856_pass_1.fastq.gz
+fnFs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4423081_pass_1.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419852_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419853_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419854_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419855_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419856_F_filt.fastq.gz
+filtFs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4423081_F_filt.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419852_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419853_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419854_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419855_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4419856_pass_2.fastq.gz
+fnRs: /pollard/home/mpittman/dada2/Data/raw_16S/TMM_DSS/SRR4423081_pass_2.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419852_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419853_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419854_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419855_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419856_R_filt.fastq.gz
+filtRs: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4423081_R_filt.fastq.gz
+Initializing error rates to maximum possible estimate.
+Sample 1 - 27009 reads in 10733 unique sequences.
+Sample 2 - 33299 reads in 9690 unique sequences.
+Sample 3 - 22583 reads in 8697 unique sequences.
+Sample 4 - 32503 reads in 11831 unique sequences.
+Sample 5 - 29598 reads in 8869 unique sequences.
+Sample 6 - 29855 reads in 9542 unique sequences.
+   selfConsist step 2 
+   selfConsist step 3 
+   selfConsist step 4 
+   selfConsist step 5 
+Convergence after  5  rounds.
+Total reads used:  174847 
+Initializing error rates to maximum possible estimate.
+Sample 1 - 27009 reads in 12985 unique sequences.
+Sample 2 - 33299 reads in 15133 unique sequences.
+Sample 3 - 22583 reads in 11684 unique sequences.
+Sample 4 - 32503 reads in 16266 unique sequences.
+Sample 5 - 29598 reads in 13989 unique sequences.
+Sample 6 - 29855 reads in 12408 unique sequences.
+   selfConsist step 2 
+   selfConsist step 3 
+   selfConsist step 4 
+   selfConsist step 5 
+   selfConsist step 6 
+   selfConsist step 7 
+   selfConsist step 8 
+   selfConsist step 9 
+   selfConsist step 10 
+Self-consistency loop terminated before convergence.
+Total reads used:  174847 
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419852_F_filt.fastq.gz
+Encountered 10733 unique sequences from 27009 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419853_F_filt.fastq.gz
+Encountered 9690 unique sequences from 33299 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419854_F_filt.fastq.gz
+Encountered 8697 unique sequences from 22583 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419855_F_filt.fastq.gz
+Encountered 11831 unique sequences from 32503 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419856_F_filt.fastq.gz
+Encountered 8869 unique sequences from 29598 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4423081_F_filt.fastq.gz
+Encountered 9542 unique sequences from 29855 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419852_R_filt.fastq.gz
+Encountered 12985 unique sequences from 27009 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419853_R_filt.fastq.gz
+Encountered 15133 unique sequences from 33299 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419854_R_filt.fastq.gz
+Encountered 11684 unique sequences from 22583 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419855_R_filt.fastq.gz
+Encountered 16266 unique sequences from 32503 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4419856_R_filt.fastq.gz
+Encountered 13989 unique sequences from 29598 total sequences read.
+Dereplicating sequence entries in Fastq file: /pollard/home/mpittman/dada2/Data/filt_16S/TMM_DSS///SRR4423081_R_filt.fastq.gz
+Encountered 12408 unique sequences from 29855 total sequences read.
+Sample 1 - 27009 reads in 10733 unique sequences.
+Sample 2 - 33299 reads in 9690 unique sequences.
+Sample 3 - 22583 reads in 8697 unique sequences.
+Sample 4 - 32503 reads in 11831 unique sequences.
+Sample 5 - 29598 reads in 8869 unique sequences.
+Sample 6 - 29855 reads in 9542 unique sequences.
+Sample 1 - 27009 reads in 12985 unique sequences.
+Sample 2 - 33299 reads in 15133 unique sequences.
+Sample 3 - 22583 reads in 11684 unique sequences.
+Sample 4 - 32503 reads in 16266 unique sequences.
+Sample 5 - 29598 reads in 13989 unique sequences.
+Sample 6 - 29855 reads in 12408 unique sequences.
+13095 paired-reads (in 676 unique pairings) successfully merged out of 27009 (in 3019 pairings) input.
+14109 paired-reads (in 386 unique pairings) successfully merged out of 33299 (in 1552 pairings) input.
+7871 paired-reads (in 155 unique pairings) successfully merged out of 22583 (in 2105 pairings) input.
+14010 paired-reads (in 363 unique pairings) successfully merged out of 32503 (in 2373 pairings) input.
+18739 paired-reads (in 385 unique pairings) successfully merged out of 29598 (in 1008 pairings) input.
+8702 paired-reads (in 173 unique pairings) successfully merged out of 29855 (in 2017 pairings) input.
+The sequences being tabled vary in length.
+Identified 1215 bimeras out of 2138 input sequences.
+Warning messages:
+1: Transformation introduced infinite values in continuous y-axis 
+2: Transformation introduced infinite values in continuous y-axis 
+3: Transformation introduced infinite values in continuous y-axis 
+Error in paste0(sample.names, "_F_filt.fastq.gz") : 
+  object 'sample.names' not found
+Calls: file.path -> paste0
+Execution halted

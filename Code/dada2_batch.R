@@ -113,7 +113,7 @@ dada2 <- function(name, f_trunc, r_trunc, f_EE, r_EE){
   getN <- function(x) sum(getUniques(x))
   track <- cbind(out, sapply(dadaFs, getN), sapply(mergers, getN), rowSums(seqtab), rowSums(seqtab.nochim))
   # If processing a single sample, remove the sapply calls: e.g. replace sapply(dadaFs, getN) with getN(dadaFs)
-  colnames(track) <- c("input", "filtered", "denoised", "merged", "tabled", "nonchim")
+  colnames(track) <- c("raw","filtered","denoised", "merged", "tabled", "nonchim")
   rownames(track) <- sample.names
   saveRDS(track, file=paste0(out_path,"/QC/",name,"_trackedReads.rds"))
   
@@ -235,10 +235,11 @@ img_path = paste0(base_path,"Data/test_img")
 # Forward and reverse filenames have format RUNID_pass_1 for forward, RUNID_pass_2 for reverse
 filtFs <- sort(list.files(filt_path, pattern="_F_filt.fastq.gz", full.names = TRUE))
 filtRs <- sort(list.files(filt_path, pattern="_R_filt.fastq.gz", full.names = TRUE))
+sample.names <- sapply(strsplit(basename(filtFs), "_"), `[`, 1)
 
-write(paste0("fnFs: ", fnFs),stderr())
+#write(paste0("fnFs: ", fnFs),stderr())
 write(paste0("filtFs: ", filtFs), stderr())
-write(paste0("fnRs: ", fnRs), stderr())
+#write(paste0("fnRs: ", fnRs), stderr())
 write(paste0("filtRs: ", filtRs), stderr())
 
 # Save an image to summarize the error rates of the samples after filtering
@@ -273,9 +274,9 @@ saveRDS(seqtab.nochim,
 
 # Track reads through pipeline
 getN <- function(x) sum(getUniques(x))
-track <- cbind(out, sapply(dadaFs, getN), sapply(mergers, getN), rowSums(seqtab), rowSums(seqtab.nochim))
+track <- cbind(sapply(dadaFs, getN), sapply(mergers, getN), rowSums(seqtab), rowSums(seqtab.nochim))
 # If processing a single sample, remove the sapply calls: e.g. replace sapply(dadaFs, getN) with getN(dadaFs)
-colnames(track) <- c("input", "filtered", "denoised", "merged", "tabled", "nonchim")
+colnames(track) <- c("denoised", "merged", "tabled", "nonchim")
 rownames(track) <- sample.names
 saveRDS(track, file=paste0(out_path,"/QC/",name,"_trackedReads.rds"))
 
