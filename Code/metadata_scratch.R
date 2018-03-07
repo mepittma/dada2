@@ -2,6 +2,18 @@
 
 base_dir = "/Users/student/Documents/PollardRotation/dada2"
 
+dummy_app <- function(meta, model){
+
+  meta$DNR <- 0
+  meta$TNBS <- 0
+  meta$AOMDSS <- 0
+  meta$DSS <- 0
+  
+  meta[[model]][which(meta$response == 1)] <- 1
+  
+  return(meta)
+}
+
 
 # # # # # # # # # # # # # #  BAXTER # # # # # # # # # # # # # # 
 name = "Baxter_AOMDSS"
@@ -11,20 +23,28 @@ meta = read.table(paste0(base_dir, "/MetaData/",name,"_metadata.txt"),
 # Load in sequence abundances
 seqs <- readRDS(paste0(base_dir, "/Output/SeqTables/",name,"_seqtab_nochim.rds"))
 # Rename the underscores in the metadata to hyphens (to accomadate necessary filename changes...)
-metanames <- gsub("_", "-", row.names(data), fixed=TRUE)
+metanames <- gsub("_", "-", row.names(seqs), fixed=TRUE)
 row.names(meta) <- metanames
 # Confirm that the two can be merged
 merged <- merge(seqs, meta, by="row.names")
 
 # Remove samples not relevant to my hypothesis
 meta <- meta[grep("Mus mus", meta$feature),]
+meta <- meta[!grepl("Cancer", row.names(meta)),]
 meta <- meta[,c("collection_date", "subspecf_gen_lin", "host_subject_id", "inoculum", "disease_stat", "tumors")]
-names(meta) <- c("collection_date", "genotype", "Library_Name","inoculum", "disease_stat")
+names(meta) <- c("collection_date", "genotype", "Library_Name","inoculum", "disease_stat", "tumors")
 
 # Make sure to name Response column  "response", with 0 = no IBD and 1 = IBD
 names(meta)[names(meta) == 'disease_stat'] <- 'response'
 meta$response <- gsub('aom/dss', '1', meta$response)
 meta$response <- gsub('normal', '0', meta$response)
+
+# Replace the collection date with the number of days indicated by sample name
+#meta$days <- sub('.*\\-', '', row.names(meta))
+#meta$days <- gsub('d','',meta$days)
+
+# Append the dummy variables
+meta <- dummy_app(meta, "AOMDSS")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -47,11 +67,20 @@ merged <- merge(seqs, meta, by="row.names")
 # Remove samples not relevant to my hypothesis
 meta <- meta[,c("collection_date", "host_genotype", "Library_Name", "Microbiota", "Treatment")]
 names(meta) <- c("collection_date", "genotype", "Library_Name", "inoculum", "Treatment")
+meta <- meta[which(meta$genotype == "C57BL/6N"),]
 
 # Make sure to name Response column  "response", with 0 = no IBD and 1 = IBD
 names(meta)[names(meta) == 'Treatment'] <- 'response'
 meta$response <- gsub('DSS', '1', meta$response)
 meta$response <- gsub('none', '0', meta$response)
+
+# Replace the collection date with the number of days indicated by sample name
+#dates <- sort(as.Date(unique(as.vector(meta$collection_date)), format="%d-%b-%Y"))
+#meta$days <- sub('.*\\-', '', row.names(meta))
+#meta$days <- gsub('d','',meta$days)
+
+# Append the dummy variables
+meta <- dummy_app(meta, "DSS")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -108,6 +137,9 @@ names(meta) <- c("collection_date","Library_Name","response")
 meta$response <- gsub('AOM/DSS colon cancer induction', '0', meta$response)
 meta$response <- gsub('DSS colon colitis induction', '1', meta$response)
 
+# Append the dummy variables
+meta <- dummy_app(meta, "AOMDSS")
+
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
 
@@ -132,6 +164,9 @@ names(meta) <- c("collection_date","Library_Name","inoculum","response")
 # Make sure to name Response column  "response", with 0 = no IBD and 1 = IBD
 meta$response <- gsub('.*A.*', '0', meta$response)
 meta$response <- gsub('.*F.*', '1', meta$response)
+
+# Append the dummy variables
+meta <- dummy_app(meta, "AOMDSS")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -165,6 +200,9 @@ current_meta$response <- gsub('WT|DNR', 'unknown', current_meta$response)
 # Recombine
 meta <- rbind(pilot_meta,current_meta)
 
+# Append the dummy variables
+meta <- dummy_app(meta, "AOMDSS")
+
 # Save out both
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), 
             sep="\t", quote=FALSE)
@@ -190,6 +228,9 @@ names(meta) <- c("collection_date", "genotype", "Library_Name","response")
 meta$response <- gsub('.*DSS.*', '1', meta$response)
 meta$response <- gsub('.*NoAbs.*', '0', meta$response)
 
+# Append the dummy variables
+meta <- dummy_app(meta, "AOMDSS")
+
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
 
@@ -214,6 +255,9 @@ names(meta) <- c("collection_date", "Library_Name","response")
 meta$response <- gsub('CONTROL', '0', meta$response)
 meta$response <- gsub('TNBS', '1', meta$response)
 
+# Append the dummy variables
+meta <- dummy_app(meta, "AOMDSS")
+
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
 
@@ -237,6 +281,9 @@ names(meta) <- c("Library_Name","inoculum","response")
 # Make sure to name Response column  "response", with 0 = no IBD and 1 = IBD
 meta$response <- gsub('Mock|Sodium tungstate|DSS\\+sodium tungstate', '0', meta$response)
 meta$response <- gsub('DSS', '1', meta$response)
+
+# Append the dummy variables
+meta <- dummy_app(meta, "AOMDSS")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
