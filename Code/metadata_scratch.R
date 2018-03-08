@@ -138,7 +138,7 @@ meta$response <- gsub('AOM/DSS colon cancer induction', '0', meta$response)
 meta$response <- gsub('DSS colon colitis induction', '1', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "AOMDSS")
+meta <- dummy_app(meta, "DSS")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -166,7 +166,7 @@ meta$response <- gsub('.*A.*', '0', meta$response)
 meta$response <- gsub('.*F.*', '1', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "AOMDSS")
+meta <- dummy_app(meta, "TNBS")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -195,18 +195,23 @@ current_meta <- meta[which(meta$cohort == "Current"),]
 # Create response column for the pilot metadata
 pilot_meta$response <- gsub('WT', '0', pilot_meta$response)
 pilot_meta$response <- gsub('DNR', '1', pilot_meta$response)
+
+# Remove response column from current data
 current_meta$response <- gsub('WT|DNR', 'unknown', current_meta$response)
 
-# Recombine
-meta <- rbind(pilot_meta,current_meta)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "AOMDSS")
+pilot_meta <- dummy_app(pilot_meta, "DNR")
+current_meta$DNR <- 0
+current_meta$TNBS <- 0
+current_meta$AOMDSS <- 0
+current_meta$DSS <- 0
 
 # Save out both
-write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), 
+write.table(pilot_meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), 
             sep="\t", quote=FALSE)
-
+write.table(current_meta, file=paste0(base_dir,"/MetaData/",name,"_TEST_processed.txt"), 
+            sep="\t", quote=FALSE)
 
 # # # # # # # # # # # # # # UMAA DSS # # # # # # # # # # # # # # 
 name = "UMAA_DSS"
@@ -229,7 +234,7 @@ meta$response <- gsub('.*DSS.*', '1', meta$response)
 meta$response <- gsub('.*NoAbs.*', '0', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "AOMDSS")
+meta <- dummy_app(meta, "DSS")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -256,7 +261,7 @@ meta$response <- gsub('CONTROL', '0', meta$response)
 meta$response <- gsub('TNBS', '1', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "AOMDSS")
+meta <- dummy_app(meta, "TNBS")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -283,7 +288,7 @@ meta$response <- gsub('Mock|Sodium tungstate|DSS\\+sodium tungstate', '0', meta$
 meta$response <- gsub('DSS', '1', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "AOMDSS")
+meta <- dummy_app(meta, "DSS")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)

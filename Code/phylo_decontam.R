@@ -159,5 +159,7 @@ phyloML(base_path, out_path, "UCSD_TNBS", c("collection_date","inoculum","respon
 phyloML(base_path, out_path, "UMAA_DSS", c("collection_date","response"))
 phyloML(base_path, out_path, "UTA_TNBS", c("collection_date","response"))
 #phyloML(base_path, out_path, "UTS_DSS", c("inoculum","response")) # why does this one just have EukaryotaNANANA?
-#Tell dada2 to try the reverse-complement orientation with assignTaxonomy(..., tryRC=TRUE)
+
+
+
 
