@@ -282,9 +282,9 @@ dada2("UTS_DSS", 160, 230, 2, 2)
 
 # 7. Assign taxonomy
 #taxa <- try(assignTaxonomy(seqtab.nochim, 
-                           paste0(silva_path,"/silva_nr_v128_train_set.fa.gz"), multithread=TRUE), TRUE)
+#                           paste0(silva_path,"/silva_nr_v128_train_set.fa.gz"), multithread=TRUE), TRUE)
 #taxa <- try(addSpecies(taxa, 
-                       paste0(silva_path,"/silva_species_assignment_v128.fa.gz")), TRUE)
+#                       paste0(silva_path,"/silva_species_assignment_v128.fa.gz")), TRUE)
 #try(saveRDS(taxa, file = paste0(out_path, "/Taxa/",name,"_taxa_silva_plus.rds")), TRUE)
 
 

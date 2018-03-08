@@ -184,7 +184,6 @@ metanames <- gsub("_", "-", meta$sample)
 row.names(meta) <- metanames
 # Confirm that the two can be merged
 merged <- merge(seqs, meta, by="row.names")
-row.names(meta) <- meta$sample
 names(meta) <- c("Library_Name","genotype","cohort")
 meta$response <- meta$genotype
 
@@ -197,8 +196,7 @@ pilot_meta$response <- gsub('WT', '0', pilot_meta$response)
 pilot_meta$response <- gsub('DNR', '1', pilot_meta$response)
 
 # Remove response column from current data
-current_meta$response <- gsub('WT|DNR', 'unknown', current_meta$response)
-
+current_meta$response <- NULL
 
 # Append the dummy variables
 pilot_meta <- dummy_app(pilot_meta, "DNR")
