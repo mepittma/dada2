@@ -172,6 +172,38 @@ test_meta$DNR <- "unknown"
 meta$response<-NULL
 c_meta <- rbind(meta, test_meta)
 
+out_path = "/Users/student/Documents/PollardRotation/scikit/Data/OOS"
+ps = read_seqtab(seq,taxa,test_meta)
+# Remove contaminants based on negative controls
+sample_data(ps)$is.neg <- sample_data(ps)$genotype == "WT"
+contamdf.prev <- isContaminant(ps, method="prevalence", neg="is.neg")
+to_remove <- contamdf.prev[which(contamdf.prev$contaminant),]
+decon <- prune_taxa(!contamdf.prev$contaminant, ps)
+# Save out filtering info
+contam_tax <- taxa[which(row.names(taxa) %in% row.names(to_remove)),]
+write.table(contam_tax, 
+            file = base_path, "Output/Decontam/", name, "_COMBINED_removedTaxa.tsv", sep = "\t")
+visualize(ps, var_list, name, suff = "raw_OOS", base_path)
+visualize(decon, var_list, name, suff = "decon_OOS", base_path)
+# Extract abundance matrix from the phyloseq object
+OTU1 = as(otu_table(ps), "matrix")
+if(taxa_are_rows(ps)){OTU1 <- t(OTU1)}
+seq_df = as.data.frame(OTU1)
+# Get taxon abundance table
+OTU = as.data.frame(as(tax_table(ps), "matrix"))
+OTU$C = paste(OTU$Kingdom, OTU$Phylum, OTU$Class, OTU$Order, OTU$Family, 
+              OTU$Genus, OTU$Species, sep="_")
+lookup <- cbind(row.names(OTU), OTU$C)
+lookup <- as.data.frame(lookup)
+OTU2 <- as.data.frame(OTU1)
+match(names(OTU2), lookup$V1)
+names(OTU2) = lookup$V2[match(names(OTU2), lookup$V1)]
+# Save out both matrices to scikitlearn folder - 
+# ACTUALLY, no, because these will have wrong # features
+# See below where it's added back into conglomerate
+write.table(OTU1, file = paste0(out_path,name,"_seq.tsv"), sep = "\t", quote = FALSE)
+write.table(OTU2, file = paste0(out_path,name,"_tax.tsv"), sep = "\t", quote = FALSE)
+
 taxa <- readRDS(paste0(base_path, "Output/Taxa/", name,"_taxa_silva_plus.rds"))
 seq <- readRDS(paste0(base_path, "Output/SeqTables/", name, "_seqtab_nochim.rds"))
 ps = read_seqtab(seq,taxa,c_meta)
@@ -207,18 +239,60 @@ for(name in name_list){
   tax_data <- read.table(paste0(
     "/Users/student/Documents/PollardRotation/scikit/Data/",name,"_tax.tsv"))
   
+  # add a column indicating study identity
+  seq_data$study <- paste(name)
+  tax_data$study <- paste(name)
+  
   # merge with df, creating 0s where no data for the sequences exists (note: is this ok?)
   seq_df <- rbind(setDT(seq_data), setDT(seq_df), fill=TRUE)
-  seq_df[is.na(seq_df)] <- 0
-  
   tax_df <- rbind(setDT(tax_data), setDT(tax_df), fill=TRUE)
-  tax_df[is.na(tax_df)] <- 0
   
 }
 
+# Read in the test data and merge that too
+seq_tdata <- read.table("/Users/student/Documents/PollardRotation/scikit/Data/OOSUCSF_DNR_seq.tsv")
+tax_tdata <- read.table("/Users/student/Documents/PollardRotation/scikit/Data/OOSUCSF_DNR_tax.tsv")
+seq_tdata$study <- "DNR_test"
+tax_tdata$study <- "DNR_test"
+### REMOVE THIS SOMEDAY ###
+seq_df$Row.names <- NULL
+tax_df$Row.names <- NULL
+
+seq_df <- rbind(setDT(seq_tdata), setDT(seq_df), fill=TRUE)
+tax_df <- rbind(setDT(tax_tdata), setDT(tax_df), fill=TRUE)
+
+seq_df[is.na(seq_df)] <- 0
+tax_df[is.na(tax_df)] <- 0
+
+# Now take out the rows that were part of the test data
+test_seq <- seq_df[which(seq_df$study == "DNR_test"),]
+test_tax <- tax_df[which(tax_df$study == "DNR_test"),]
+
+tr_seq_df <- seq_df[which(seq_df$study != "DNR_test"),]
+tr_tax_df <- tax_df[which(tax_df$study != "DNR_test"),]
+
+# Make one for UCSF_DNR (not test version)
+ucsf_seq <- seq_df[which(seq_df$study == "UCSF_DNR"),]
+ucsf_tax <- seq_df[which(tax_df$study == "UCSF_DNR"),]
+
+# Remove study column
+test_seq$study <- NULL
+test_tax$study <- NULL
+tr_seq_df$study <- NULL
+tr_tax_df$study <- NULL
+ucsf_seq$study <- NULL
+ucsf_tax$study <- NULL
+
 # Save out the feature files
-write.table(seq_df, file = "/Users/student/Documents/PollardRotation/scikit/Data/Sequence_FF.tsv", sep = "\t", row.names = FALSE)
-write.table(tax_df, file = "/Users/student/Documents/PollardRotation/scikit/Data/Taxonomy_FF.tsv", sep = "\t", row.names = FALSE)
+write.table(tr_seq_df, file = "/Users/student/Documents/PollardRotation/scikit/Data/seq_FF.tsv", sep = "\t", row.names = FALSE)
+write.table(tr_tax_df, file = "/Users/student/Documents/PollardRotation/scikit/Data/tax_FF.tsv", sep = "\t", row.names = FALSE)
+write.table(test_seq, file = "/Users/student/Documents/PollardRotation/scikit/Data/test_seq_FF.tsv", sep = "\t", row.names = FALSE)
+write.table(test_tax, file = "/Users/student/Documents/PollardRotation/scikit/Data/test_tax_FF.tsv", sep = "\t", row.names = FALSE)
+
+write.table(ucsf_seq, file = "/Users/student/Documents/PollardRotation/scikit/Data/UCSF_DNR_seq_FF.tsv", sep = "\t", row.names = FALSE)
+write.table(ucsf_tax, file = "/Users/student/Documents/PollardRotation/scikit/Data/UCSF_DNR_tax_FF.tsv.tsv", sep = "\t", row.names = FALSE)
+
+
 
 # # # # # # # # # # # # # # # # # # 
 # Visualize in PhyloSeq
