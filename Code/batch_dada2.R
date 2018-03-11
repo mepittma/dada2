@@ -51,7 +51,7 @@ single_read <- function(name){
 # # # # # # # # # # # # # # # # # # # # # # # # 
 # 2. QC/Filtering
 
-paired_filt <- function(name, sample.names, f_trunc, r_trunc){
+paired_filt <- function(name, sample.names, f_trunc, r_trunc, f_EE, r_EE){
   
   # Save an image to summarize quality profiles of the samples
   img_path = paste0(base_path,"Data/test_img")
@@ -92,7 +92,7 @@ paired_filt <- function(name, sample.names, f_trunc, r_trunc){
   return(list(errF, errR))
 }
 
-single_filt <- function(name, sample.names, trunc){
+single_filt <- function(name, sample.names, trunc, EE){
 
   img_path = paste0(base_path,"Data/test_img")
   pdf(paste0(img_path,"/QualityProfiles/",name,"_QP.pdf"))
@@ -219,15 +219,15 @@ dada_paired <- function(name, f_trunc, r_trunc, f_EE, r_EE){
 dada_single <- function(name, f_trunc, f_EE){
   
   # Read in names
-  name_list <- paired_read(name)
+  name_list <- single_read(name)
   fnFs <- name_list[1]
   sample.names <- name_list[2]
   
   # Filter data
-  errF <- paired_filt(name, sample.names, f_trunc, f_EE)
+  errF <- single_filt(name, sample.names, f_trunc, f_EE)
   
   # Inference and table creation
-  seqs <- paired_inference(filtFs, errF, sample.names)
+  seqs <- single_inference(filtFs, errF, sample.names)
   get_tabs(seqs, track_reads = "full_single")
 }
 
