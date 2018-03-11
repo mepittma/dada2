@@ -8,6 +8,7 @@ dummy_app <- function(meta, model){
   meta$TNBS <- 0
   meta$AOMDSS <- 0
   meta$DSS <- 0
+  meta$IL10 <- 0
   
   meta[[model]][which(meta$response == 1)] <- 1
   
@@ -31,8 +32,10 @@ merged <- merge(seqs, meta, by="row.names")
 # Remove samples not relevant to my hypothesis
 meta <- meta[grep("Mus mus", meta$feature),]
 meta <- meta[!grepl("Cancer", row.names(meta)),]
-meta <- meta[,c("collection_date", "subspecf_gen_lin", "host_subject_id", "inoculum", "disease_stat", "tumors")]
-names(meta) <- c("collection_date", "genotype", "Library_Name","inoculum", "disease_stat", "tumors")
+meta <- meta[,c("collection_date", "subspecf_gen_lin", 
+                "host_subject_id", "inoculum", "disease_stat", "tumors")]
+names(meta) <- c("collection_date", "genotype", "Library_Name","inoculum", 
+                 "disease_stat", "tumors")
 
 # Make sure to name Response column  "response", with 0 = no IBD and 1 = IBD
 names(meta)[names(meta) == 'disease_stat'] <- 'response'
@@ -86,7 +89,7 @@ meta <- dummy_app(meta, "DSS")
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
 
 
-# # # # # # # # # # # # # # TMM AOM/DSS 2014 - needs response clarification # # # # # # # # # # # # # # 
+# # # # # # # # # # # # TMM AOM/DSS 2014 - needs response clarification # # # # # # # # # # # # 
 #name = "TMM_AOMDSS_2014"
 #meta = read.table(paste0(base_dir, "/MetaData/",name,"_metadata.txt"), 
 #                  sep = '\t', header = TRUE)
@@ -101,7 +104,7 @@ write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep=
 # Remove samples not relevant to my hypothesis
 #meta <- meta[,c("collection_date", "Sample_Name", "env_feature")]
 
-# # # # # # # # # # # # # # TMM AOM/DSS 2016 - needs response clarification # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # TMM AOM/DSS 2016 - needs response clarification # # # ## # # # # # 
 #name = "TMM_AOMDSS_2016"
 #meta = read.table(paste0(base_dir, "/MetaData/",name,"_metadata.txt"), 
 #                  sep = '\t', header = TRUE)
@@ -167,6 +170,32 @@ meta$response <- gsub('.*F.*', '1', meta$response)
 
 # Append the dummy variables
 meta <- dummy_app(meta, "TNBS")
+
+# Save out as tab-delimited text file with the format name_processed.txt
+write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
+
+# # # # # # # # # # # # # # UCSD IL10 # # # # # # # # # # # # # # 
+name = "UCSD_IL10"
+meta = read.table(paste0(base_dir, "/MetaData/",name,"_metadata.txt"), 
+                  sep = '\t', header = TRUE)
+
+# Remove samples not relevant to my hypothesis
+meta <- meta[which(!is.na(meta$Library_Name)),]
+row.names(meta) <- meta$Run
+meta <- meta[,c("collection_timestamp","cage", "gender", "genotype","run_prefix","timepoint")]
+names(meta) <- c("collection_date","cage","gender","response","run","timepoint")
+
+# Make sure to name Response column  "response", with 0 = no IBD and 1 = IBD
+meta$response <- gsub('c57', '0', meta$response)
+meta$response <- gsub('IL10', '1', meta$response)
+
+# Append the dummy variables
+meta <- dummy_app(meta, "IL10")
+
+# Load in sequence abundances
+seqs <- readRDS(paste0(base_dir, "/Output/SeqTables/",name,"_seqtab_nochim.rds"))
+# Confirm that the two can be merged
+merged <- merge(seqs, meta, by="row.names")
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
