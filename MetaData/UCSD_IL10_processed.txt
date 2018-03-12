@@ -1,531 +1,531 @@
-collection_date	cage	gender	response	run	timepoint	DNR	TNBS	AOMDSS	DSS	IL10
-ERR2183215	11/3/13	COF6	Female	1	run1	week_21	0	0	0	0	1
-ERR2183216	11/3/13	COF6	Female	1	run1	week_21	0	0	0	0	1
-ERR2183217	7/23/13	COM1	Male	1	run1	week_6_ileal	0	0	0	0	1
-ERR2183218	7/23/13	COM1	Male	1	run1	week_6_ileal	0	0	0	0	1
-ERR2183219	7/23/13	COM2	Male	1	run1	week_6_ileal	0	0	0	0	1
-ERR2183220	10/3/13	COM4	Male	1	run1	week_15	0	0	0	0	1
-ERR2183221	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1
-ERR2183222	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1
-ERR2183223	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1
-ERR2183224	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1
-ERR2183225	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1
-ERR2183226	9/25/13	COF2	Female	1	run1	week_15	0	0	0	0	1
-ERR2183227	9/25/13	COF2	Female	1	run1	week_15	0	0	0	0	1
-ERR2183228	9/25/13	COF2	Female	1	run1	week_15	0	0	0	0	1
-ERR2183234	11/7/13	COM2	Male	1	run1	week_21	0	0	0	0	1
-ERR2183235	11/7/13	COM2	Male	1	run1	week_21	0	0	0	0	1
-ERR2183236	11/7/13	COM2	Male	1	run1	week_21	0	0	0	0	1
-ERR2183237	11/7/13	COM4	Male	1	run1	week_21	0	0	0	0	1
-ERR2183238	11/7/13	COM4	Male	1	run1	week_21	0	0	0	0	1
-ERR2183247	6/8/13	TBI02	Female	1	run1	gavage_D1	0	0	0	0	1
-ERR2183249	6/8/13	TBI04	Female	1	run1	gavage_D1	0	0	0	0	1
-ERR2183251	6/8/13	TBI06	Female	1	run1	gavage_D1	0	0	0	0	1
-ERR2183252	6/8/13	TBI07	Female	1	run1	gavage_D1	0	0	0	0	1
-ERR2183255	2/10/14	TBC03	Female	0	run1	gavage_D5	0	0	0	0	0
-ERR2183257	2/10/14	TBC05	Female	0	run1	gavage_D5	0	0	0	0	0
-ERR2183259	2/10/14	TBC07	Female	0	run1	gavage_D5	0	0	0	0	0
-ERR2183261	2/10/14	TBC09	Female	0	run1	gavage_D5	0	0	0	0	0
-ERR2183263	2/10/14	TBC11	Female	0	run1	gavage_D5	0	0	0	0	0
-ERR2183265	2/10/14	TBC13	Female	0	run1	gavage_D5	0	0	0	0	0
-ERR2183266	3/4/14	TBC01	Female	0	run1	pupday21	0	0	0	0	0
-ERR2183268	3/4/14	TBC03	Female	0	run1	pupday21	0	0	0	0	0
-ERR2183270	3/5/14	TBC05	Female	0	run1	pupday21	0	0	0	0	0
-ERR2183273	3/5/14	TBC07	Female	0	run1	pupday21	0	0	0	0	0
-ERR2183275	3/5/14	TBC09	Female	0	run1	pupday21	0	0	0	0	0
-ERR2183277	3/8/14	TBC11	Female	0	run1	pupday21	0	0	0	0	0
-ERR2183279	3/11/14	TBC13	Female	0	run1	pupday21	0	0	0	0	0
-ERR2183280	3/11/14	TBC01	Female	0	run1	pupday28	0	0	0	0	0
-ERR2183283	3/11/14	TBC03	Female	0	run1	pupday28	0	0	0	0	0
-ERR2183290	3/14/14	TBC11	Female	0	run1	pupday28	0	0	0	0	0
-ERR2183292	6/9/13	TBI02	Female	1	run1	gavage_D2	0	0	0	0	1
-ERR2183293	3/18/14	TBC13	Female	0	run1	pupday28	0	0	0	0	0
-ERR2183294	3/19/14	TBC01	Female	0	run1	pupday36	0	0	0	0	0
-ERR2183295	3/19/14	TBC03	Female	0	run1	pupday36	0	0	0	0	0
-ERR2183297	3/21/14	TBC05	Female	0	run1	pupday36	0	0	0	0	0
-ERR2183299	3/21/14	TBC07	Female	0	run1	pupday36	0	0	0	0	0
-ERR2183301	3/21/14	TBC09	Female	0	run1	pupday36	0	0	0	0	0
-ERR2183303	3/23/14	TBC11	Female	0	run1	pupday36	0	0	0	0	0
-ERR2183305	3/27/13	TBC13	Female	0	run1	pupday36	0	0	0	0	0
-ERR2183307	4/4/14	TBC03	Female	0	run1	week_6	0	0	0	0	0
-ERR2183309	4/4/14	TBC05	Female	0	run1	week_6	0	0	0	0	0
-ERR2183311	4/4/14	TBC07	Female	0	run1	week_6	0	0	0	0	0
-ERR2183312	6/9/13	TBI04	Female	1	run1	gavage_D2	0	0	0	0	1
-ERR2183314	4/4/14	TBC11	Female	0	run1	week_6	0	0	0	0	0
-ERR2183316	4/4/14	TBC13	Female	0	run1	week_6	0	0	0	0	0
-ERR2183317	4/11/14	TBC01	Female	0	run1	week_7_fecal	0	0	0	0	0
-ERR2183319	4/11/14	TBC03	Female	0	run1	week_7_fecal	0	0	0	0	0
-ERR2183323	4/11/14	TBC05	Female	0	run1	week_7_fecal	0	0	0	0	0
-ERR2183325	4/11/14	TBC07	Female	0	run1	week_7_fecal	0	0	0	0	0
-ERR2183327	4/11/14	TBC09	Female	0	run1	week_7_fecal	0	0	0	0	0
-ERR2183329	4/11/14	TBC11	Female	0	run1	week_7_fecal	0	0	0	0	0
-ERR2183331	4/11/14	TBC13	Female	0	run1	week_7_fecal	0	0	0	0	0
-ERR2183332	6/9/13	TBI06	Female	1	run1	gavage_D2	0	0	0	0	1
-ERR2183333	4/16/14	TBC01	Female	0	run1	week_8_fecal	0	0	0	0	0
-ERR2183335	4/16/14	TBC03	Female	0	run1	week_8_fecal	0	0	0	0	0
-ERR2183337	4/16/14	TBC05	Female	0	run1	week_8_fecal	0	0	0	0	0
-ERR2183339	4/16/14	TBC07	Female	0	run1	week_8_fecal	0	0	0	0	0
-ERR2183341	4/16/14	TBC09	Female	0	run1	week_8_fecal	0	0	0	0	0
-ERR2183343	4/16/14	TBC11	Female	0	run1	week_8_fecal	0	0	0	0	0
-ERR2183345	4/16/14	TBC13	Female	0	run1	week_8_fecal	0	0	0	0	0
-ERR2183346	4/16/14	TBC01	Female	0	run1	week_8_cecal	0	0	0	0	0
-ERR2183348	4/16/14	TBC03	Female	0	run1	week_8_cecal	0	0	0	0	0
-ERR2183350	4/16/14	TBC05	Female	0	run1	week_8_cecal	0	0	0	0	0
-ERR2183351	6/9/13	TBI07	Female	1	run1	gavage_D2	0	0	0	0	1
-ERR2183353	6/15/13	TBI09	Female	1	run1	gavage_D2	0	0	0	0	1
-ERR2183356	6/11/13	TBI02	Female	1	run1	gavage_D4	0	0	0	0	1
-ERR2183358	6/11/13	TBI04	Female	1	run1	gavage_D4	0	0	0	0	1
-ERR2183360	6/11/13	TBI06	Female	1	run1	gavage_D4	0	0	0	0	1
-ERR2183371	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0
-ERR2183372	4/1/14	CF1	Female	0	run1	week_6	0	0	0	0	0
-ERR2183373	4/1/14	CF2	Female	0	run1	week_6	0	0	0	0	0
-ERR2183374	6/11/13	TBI07	Female	1	run1	gavage_D4	0	0	0	0	1
-ERR2183375	4/1/14	CF2	Female	0	run1	week_6	0	0	0	0	0
-ERR2183376	4/1/14	CF1	Female	0	run1	week_6	0	0	0	0	0
-ERR2183377	4/1/14	CF2	Female	0	run1	week_6	0	0	0	0	0
-ERR2183378	4/1/14	CF1	Female	0	run1	week_6	0	0	0	0	0
-ERR2183379	4/1/14	CF1	Female	0	run1	week_6	0	0	0	0	0
-ERR2183380	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0
-ERR2183381	4/1/14	CF2	Female	0	run1	week_6	0	0	0	0	0
-ERR2183382	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0
-ERR2183383	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0
-ERR2183384	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0
-ERR2183386	4/1/14	CM2	Male	0	run1	week_6	0	0	0	0	0
-ERR2183387	4/1/14	CM2	Male	0	run1	week_6	0	0	0	0	0
-ERR2183388	4/1/14	CM2	Male	0	run1	week_6	0	0	0	0	0
-ERR2183389	4/1/14	CM3	Male	0	run1	week_6	0	0	0	0	0
-ERR2183390	4/1/14	CF3	Female	0	run1	week_6	0	0	0	0	0
-ERR2183391	4/1/14	CM3	Male	0	run1	week_6	0	0	0	0	0
-ERR2183392	4/1/14	CF3	Female	0	run1	week_6	0	0	0	0	0
-ERR2183396	6/17/13	TBI09	Female	1	run1	gavage_D4	0	0	0	0	1
-ERR2183410	6/2/14	CM1	Male	0	run1	week_15	0	0	0	0	0
-ERR2183411	6/2/14	CF1	Female	0	run1	week_15	0	0	0	0	0
-ERR2183412	6/2/14	CF2	Female	0	run1	week_15	0	0	0	0	0
-ERR2183413	6/2/14	CF2	Female	0	run1	week_15	0	0	0	0	0
-ERR2183414	6/2/14	CF1	Female	0	run1	week_15	0	0	0	0	0
-ERR2183415	6/2/14	CF2	Female	0	run1	week_15	0	0	0	0	0
-ERR2183416	6/2/14	CF1	Female	0	run1	week_15	0	0	0	0	0
-ERR2183417	6/2/14	CF1	Female	0	run1	week_15	0	0	0	0	0
-ERR2183419	6/2/14	CM1	Male	0	run1	week_15	0	0	0	0	0
-ERR2183420	6/2/14	CF2	Female	0	run1	week_15	0	0	0	0	0
-ERR2183421	6/2/14	CM1	Male	0	run1	week_15	0	0	0	0	0
-ERR2183423	6/2/14	CM1	Male	0	run1	week_15	0	0	0	0	0
-ERR2183424	6/2/14	CM2	Male	0	run1	week_15	0	0	0	0	0
-ERR2183425	6/2/14	CM2	Male	0	run1	week_15	0	0	0	0	0
-ERR2183426	6/2/14	CM2	Male	0	run1	week_15	0	0	0	0	0
-ERR2183427	6/2/14	CM3	Male	0	run1	week_15	0	0	0	0	0
-ERR2183428	6/2/14	CF3	Female	0	run1	week_15	0	0	0	0	0
-ERR2183429	6/17/13	TBI02	Female	1	run1	birth_D3_5	0	0	0	0	1
-ERR2183430	6/2/14	CM3	Male	0	run1	week_15	0	0	0	0	0
-ERR2183431	6/2/14	CF3	Female	0	run1	week_15	0	0	0	0	0
-ERR2183440	9/26/13	COF1	Female	1	run1	week_14_ileal	0	0	0	0	1
-ERR2183441	9/26/13	COF1	Female	1	run1	week_14_ileal	0	0	0	0	1
-ERR2183442	9/26/13	COF1	Female	1	run1	week_14_ileal	0	0	0	0	1
-ERR2183443	9/26/13	COF1	Female	1	run1	week_14_ileal	0	0	0	0	1
-ERR2183444	9/26/13	COF2	Female	1	run1	week_14_ileal	0	0	0	0	1
-ERR2183445	9/26/13	COF2	Female	1	run1	week_14_ileal	0	0	0	0	1
-ERR2183446	9/26/13	COF2	Female	1	run1	week_14_ileal	0	0	0	0	1
-ERR2183447	7/25/13	COF3	Female	1	run1	week_6_ileal	0	0	0	0	1
-ERR2183448	6/17/13	TBI04	Female	1	run1	birth_D3_5	0	0	0	0	1
-ERR2183449	7/25/13	COF3	Female	1	run1	week_6_ileal	0	0	0	0	1
-ERR2183450	7/25/13	COF4	Female	1	run1	week_6_ileal	0	0	0	0	1
-ERR2183451	7/25/13	COF4	Female	1	run1	week_6_ileal	0	0	0	0	1
-ERR2183452	7/25/13	COF4	Female	1	run1	week_6_ileal	0	0	0	0	1
-ERR2183454	6/17/13	TBI06	Female	1	run1	birth_D3_5	0	0	0	0	1
-ERR2183455	6/21/13	TBI07	Female	1	run1	birth_D3_5	0	0	0	0	1
-ERR2183457	6/21/13	TBI09	Female	1	run1	birth_D3_5	0	0	0	0	1
-ERR2183460	6/24/13	TBI02	Female	1	run1	birth_D10_12	0	0	0	0	1
-ERR2183462	6/24/13	TBI04	Female	1	run1	birth_D10_12	0	0	0	0	1
-ERR2183477	6/24/13	TBI06	Female	1	run1	birth_D10_12	0	0	0	0	1
-ERR2183484	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183485	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183486	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183487	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183488	6/28/13	TBI07	Female	1	run1	birth_D10_12	0	0	0	0	1
-ERR2183489	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183490	7/3/13	COF2	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183491	7/3/13	COF2	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183492	7/3/13	COF2	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183493	7/3/13	COF3	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183494	7/3/13	COF3	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183495	7/3/13	COF3	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183496	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183497	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183498	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183500	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183501	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183502	7/8/13	COF5	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183503	7/8/13	COF5	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183504	7/8/13	COF5	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183505	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183506	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183507	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183508	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183509	6/28/13	TBI09	Female	1	run1	birth_D10_12	0	0	0	0	1
-ERR2183510	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183511	7/9/13	COF5	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183523	11/7/13	COM2	Male	1	run1	week_21_ileal	0	0	0	0	1
-ERR2183529	7/10/13	COM1	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183530	7/10/13	COM1	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183532	7/10/13	COM1	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183533	7/11/13	COM1	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183534	7/11/13	COM2	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183535	7/11/13	COM2	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183536	7/11/13	COM2	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183537	7/11/13	COM2	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183538	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183539	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183540	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183541	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183542	7/3/13	TBI02	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183543	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183544	7/15/13	COM3	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183545	7/15/13	COM3	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183546	7/15/13	COM3	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183547	7/15/13	COM3	Male	1	run1	pupday28	0	0	0	0	1
-ERR2183563	7/3/13	TBI04	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183568	7/3/13	TBI06	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183569	7/9/13	TBI07	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183571	7/8/13	TBI09	Female	1	run1	pupday21	0	0	0	0	1
-ERR2183573	7/10/13	TBI02	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183574	7/22/13	COF4	Female	1	run1	week_6	0	0	0	0	1
-ERR2183576	7/28/13	COF5	Female	1	run1	week_6	0	0	0	0	1
-ERR2183577	7/28/13	COF5	Female	1	run1	week_6	0	0	0	0	1
-ERR2183578	7/28/13	COF5	Female	1	run1	week_6	0	0	0	0	1
-ERR2183579	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1
-ERR2183580	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1
-ERR2183581	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1
-ERR2183582	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1
-ERR2183583	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1
-ERR2183584	7/28/13	COF5	Female	1	run1	week_6	0	0	0	0	1
-ERR2183586	7/11/13	TBI04	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183602	9/29/13	COM2	Male	1	run1	week_15	0	0	0	0	1
-ERR2183603	9/29/13	COM2	Male	1	run1	week_15	0	0	0	0	1
-ERR2183604	9/29/13	COM2	Male	1	run1	week_15	0	0	0	0	1
-ERR2183605	10/3/13	COF6	Female	1	run1	week_15	0	0	0	0	1
-ERR2183606	7/11/13	TBI06	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183607	10/3/13	COM4	Male	1	run1	week_15	0	0	0	0	1
-ERR2183608	10/3/13	COM4	Male	1	run1	week_15	0	0	0	0	1
-ERR2183609	9/29/13	COM4	Male	1	run1	week_15	0	0	0	0	1
-ERR2183610	9/29/13	COM4	Male	1	run1	week_15	0	0	0	0	1
-ERR2183611	9/29/13	COM3	Male	1	run1	week_15	0	0	0	0	1
-ERR2183612	9/29/13	COM3	Male	1	run1	week_15	0	0	0	0	1
-ERR2183613	9/29/13	COM3	Male	1	run1	week_15	0	0	0	0	1
-ERR2183614	9/29/13	COM3	Male	1	run1	week_15	0	0	0	0	1
-ERR2183617	7/15/13	TBI07	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183621	10/3/13	COF5	Female	1	run1	week_15	0	0	0	0	1
-ERR2183629	10/3/13	COF5	Female	1	run1	week_15	0	0	0	0	1
-ERR2183630	10/3/13	COF5	Female	1	run1	week_15	0	0	0	0	1
-ERR2183631	10/3/13	COF6	Female	1	run1	week_15	0	0	0	0	1
-ERR2183632	10/3/13	COF6	Female	1	run1	week_15	0	0	0	0	1
-ERR2183633	10/3/13	COF5	Female	1	run1	week_15	0	0	0	0	1
-ERR2183637	7/15/13	TBI09	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183639	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1
-ERR2183640	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1
-ERR2183641	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1
-ERR2183642	11/4/13	COF5	Female	1	run1	week_21_cecal	0	0	0	0	1
-ERR2183644	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1
-ERR2183645	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1
-ERR2183646	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1
-ERR2183647	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1
-ERR2183649	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1
-ERR2183650	9/26/13	COF2	Female	1	run1	week_14_cecal	0	0	0	0	1
-ERR2183651	9/26/13	COF2	Female	1	run1	week_14_cecal	0	0	0	0	1
-ERR2183652	9/26/13	COF2	Female	1	run1	week_14_cecal	0	0	0	0	1
-ERR2183653	7/25/13	COF3	Female	1	run1	week_6_cecal	0	0	0	0	1
-ERR2183654	7/25/13	COF3	Female	1	run1	week_6_cecal	0	0	0	0	1
-ERR2183655	7/25/13	COF3	Female	1	run1	week_6_cecal	0	0	0	0	1
-ERR2183656	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1
-ERR2183657	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1
-ERR2183658	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1
-ERR2183660	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1
-ERR2183661	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1
-ERR2183662	11/4/13	COF5	Female	1	run1	week_21_cecal	0	0	0	0	1
-ERR2183663	11/4/13	COF5	Female	1	run1	week_21_cecal	0	0	0	0	1
-ERR2183664	11/4/13	COF5	Female	1	run1	week_21_cecal	0	0	0	0	1
-ERR2183665	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1
-ERR2183666	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1
-ERR2183670	7/15/13	TBI02	Female	1	run1	pupday32	0	0	0	0	1
-ERR2183673	11/3/13	COF5	Female	1	run1	week_21	0	0	0	0	1
-ERR2183674	11/3/13	COF5	Female	1	run1	week_21	0	0	0	0	1
-ERR2183675	11/3/13	COF5	Female	1	run1	week_21	0	0	0	0	1
-ERR2183677	7/15/13	TBI04	Female	1	run1	pupday32	0	0	0	0	1
-ERR2183679	7/15/13	TBI06	Female	1	run1	pupday32	0	0	0	0	1
-ERR2183680	7/19/13	TBI07	Female	1	run1	pupday32	0	0	0	0	1
-ERR2183682	7/19/13	TBI09	Female	1	run1	pupday32	0	0	0	0	1
-ERR2183685	7/19/13	TBI02	Female	1	run1	pupday36	0	0	0	0	1
-ERR2183686	7/17/14	CF2	Female	0	run1	week_21_cecal	0	0	0	0	0
-ERR2183687	7/22/14	CM2	Male	0	run1	week_21_cecal	0	0	0	0	0
-ERR2183688	7/22/14	CM3	Male	0	run1	week_21_cecal	0	0	0	0	0
-ERR2183689	7/17/14	CF3	Female	0	run1	week_21_cecal	0	0	0	0	0
-ERR2183690	7/17/14	CF3	Female	0	run1	week_21_cecal	0	0	0	0	0
-ERR2183695	7/22/14	CM1	Male	0	run1	week_21_ileal	0	0	0	0	0
-ERR2183696	7/17/14	CF1	Female	0	run1	week_21_ileal	0	0	0	0	0
-ERR2183697	7/17/14	CF1	Female	0	run1	week_21_ileal	0	0	0	0	0
-ERR2183698	7/17/14	CF2	Female	0	run1	week_21_ileal	0	0	0	0	0
-ERR2183699	7/24/14	CM2	Male	0	run1	week_21_ileal	0	0	0	0	0
-ERR2183700	7/17/14	CF3	Female	0	run1	week_21_ileal	0	0	0	0	0
-ERR2183701	7/17/14	CF3	Female	0	run1	week_21_ileal	0	0	0	0	0
-ERR2183704	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183705	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183706	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183707	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183708	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1
-ERR2183717	7/19/13	TBI06	Female	1	run2	pupday36	0	0	0	0	1
-ERR2183718	7/22/13	TBI07	Female	1	run2	pupday36	0	0	0	0	1
-ERR2183720	7/22/13	TBI09	Female	1	run2	pupday36	0	0	0	0	1
-ERR2183723	7/28/13	TBI02	Female	1	run2	week_6	0	0	0	0	1
-ERR2183725	7/28/13	TBI04	Female	1	run2	week_6	0	0	0	0	1
-ERR2183727	6/14/13	TBI09	Female	1	run2	gavage_D1	0	0	0	0	1
-ERR2183730	7/28/13	TBI06	Female	1	run2	week_6	0	0	0	0	1
-ERR2183732	11/4/13	COF5	Female	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183733	11/4/13	COF5	Female	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183734	11/4/13	COF5	Female	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183735	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183739	3/18/14	CF3	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183741	7/28/13	TBI07	Female	1	run2	week_6	0	0	0	0	1
-ERR2183743	4/4/14	TBC01	Female	0	run2	week_6	0	0	0	0	0
-ERR2183745	4/4/14	TBC09	Female	0	run2	week_6	0	0	0	0	0
-ERR2183751	7/25/13	COF4	Female	1	run2	week_6_ileal	0	0	0	0	1
-ERR2183752	7/22/14	CM2	Male	0	run2	week_21	0	0	0	0	0
-ERR2183757	7/28/13	TBI09	Female	1	run2	week_6	0	0	0	0	1
-ERR2183758	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1
-ERR2183759	7/22/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183761	7/22/14	CM1	Male	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183763	11/7/13	COM4	Male	1	run2	week_21	0	0	0	0	1
-ERR2183773	7/29/13	TBI02	Female	1	run2	week_6_ileal	0	0	0	0	1
-ERR2183775	7/29/13	TBI04	Female	1	run2	week_6_ileal	0	0	0	0	1
-ERR2183777	7/29/13	TBI06	Female	1	run2	week_6_ileal	0	0	0	0	1
-ERR2183778	7/29/13	TBI07	Female	1	run2	week_6_ileal	0	0	0	0	1
-ERR2183780	7/29/13	TBI09	Female	1	run2	week_6_ileal	0	0	0	0	1
-ERR2183781	2/6/14	TBC01	Female	0	run2	gavage_D1	0	0	0	0	0
-ERR2183783	2/6/14	TBC03	Female	0	run2	gavage_D1	0	0	0	0	0
-ERR2183785	2/6/14	TBC05	Female	0	run2	gavage_D1	0	0	0	0	0
-ERR2183787	2/6/14	TBC07	Female	0	run2	gavage_D1	0	0	0	0	0
-ERR2183789	2/6/14	TBC09	Female	0	run2	gavage_D1	0	0	0	0	0
-ERR2183791	2/6/14	TBC11	Female	0	run2	gavage_D1	0	0	0	0	0
-ERR2183793	2/6/14	TBC13	Female	0	run2	gavage_D1	0	0	0	0	0
-ERR2183794	2/7/14	TBC01	Female	0	run2	gavage_D2	0	0	0	0	0
-ERR2183796	2/7/14	TBC03	Female	0	run2	gavage_D2	0	0	0	0	0
-ERR2183798	2/7/14	TBC05	Female	0	run2	gavage_D2	0	0	0	0	0
-ERR2183800	2/7/14	TBC07	Female	0	run2	gavage_D2	0	0	0	0	0
-ERR2183802	2/7/14	TBC09	Female	0	run2	gavage_D2	0	0	0	0	0
-ERR2183804	2/7/14	TBC11	Female	0	run2	gavage_D2	0	0	0	0	0
-ERR2183806	2/7/14	TBC13	Female	0	run2	gavage_D2	0	0	0	0	0
-ERR2183807	2/9/14	TBC01	Female	0	run2	gavage_D4	0	0	0	0	0
-ERR2183809	2/9/14	TBC03	Female	0	run2	gavage_D4	0	0	0	0	0
-ERR2183811	2/9/14	TBC05	Female	0	run2	gavage_D4	0	0	0	0	0
-ERR2183813	2/9/14	TBC07	Female	0	run2	gavage_D4	0	0	0	0	0
-ERR2183815	2/9/14	TBC09	Female	0	run2	gavage_D4	0	0	0	0	0
-ERR2183817	2/9/14	TBC11	Female	0	run2	gavage_D4	0	0	0	0	0
-ERR2183819	2/9/14	TBC13	Female	0	run2	gavage_D4	0	0	0	0	0
-ERR2183820	2/10/14	TBC01	Female	0	run2	gavage_D5	0	0	0	0	0
-ERR2183821	4/16/14	TBC07	Female	0	run2	week_8_cecal	0	0	0	0	0
-ERR2183823	4/16/14	TBC09	Female	0	run2	week_8_cecal	0	0	0	0	0
-ERR2183825	4/16/14	TBC11	Female	0	run2	week_8_cecal	0	0	0	0	0
-ERR2183827	4/16/14	TBC13	Female	0	run2	week_8_cecal	0	0	0	0	0
-ERR2183828	4/16/14	TBC01	Female	0	run2	week_8_Ileal	0	0	0	0	0
-ERR2183830	4/16/14	TBC03	Female	0	run2	week_8_Ileal	0	0	0	0	0
-ERR2183832	4/16/14	TBC05	Female	0	run2	week_8_Ileal	0	0	0	0	0
-ERR2183834	4/16/14	TBC07	Female	0	run2	week_8_Ileal	0	0	0	0	0
-ERR2183836	4/16/14	TBC09	Female	0	run2	week_8_Ileal	0	0	0	0	0
-ERR2183838	4/16/14	TBC11	Female	0	run2	week_8_Ileal	0	0	0	0	0
-ERR2183840	4/16/14	TBC13	Female	0	run2	week_8_Ileal	0	0	0	0	0
-ERR2183856	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183857	3/4/14	CF1	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183858	3/4/14	CF2	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183859	3/4/14	CF2	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183860	3/4/14	CF1	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183861	3/4/14	CF2	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183862	3/4/14	CF1	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183863	3/4/14	CF1	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183864	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183865	3/4/14	CF2	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183866	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183867	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183868	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183869	3/8/14	CM2	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183870	3/8/14	CM2	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183871	3/8/14	CM2	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183872	3/11/14	CM3	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183873	3/11/14	CF3	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183874	3/11/14	CM3	Male	0	run2	pupday21	0	0	0	0	0
-ERR2183875	3/11/14	CF3	Female	0	run2	pupday21	0	0	0	0	0
-ERR2183891	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183892	3/11/14	CF1	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183893	3/11/14	CF2	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183894	3/11/14	CF2	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183895	3/11/14	CF1	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183896	3/11/14	CF2	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183897	3/11/14	CF1	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183898	3/11/14	CF1	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183899	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183900	3/11/14	CF2	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183901	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183902	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183903	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183904	3/14/14	CM2	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183905	3/14/14	CM2	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183906	3/14/14	CM2	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183907	3/18/14	CM3	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183908	3/18/14	CF3	Female	0	run2	pupday28	0	0	0	0	0
-ERR2183909	3/18/14	CM3	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183910	3/18/14	CM3	Male	0	run2	pupday28	0	0	0	0	0
-ERR2183915	7/22/14	CM2	Male	0	run2	week_21	0	0	0	0	0
-ERR2183916	7/24/14	CM2	Male	0	run2	week_21	0	0	0	0	0
-ERR2183917	7/22/14	CM3	Male	0	run2	week_21	0	0	0	0	0
-ERR2183918	7/24/14	CM3	Male	0	run2	week_21	0	0	0	0	0
-ERR2183926	7/15/14	CF1	Female	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183927	7/15/14	CF2	Female	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183928	7/15/14	CF2	Female	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183929	7/15/14	CF1	Female	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183930	7/15/14	CF2	Female	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183931	7/24/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183932	7/24/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183933	7/24/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183934	7/22/14	CM2	Male	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183935	7/24/14	CM2	Male	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183936	7/24/14	CM3	Male	0	run2	week_21_cecal	0	0	0	0	0
-ERR2183944	7/15/14	CF1	Female	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183945	7/15/14	CF2	Female	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183946	7/15/14	CF2	Female	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183947	7/15/14	CF1	Female	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183948	7/15/14	CF2	Female	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183949	7/24/14	CM1	Male	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183950	7/24/14	CM1	Male	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183951	7/22/14	CM2	Male	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183952	7/22/14	CM2	Male	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183953	7/22/14	CM3	Male	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183954	7/24/14	CM3	Male	0	run2	week_21_ileal	0	0	0	0	0
-ERR2183955	7/3/13	COM1	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183956	7/3/13	COM1	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183957	7/3/13	COM1	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183958	7/3/13	COM1	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183959	7/3/13	COM2	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183960	7/3/13	COM2	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183961	7/3/13	COM2	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183962	7/3/13	COM2	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183963	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183964	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183965	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183966	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183967	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183968	7/9/13	COM3	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183969	7/9/13	COM3	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183970	7/9/13	COM3	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183971	7/9/13	COM3	Male	1	run2	pupday21	0	0	0	0	1
-ERR2183972	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183973	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183974	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183975	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183976	11/4/13	COF5	Female	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183980	11/7/13	COM2	Male	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183981	11/7/13	COM2	Male	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183982	11/7/13	COM4	Male	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183983	11/7/13	COM4	Male	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183984	11/7/13	COM4	Male	1	run2	week_21_ileal	0	0	0	0	1
-ERR2183985	9/30/13	COM4	Male	1	run2	week_14_ileal	0	0	0	0	1
-ERR2183986	9/30/13	COM4	Male	1	run2	week_14_ileal	0	0	0	0	1
-ERR2183987	9/30/13	COM3	Male	1	run2	week_14_ileal	0	0	0	0	1
-ERR2183988	9/30/13	COM3	Male	1	run2	week_14_ileal	0	0	0	0	1
-ERR2183989	9/30/13	COM3	Male	1	run2	week_14_ileal	0	0	0	0	1
-ERR2183990	9/30/13	COM3	Male	1	run2	week_14_ileal	0	0	0	0	1
-ERR2184007	7/11/13	COF2	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184008	7/11/13	COF2	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184009	7/11/13	COF2	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184010	7/11/13	COF3	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184011	7/11/13	COF3	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184012	7/11/13	COF3	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184013	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184014	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184015	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184016	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184017	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184018	7/15/13	COF5	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184019	7/15/13	COF5	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184020	7/15/13	COF5	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184021	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184022	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184023	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184024	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184025	7/15/13	COF5	Female	1	run2	pupday28	0	0	0	0	1
-ERR2184042	7/22/13	COM1	Male	1	run2	week_6	0	0	0	0	1
-ERR2184043	7/22/13	COM1	Male	1	run2	week_6	0	0	0	0	1
-ERR2184044	7/22/13	COM1	Male	1	run2	week_6	0	0	0	0	1
-ERR2184045	7/22/13	COM1	Male	1	run2	week_6	0	0	0	0	1
-ERR2184046	7/22/13	COM2	Male	1	run2	week_6	0	0	0	0	1
-ERR2184047	7/22/13	COM2	Male	1	run2	week_6	0	0	0	0	1
-ERR2184048	7/22/13	COM2	Male	1	run2	week_6	0	0	0	0	1
-ERR2184049	7/22/13	COM2	Male	1	run2	week_6	0	0	0	0	1
-ERR2184050	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1
-ERR2184051	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1
-ERR2184052	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1
-ERR2184053	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1
-ERR2184054	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1
-ERR2184055	7/28/13	COM3	Male	1	run2	week_6	0	0	0	0	1
-ERR2184056	7/28/13	COM3	Male	1	run2	week_6	0	0	0	0	1
-ERR2184057	7/28/13	COM3	Male	1	run2	week_6	0	0	0	0	1
-ERR2184058	7/28/13	COM3	Male	1	run2	week_6	0	0	0	0	1
-ERR2184077	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1
-ERR2184078	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1
-ERR2184079	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1
-ERR2184080	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1
-ERR2184081	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1
-ERR2184082	7/22/13	COF2	Female	1	run2	week_6	0	0	0	0	1
-ERR2184083	7/22/13	COF2	Female	1	run2	week_6	0	0	0	0	1
-ERR2184084	7/22/13	COF2	Female	1	run2	week_6	0	0	0	0	1
-ERR2184085	7/22/13	COF3	Female	1	run2	week_6	0	0	0	0	1
-ERR2184086	7/22/13	COF3	Female	1	run2	week_6	0	0	0	0	1
-ERR2184087	7/22/13	COF3	Female	1	run2	week_6	0	0	0	0	1
-ERR2184088	7/22/13	COF4	Female	1	run2	week_6	0	0	0	0	1
-ERR2184089	7/22/13	COF4	Female	1	run2	week_6	0	0	0	0	1
-ERR2184090	7/22/13	COF4	Female	1	run2	week_6	0	0	0	0	1
-ERR2184091	7/22/13	COF4	Female	1	run2	week_6	0	0	0	0	1
-ERR2184093	11/3/13	COF6	Female	1	run2	week_21	0	0	0	0	1
-ERR2184094	11/3/13	COF6	Female	1	run2	week_21	0	0	0	0	1
-ERR2184096	11/3/13	COF6	Female	1	run2	week_21	0	0	0	0	1
-ERR2184097	11/3/13	COF5	Female	1	run2	week_21	0	0	0	0	1
-ERR2184102	7/23/13	COM1	Male	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184103	7/23/13	COM1	Male	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184104	7/23/13	COM1	Male	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184105	7/23/13	COM1	Male	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184106	7/23/13	COM2	Male	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184107	11/7/13	COM2	Male	1	run2	week_21_cecal	0	0	0	0	1
-ERR2184109	11/7/13	COM2	Male	1	run2	week_21_cecal	0	0	0	0	1
-ERR2184110	11/7/13	COM2	Male	1	run2	week_21_cecal	0	0	0	0	1
-ERR2184111	11/7/13	COM4	Male	1	run2	week_21_cecal	0	0	0	0	1
-ERR2184112	11/7/13	COM4	Male	1	run2	week_21_cecal	0	0	0	0	1
-ERR2184113	11/7/13	COM4	Male	1	run2	week_21_cecal	0	0	0	0	1
-ERR2184114	9/30/13	COM4	Male	1	run2	week_14_cecal	0	0	0	0	1
-ERR2184115	9/30/13	COM4	Male	1	run2	week_14_cecal	0	0	0	0	1
-ERR2184116	9/30/13	COM3	Male	1	run2	week_14_cecal	0	0	0	0	1
-ERR2184117	9/30/13	COM3	Male	1	run2	week_14_cecal	0	0	0	0	1
-ERR2184118	9/30/13	COM3	Male	1	run2	week_14_cecal	0	0	0	0	1
-ERR2184119	9/30/13	COM3	Male	1	run2	week_14_cecal	0	0	0	0	1
-ERR2184132	7/29/13	TBI02	Female	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184134	7/29/13	TBI04	Female	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184136	7/29/13	TBI06	Female	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184137	7/29/13	TBI07	Female	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184139	7/29/13	TBI09	Female	1	run2	week_6_cecal	0	0	0	0	1
-ERR2184141	3/12/14	TBC05	Female	0	run2	pupday28	0	0	0	0	0
-ERR2184142	3/12/14	TBC07	Female	0	run2	pupday28	0	0	0	0	0
-ERR2184143	3/12/14	TBC09	Female	0	run2	pupday28	0	0	0	0	0
-ERR2184159	7/22/14	CM1	Male	0	run2	week_21	0	0	0	0	0
-ERR2184160	7/15/14	CF1	Female	0	run2	week_21	0	0	0	0	0
-ERR2184161	7/15/14	CF2	Female	0	run2	week_21	0	0	0	0	0
-ERR2184162	7/15/14	CF2	Female	0	run2	week_21	0	0	0	0	0
-ERR2184163	7/15/14	CF1	Female	0	run2	week_21	0	0	0	0	0
-ERR2184164	7/15/14	CF2	Female	0	run2	week_21	0	0	0	0	0
-ERR2184165	7/17/14	CF1	Female	0	run2	week_21	0	0	0	0	0
-ERR2184166	7/17/14	CF1	Female	0	run2	week_21	0	0	0	0	0
-ERR2184167	7/22/14	CM1	Male	0	run2	week_21	0	0	0	0	0
-ERR2184168	7/17/14	CF2	Female	0	run2	week_21	0	0	0	0	0
-ERR2184169	7/24/14	CM1	Male	0	run2	week_21	0	0	0	0	0
-ERR2184170	7/24/14	CM1	Male	0	run2	week_21	0	0	0	0	0
-ERR2184171	7/24/14	CM1	Male	0	run2	week_21	0	0	0	0	0
-ERR2184172	7/17/14	CF3	Female	0	run2	week_21	0	0	0	0	0
-ERR2184173	7/17/14	CF3	Female	0	run2	week_21	0	0	0	0	0
-ERR2184182	7/22/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0
-ERR2184183	7/17/14	CF1	Female	0	run2	week_21_cecal	0	0	0	0	0
-ERR2184184	7/17/14	CF1	Female	0	run2	week_21_cecal	0	0	0	0	0
-ERR2184186	7/19/13	TBI04	Female	1	run2	pupday36	0	0	0	0	1
+collection_date	cage	gender	response	run	timepoint	DNR	TNBS	AOMDSS	DSS	IL10	study
+ERR2183215	11/3/13	COF6	Female	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183216	11/3/13	COF6	Female	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183217	7/23/13	COM1	Male	1	run1	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183218	7/23/13	COM1	Male	1	run1	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183219	7/23/13	COM2	Male	1	run1	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183220	10/3/13	COM4	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183221	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183222	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183223	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183224	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183225	9/25/13	COF1	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183226	9/25/13	COF2	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183227	9/25/13	COF2	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183228	9/25/13	COF2	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183234	11/7/13	COM2	Male	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183235	11/7/13	COM2	Male	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183236	11/7/13	COM2	Male	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183237	11/7/13	COM4	Male	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183238	11/7/13	COM4	Male	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183247	6/8/13	TBI02	Female	1	run1	gavage_D1	0	0	0	0	1	UCSD_IL10
+ERR2183249	6/8/13	TBI04	Female	1	run1	gavage_D1	0	0	0	0	1	UCSD_IL10
+ERR2183251	6/8/13	TBI06	Female	1	run1	gavage_D1	0	0	0	0	1	UCSD_IL10
+ERR2183252	6/8/13	TBI07	Female	1	run1	gavage_D1	0	0	0	0	1	UCSD_IL10
+ERR2183255	2/10/14	TBC03	Female	0	run1	gavage_D5	0	0	0	0	0	UCSD_IL10
+ERR2183257	2/10/14	TBC05	Female	0	run1	gavage_D5	0	0	0	0	0	UCSD_IL10
+ERR2183259	2/10/14	TBC07	Female	0	run1	gavage_D5	0	0	0	0	0	UCSD_IL10
+ERR2183261	2/10/14	TBC09	Female	0	run1	gavage_D5	0	0	0	0	0	UCSD_IL10
+ERR2183263	2/10/14	TBC11	Female	0	run1	gavage_D5	0	0	0	0	0	UCSD_IL10
+ERR2183265	2/10/14	TBC13	Female	0	run1	gavage_D5	0	0	0	0	0	UCSD_IL10
+ERR2183266	3/4/14	TBC01	Female	0	run1	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183268	3/4/14	TBC03	Female	0	run1	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183270	3/5/14	TBC05	Female	0	run1	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183273	3/5/14	TBC07	Female	0	run1	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183275	3/5/14	TBC09	Female	0	run1	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183277	3/8/14	TBC11	Female	0	run1	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183279	3/11/14	TBC13	Female	0	run1	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183280	3/11/14	TBC01	Female	0	run1	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183283	3/11/14	TBC03	Female	0	run1	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183290	3/14/14	TBC11	Female	0	run1	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183292	6/9/13	TBI02	Female	1	run1	gavage_D2	0	0	0	0	1	UCSD_IL10
+ERR2183293	3/18/14	TBC13	Female	0	run1	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183294	3/19/14	TBC01	Female	0	run1	pupday36	0	0	0	0	0	UCSD_IL10
+ERR2183295	3/19/14	TBC03	Female	0	run1	pupday36	0	0	0	0	0	UCSD_IL10
+ERR2183297	3/21/14	TBC05	Female	0	run1	pupday36	0	0	0	0	0	UCSD_IL10
+ERR2183299	3/21/14	TBC07	Female	0	run1	pupday36	0	0	0	0	0	UCSD_IL10
+ERR2183301	3/21/14	TBC09	Female	0	run1	pupday36	0	0	0	0	0	UCSD_IL10
+ERR2183303	3/23/14	TBC11	Female	0	run1	pupday36	0	0	0	0	0	UCSD_IL10
+ERR2183305	3/27/13	TBC13	Female	0	run1	pupday36	0	0	0	0	0	UCSD_IL10
+ERR2183307	4/4/14	TBC03	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183309	4/4/14	TBC05	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183311	4/4/14	TBC07	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183312	6/9/13	TBI04	Female	1	run1	gavage_D2	0	0	0	0	1	UCSD_IL10
+ERR2183314	4/4/14	TBC11	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183316	4/4/14	TBC13	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183317	4/11/14	TBC01	Female	0	run1	week_7_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183319	4/11/14	TBC03	Female	0	run1	week_7_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183323	4/11/14	TBC05	Female	0	run1	week_7_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183325	4/11/14	TBC07	Female	0	run1	week_7_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183327	4/11/14	TBC09	Female	0	run1	week_7_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183329	4/11/14	TBC11	Female	0	run1	week_7_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183331	4/11/14	TBC13	Female	0	run1	week_7_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183332	6/9/13	TBI06	Female	1	run1	gavage_D2	0	0	0	0	1	UCSD_IL10
+ERR2183333	4/16/14	TBC01	Female	0	run1	week_8_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183335	4/16/14	TBC03	Female	0	run1	week_8_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183337	4/16/14	TBC05	Female	0	run1	week_8_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183339	4/16/14	TBC07	Female	0	run1	week_8_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183341	4/16/14	TBC09	Female	0	run1	week_8_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183343	4/16/14	TBC11	Female	0	run1	week_8_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183345	4/16/14	TBC13	Female	0	run1	week_8_fecal	0	0	0	0	0	UCSD_IL10
+ERR2183346	4/16/14	TBC01	Female	0	run1	week_8_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183348	4/16/14	TBC03	Female	0	run1	week_8_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183350	4/16/14	TBC05	Female	0	run1	week_8_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183351	6/9/13	TBI07	Female	1	run1	gavage_D2	0	0	0	0	1	UCSD_IL10
+ERR2183353	6/15/13	TBI09	Female	1	run1	gavage_D2	0	0	0	0	1	UCSD_IL10
+ERR2183356	6/11/13	TBI02	Female	1	run1	gavage_D4	0	0	0	0	1	UCSD_IL10
+ERR2183358	6/11/13	TBI04	Female	1	run1	gavage_D4	0	0	0	0	1	UCSD_IL10
+ERR2183360	6/11/13	TBI06	Female	1	run1	gavage_D4	0	0	0	0	1	UCSD_IL10
+ERR2183371	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183372	4/1/14	CF1	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183373	4/1/14	CF2	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183374	6/11/13	TBI07	Female	1	run1	gavage_D4	0	0	0	0	1	UCSD_IL10
+ERR2183375	4/1/14	CF2	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183376	4/1/14	CF1	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183377	4/1/14	CF2	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183378	4/1/14	CF1	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183379	4/1/14	CF1	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183380	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183381	4/1/14	CF2	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183382	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183383	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183384	4/1/14	CM1	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183386	4/1/14	CM2	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183387	4/1/14	CM2	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183388	4/1/14	CM2	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183389	4/1/14	CM3	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183390	4/1/14	CF3	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183391	4/1/14	CM3	Male	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183392	4/1/14	CF3	Female	0	run1	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183396	6/17/13	TBI09	Female	1	run1	gavage_D4	0	0	0	0	1	UCSD_IL10
+ERR2183410	6/2/14	CM1	Male	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183411	6/2/14	CF1	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183412	6/2/14	CF2	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183413	6/2/14	CF2	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183414	6/2/14	CF1	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183415	6/2/14	CF2	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183416	6/2/14	CF1	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183417	6/2/14	CF1	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183419	6/2/14	CM1	Male	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183420	6/2/14	CF2	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183421	6/2/14	CM1	Male	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183423	6/2/14	CM1	Male	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183424	6/2/14	CM2	Male	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183425	6/2/14	CM2	Male	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183426	6/2/14	CM2	Male	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183427	6/2/14	CM3	Male	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183428	6/2/14	CF3	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183429	6/17/13	TBI02	Female	1	run1	birth_D3_5	0	0	0	0	1	UCSD_IL10
+ERR2183430	6/2/14	CM3	Male	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183431	6/2/14	CF3	Female	0	run1	week_15	0	0	0	0	0	UCSD_IL10
+ERR2183440	9/26/13	COF1	Female	1	run1	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183441	9/26/13	COF1	Female	1	run1	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183442	9/26/13	COF1	Female	1	run1	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183443	9/26/13	COF1	Female	1	run1	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183444	9/26/13	COF2	Female	1	run1	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183445	9/26/13	COF2	Female	1	run1	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183446	9/26/13	COF2	Female	1	run1	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183447	7/25/13	COF3	Female	1	run1	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183448	6/17/13	TBI04	Female	1	run1	birth_D3_5	0	0	0	0	1	UCSD_IL10
+ERR2183449	7/25/13	COF3	Female	1	run1	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183450	7/25/13	COF4	Female	1	run1	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183451	7/25/13	COF4	Female	1	run1	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183452	7/25/13	COF4	Female	1	run1	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183454	6/17/13	TBI06	Female	1	run1	birth_D3_5	0	0	0	0	1	UCSD_IL10
+ERR2183455	6/21/13	TBI07	Female	1	run1	birth_D3_5	0	0	0	0	1	UCSD_IL10
+ERR2183457	6/21/13	TBI09	Female	1	run1	birth_D3_5	0	0	0	0	1	UCSD_IL10
+ERR2183460	6/24/13	TBI02	Female	1	run1	birth_D10_12	0	0	0	0	1	UCSD_IL10
+ERR2183462	6/24/13	TBI04	Female	1	run1	birth_D10_12	0	0	0	0	1	UCSD_IL10
+ERR2183477	6/24/13	TBI06	Female	1	run1	birth_D10_12	0	0	0	0	1	UCSD_IL10
+ERR2183484	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183485	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183486	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183487	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183488	6/28/13	TBI07	Female	1	run1	birth_D10_12	0	0	0	0	1	UCSD_IL10
+ERR2183489	7/3/13	COF1	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183490	7/3/13	COF2	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183491	7/3/13	COF2	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183492	7/3/13	COF2	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183493	7/3/13	COF3	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183494	7/3/13	COF3	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183495	7/3/13	COF3	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183496	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183497	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183498	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183500	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183501	7/3/13	COF4	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183502	7/8/13	COF5	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183503	7/8/13	COF5	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183504	7/8/13	COF5	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183505	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183506	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183507	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183508	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183509	6/28/13	TBI09	Female	1	run1	birth_D10_12	0	0	0	0	1	UCSD_IL10
+ERR2183510	7/9/13	COF6	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183511	7/9/13	COF5	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183523	11/7/13	COM2	Male	1	run1	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183529	7/10/13	COM1	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183530	7/10/13	COM1	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183532	7/10/13	COM1	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183533	7/11/13	COM1	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183534	7/11/13	COM2	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183535	7/11/13	COM2	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183536	7/11/13	COM2	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183537	7/11/13	COM2	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183538	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183539	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183540	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183541	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183542	7/3/13	TBI02	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183543	7/15/13	COM4	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183544	7/15/13	COM3	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183545	7/15/13	COM3	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183546	7/15/13	COM3	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183547	7/15/13	COM3	Male	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183563	7/3/13	TBI04	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183568	7/3/13	TBI06	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183569	7/9/13	TBI07	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183571	7/8/13	TBI09	Female	1	run1	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183573	7/10/13	TBI02	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183574	7/22/13	COF4	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183576	7/28/13	COF5	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183577	7/28/13	COF5	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183578	7/28/13	COF5	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183579	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183580	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183581	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183582	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183583	7/28/13	COF6	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183584	7/28/13	COF5	Female	1	run1	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183586	7/11/13	TBI04	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183602	9/29/13	COM2	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183603	9/29/13	COM2	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183604	9/29/13	COM2	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183605	10/3/13	COF6	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183606	7/11/13	TBI06	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183607	10/3/13	COM4	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183608	10/3/13	COM4	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183609	9/29/13	COM4	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183610	9/29/13	COM4	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183611	9/29/13	COM3	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183612	9/29/13	COM3	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183613	9/29/13	COM3	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183614	9/29/13	COM3	Male	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183617	7/15/13	TBI07	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183621	10/3/13	COF5	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183629	10/3/13	COF5	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183630	10/3/13	COF5	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183631	10/3/13	COF6	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183632	10/3/13	COF6	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183633	10/3/13	COF5	Female	1	run1	week_15	0	0	0	0	1	UCSD_IL10
+ERR2183637	7/15/13	TBI09	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183639	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183640	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183641	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183642	11/4/13	COF5	Female	1	run1	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183644	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183645	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183646	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183647	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183649	9/26/13	COF1	Female	1	run1	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183650	9/26/13	COF2	Female	1	run1	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183651	9/26/13	COF2	Female	1	run1	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183652	9/26/13	COF2	Female	1	run1	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183653	7/25/13	COF3	Female	1	run1	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183654	7/25/13	COF3	Female	1	run1	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183655	7/25/13	COF3	Female	1	run1	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183656	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183657	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183658	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183660	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183661	7/25/13	COF4	Female	1	run1	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183662	11/4/13	COF5	Female	1	run1	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183663	11/4/13	COF5	Female	1	run1	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183664	11/4/13	COF5	Female	1	run1	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183665	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183666	11/4/13	COF6	Female	1	run1	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2183670	7/15/13	TBI02	Female	1	run1	pupday32	0	0	0	0	1	UCSD_IL10
+ERR2183673	11/3/13	COF5	Female	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183674	11/3/13	COF5	Female	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183675	11/3/13	COF5	Female	1	run1	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183677	7/15/13	TBI04	Female	1	run1	pupday32	0	0	0	0	1	UCSD_IL10
+ERR2183679	7/15/13	TBI06	Female	1	run1	pupday32	0	0	0	0	1	UCSD_IL10
+ERR2183680	7/19/13	TBI07	Female	1	run1	pupday32	0	0	0	0	1	UCSD_IL10
+ERR2183682	7/19/13	TBI09	Female	1	run1	pupday32	0	0	0	0	1	UCSD_IL10
+ERR2183685	7/19/13	TBI02	Female	1	run1	pupday36	0	0	0	0	1	UCSD_IL10
+ERR2183686	7/17/14	CF2	Female	0	run1	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183687	7/22/14	CM2	Male	0	run1	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183688	7/22/14	CM3	Male	0	run1	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183689	7/17/14	CF3	Female	0	run1	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183690	7/17/14	CF3	Female	0	run1	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183695	7/22/14	CM1	Male	0	run1	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183696	7/17/14	CF1	Female	0	run1	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183697	7/17/14	CF1	Female	0	run1	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183698	7/17/14	CF2	Female	0	run1	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183699	7/24/14	CM2	Male	0	run1	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183700	7/17/14	CF3	Female	0	run1	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183701	7/17/14	CF3	Female	0	run1	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183704	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183705	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183706	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183707	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183708	7/10/13	COF1	Female	1	run1	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183717	7/19/13	TBI06	Female	1	run2	pupday36	0	0	0	0	1	UCSD_IL10
+ERR2183718	7/22/13	TBI07	Female	1	run2	pupday36	0	0	0	0	1	UCSD_IL10
+ERR2183720	7/22/13	TBI09	Female	1	run2	pupday36	0	0	0	0	1	UCSD_IL10
+ERR2183723	7/28/13	TBI02	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183725	7/28/13	TBI04	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183727	6/14/13	TBI09	Female	1	run2	gavage_D1	0	0	0	0	1	UCSD_IL10
+ERR2183730	7/28/13	TBI06	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183732	11/4/13	COF5	Female	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183733	11/4/13	COF5	Female	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183734	11/4/13	COF5	Female	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183735	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183739	3/18/14	CF3	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183741	7/28/13	TBI07	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183743	4/4/14	TBC01	Female	0	run2	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183745	4/4/14	TBC09	Female	0	run2	week_6	0	0	0	0	0	UCSD_IL10
+ERR2183751	7/25/13	COF4	Female	1	run2	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183752	7/22/14	CM2	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2183757	7/28/13	TBI09	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2183758	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2183759	7/22/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183761	7/22/14	CM1	Male	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183763	11/7/13	COM4	Male	1	run2	week_21	0	0	0	0	1	UCSD_IL10
+ERR2183773	7/29/13	TBI02	Female	1	run2	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183775	7/29/13	TBI04	Female	1	run2	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183777	7/29/13	TBI06	Female	1	run2	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183778	7/29/13	TBI07	Female	1	run2	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183780	7/29/13	TBI09	Female	1	run2	week_6_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183781	2/6/14	TBC01	Female	0	run2	gavage_D1	0	0	0	0	0	UCSD_IL10
+ERR2183783	2/6/14	TBC03	Female	0	run2	gavage_D1	0	0	0	0	0	UCSD_IL10
+ERR2183785	2/6/14	TBC05	Female	0	run2	gavage_D1	0	0	0	0	0	UCSD_IL10
+ERR2183787	2/6/14	TBC07	Female	0	run2	gavage_D1	0	0	0	0	0	UCSD_IL10
+ERR2183789	2/6/14	TBC09	Female	0	run2	gavage_D1	0	0	0	0	0	UCSD_IL10
+ERR2183791	2/6/14	TBC11	Female	0	run2	gavage_D1	0	0	0	0	0	UCSD_IL10
+ERR2183793	2/6/14	TBC13	Female	0	run2	gavage_D1	0	0	0	0	0	UCSD_IL10
+ERR2183794	2/7/14	TBC01	Female	0	run2	gavage_D2	0	0	0	0	0	UCSD_IL10
+ERR2183796	2/7/14	TBC03	Female	0	run2	gavage_D2	0	0	0	0	0	UCSD_IL10
+ERR2183798	2/7/14	TBC05	Female	0	run2	gavage_D2	0	0	0	0	0	UCSD_IL10
+ERR2183800	2/7/14	TBC07	Female	0	run2	gavage_D2	0	0	0	0	0	UCSD_IL10
+ERR2183802	2/7/14	TBC09	Female	0	run2	gavage_D2	0	0	0	0	0	UCSD_IL10
+ERR2183804	2/7/14	TBC11	Female	0	run2	gavage_D2	0	0	0	0	0	UCSD_IL10
+ERR2183806	2/7/14	TBC13	Female	0	run2	gavage_D2	0	0	0	0	0	UCSD_IL10
+ERR2183807	2/9/14	TBC01	Female	0	run2	gavage_D4	0	0	0	0	0	UCSD_IL10
+ERR2183809	2/9/14	TBC03	Female	0	run2	gavage_D4	0	0	0	0	0	UCSD_IL10
+ERR2183811	2/9/14	TBC05	Female	0	run2	gavage_D4	0	0	0	0	0	UCSD_IL10
+ERR2183813	2/9/14	TBC07	Female	0	run2	gavage_D4	0	0	0	0	0	UCSD_IL10
+ERR2183815	2/9/14	TBC09	Female	0	run2	gavage_D4	0	0	0	0	0	UCSD_IL10
+ERR2183817	2/9/14	TBC11	Female	0	run2	gavage_D4	0	0	0	0	0	UCSD_IL10
+ERR2183819	2/9/14	TBC13	Female	0	run2	gavage_D4	0	0	0	0	0	UCSD_IL10
+ERR2183820	2/10/14	TBC01	Female	0	run2	gavage_D5	0	0	0	0	0	UCSD_IL10
+ERR2183821	4/16/14	TBC07	Female	0	run2	week_8_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183823	4/16/14	TBC09	Female	0	run2	week_8_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183825	4/16/14	TBC11	Female	0	run2	week_8_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183827	4/16/14	TBC13	Female	0	run2	week_8_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183828	4/16/14	TBC01	Female	0	run2	week_8_Ileal	0	0	0	0	0	UCSD_IL10
+ERR2183830	4/16/14	TBC03	Female	0	run2	week_8_Ileal	0	0	0	0	0	UCSD_IL10
+ERR2183832	4/16/14	TBC05	Female	0	run2	week_8_Ileal	0	0	0	0	0	UCSD_IL10
+ERR2183834	4/16/14	TBC07	Female	0	run2	week_8_Ileal	0	0	0	0	0	UCSD_IL10
+ERR2183836	4/16/14	TBC09	Female	0	run2	week_8_Ileal	0	0	0	0	0	UCSD_IL10
+ERR2183838	4/16/14	TBC11	Female	0	run2	week_8_Ileal	0	0	0	0	0	UCSD_IL10
+ERR2183840	4/16/14	TBC13	Female	0	run2	week_8_Ileal	0	0	0	0	0	UCSD_IL10
+ERR2183856	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183857	3/4/14	CF1	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183858	3/4/14	CF2	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183859	3/4/14	CF2	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183860	3/4/14	CF1	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183861	3/4/14	CF2	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183862	3/4/14	CF1	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183863	3/4/14	CF1	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183864	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183865	3/4/14	CF2	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183866	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183867	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183868	3/4/14	CM1	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183869	3/8/14	CM2	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183870	3/8/14	CM2	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183871	3/8/14	CM2	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183872	3/11/14	CM3	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183873	3/11/14	CF3	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183874	3/11/14	CM3	Male	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183875	3/11/14	CF3	Female	0	run2	pupday21	0	0	0	0	0	UCSD_IL10
+ERR2183891	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183892	3/11/14	CF1	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183893	3/11/14	CF2	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183894	3/11/14	CF2	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183895	3/11/14	CF1	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183896	3/11/14	CF2	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183897	3/11/14	CF1	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183898	3/11/14	CF1	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183899	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183900	3/11/14	CF2	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183901	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183902	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183903	3/11/14	CM1	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183904	3/14/14	CM2	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183905	3/14/14	CM2	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183906	3/14/14	CM2	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183907	3/18/14	CM3	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183908	3/18/14	CF3	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183909	3/18/14	CM3	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183910	3/18/14	CM3	Male	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2183915	7/22/14	CM2	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2183916	7/24/14	CM2	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2183917	7/22/14	CM3	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2183918	7/24/14	CM3	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2183926	7/15/14	CF1	Female	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183927	7/15/14	CF2	Female	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183928	7/15/14	CF2	Female	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183929	7/15/14	CF1	Female	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183930	7/15/14	CF2	Female	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183931	7/24/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183932	7/24/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183933	7/24/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183934	7/22/14	CM2	Male	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183935	7/24/14	CM2	Male	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183936	7/24/14	CM3	Male	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2183944	7/15/14	CF1	Female	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183945	7/15/14	CF2	Female	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183946	7/15/14	CF2	Female	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183947	7/15/14	CF1	Female	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183948	7/15/14	CF2	Female	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183949	7/24/14	CM1	Male	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183950	7/24/14	CM1	Male	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183951	7/22/14	CM2	Male	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183952	7/22/14	CM2	Male	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183953	7/22/14	CM3	Male	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183954	7/24/14	CM3	Male	0	run2	week_21_ileal	0	0	0	0	0	UCSD_IL10
+ERR2183955	7/3/13	COM1	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183956	7/3/13	COM1	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183957	7/3/13	COM1	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183958	7/3/13	COM1	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183959	7/3/13	COM2	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183960	7/3/13	COM2	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183961	7/3/13	COM2	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183962	7/3/13	COM2	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183963	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183964	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183965	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183966	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183967	7/8/13	COM4	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183968	7/9/13	COM3	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183969	7/9/13	COM3	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183970	7/9/13	COM3	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183971	7/9/13	COM3	Male	1	run2	pupday21	0	0	0	0	1	UCSD_IL10
+ERR2183972	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183973	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183974	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183975	11/4/13	COF6	Female	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183976	11/4/13	COF5	Female	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183980	11/7/13	COM2	Male	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183981	11/7/13	COM2	Male	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183982	11/7/13	COM4	Male	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183983	11/7/13	COM4	Male	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183984	11/7/13	COM4	Male	1	run2	week_21_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183985	9/30/13	COM4	Male	1	run2	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183986	9/30/13	COM4	Male	1	run2	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183987	9/30/13	COM3	Male	1	run2	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183988	9/30/13	COM3	Male	1	run2	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183989	9/30/13	COM3	Male	1	run2	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2183990	9/30/13	COM3	Male	1	run2	week_14_ileal	0	0	0	0	1	UCSD_IL10
+ERR2184007	7/11/13	COF2	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184008	7/11/13	COF2	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184009	7/11/13	COF2	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184010	7/11/13	COF3	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184011	7/11/13	COF3	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184012	7/11/13	COF3	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184013	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184014	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184015	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184016	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184017	7/11/13	COF4	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184018	7/15/13	COF5	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184019	7/15/13	COF5	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184020	7/15/13	COF5	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184021	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184022	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184023	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184024	7/15/13	COF6	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184025	7/15/13	COF5	Female	1	run2	pupday28	0	0	0	0	1	UCSD_IL10
+ERR2184042	7/22/13	COM1	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184043	7/22/13	COM1	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184044	7/22/13	COM1	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184045	7/22/13	COM1	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184046	7/22/13	COM2	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184047	7/22/13	COM2	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184048	7/22/13	COM2	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184049	7/22/13	COM2	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184050	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184051	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184052	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184053	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184054	7/28/13	COM4	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184055	7/28/13	COM3	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184056	7/28/13	COM3	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184057	7/28/13	COM3	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184058	7/28/13	COM3	Male	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184077	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184078	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184079	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184080	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184081	7/22/13	COF1	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184082	7/22/13	COF2	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184083	7/22/13	COF2	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184084	7/22/13	COF2	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184085	7/22/13	COF3	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184086	7/22/13	COF3	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184087	7/22/13	COF3	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184088	7/22/13	COF4	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184089	7/22/13	COF4	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184090	7/22/13	COF4	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184091	7/22/13	COF4	Female	1	run2	week_6	0	0	0	0	1	UCSD_IL10
+ERR2184093	11/3/13	COF6	Female	1	run2	week_21	0	0	0	0	1	UCSD_IL10
+ERR2184094	11/3/13	COF6	Female	1	run2	week_21	0	0	0	0	1	UCSD_IL10
+ERR2184096	11/3/13	COF6	Female	1	run2	week_21	0	0	0	0	1	UCSD_IL10
+ERR2184097	11/3/13	COF5	Female	1	run2	week_21	0	0	0	0	1	UCSD_IL10
+ERR2184102	7/23/13	COM1	Male	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184103	7/23/13	COM1	Male	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184104	7/23/13	COM1	Male	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184105	7/23/13	COM1	Male	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184106	7/23/13	COM2	Male	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184107	11/7/13	COM2	Male	1	run2	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184109	11/7/13	COM2	Male	1	run2	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184110	11/7/13	COM2	Male	1	run2	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184111	11/7/13	COM4	Male	1	run2	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184112	11/7/13	COM4	Male	1	run2	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184113	11/7/13	COM4	Male	1	run2	week_21_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184114	9/30/13	COM4	Male	1	run2	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184115	9/30/13	COM4	Male	1	run2	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184116	9/30/13	COM3	Male	1	run2	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184117	9/30/13	COM3	Male	1	run2	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184118	9/30/13	COM3	Male	1	run2	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184119	9/30/13	COM3	Male	1	run2	week_14_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184132	7/29/13	TBI02	Female	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184134	7/29/13	TBI04	Female	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184136	7/29/13	TBI06	Female	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184137	7/29/13	TBI07	Female	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184139	7/29/13	TBI09	Female	1	run2	week_6_cecal	0	0	0	0	1	UCSD_IL10
+ERR2184141	3/12/14	TBC05	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2184142	3/12/14	TBC07	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2184143	3/12/14	TBC09	Female	0	run2	pupday28	0	0	0	0	0	UCSD_IL10
+ERR2184159	7/22/14	CM1	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184160	7/15/14	CF1	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184161	7/15/14	CF2	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184162	7/15/14	CF2	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184163	7/15/14	CF1	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184164	7/15/14	CF2	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184165	7/17/14	CF1	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184166	7/17/14	CF1	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184167	7/22/14	CM1	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184168	7/17/14	CF2	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184169	7/24/14	CM1	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184170	7/24/14	CM1	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184171	7/24/14	CM1	Male	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184172	7/17/14	CF3	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184173	7/17/14	CF3	Female	0	run2	week_21	0	0	0	0	0	UCSD_IL10
+ERR2184182	7/22/14	CM1	Male	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2184183	7/17/14	CF1	Female	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2184184	7/17/14	CF1	Female	0	run2	week_21_cecal	0	0	0	0	0	UCSD_IL10
+ERR2184186	7/19/13	TBI04	Female	1	run2	pupday36	0	0	0	0	1	UCSD_IL10

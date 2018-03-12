@@ -2,7 +2,7 @@
 
 base_dir = "/Users/student/Documents/PollardRotation/dada2"
 
-dummy_app <- function(meta, model){
+dummy_app <- function(meta, model, name){
 
   meta$DNR <- 0
   meta$TNBS <- 0
@@ -11,6 +11,8 @@ dummy_app <- function(meta, model){
   meta$IL10 <- 0
   
   meta[[model]][which(meta$response == 1)] <- 1
+  
+  meta$study <- name
   
   return(meta)
 }
@@ -47,7 +49,7 @@ meta$response <- gsub('normal', '0', meta$response)
 #meta$days <- gsub('d','',meta$days)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "AOMDSS")
+meta <- dummy_app(meta, "AOMDSS", name)
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -83,41 +85,11 @@ meta$response <- gsub('none', '0', meta$response)
 #meta$days <- gsub('d','',meta$days)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "DSS")
+meta <- dummy_app(meta, "DSS", name)
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
 
-
-# # # # # # # # # # # # TMM AOM/DSS 2014 - needs response clarification # # # # # # # # # # # # 
-#name = "TMM_AOMDSS_2014"
-#meta = read.table(paste0(base_dir, "/MetaData/",name,"_metadata.txt"), 
-#                  sep = '\t', header = TRUE)
-
-# Load in sequence abundances
-#seqs <- readRDS(paste0(base_dir, "/Output/SeqTables/",name,"_seqtab_nochim.rds"))
-# Rownames should be SRR accession
-#row.names(meta) <- meta$Run
-# Confirm that the two can be merged
-#merged <- merge(seqs, meta, by="row.names")
-
-# Remove samples not relevant to my hypothesis
-#meta <- meta[,c("collection_date", "Sample_Name", "env_feature")]
-
-# # # # # # # # # # # # # # TMM AOM/DSS 2016 - needs response clarification # # # ## # # # # # 
-#name = "TMM_AOMDSS_2016"
-#meta = read.table(paste0(base_dir, "/MetaData/",name,"_metadata.txt"), 
-#                  sep = '\t', header = TRUE)
-
-# Load in sequence abundances
-#seqs <- readRDS(paste0(base_dir, "/Output/SeqTables/",name,"_seqtab_nochim.rds"))
-# Rownames should be SRR accession
-#row.names(meta) <- meta$Run
-# Confirm that the two can be merged
-#merged <- merge(seqs, meta, by="row.names")
-
-# Remove samples not relevant to my hypothesis
-#meta <- meta[,c("collection_date", "Sample_Name", "env_feature")]
 
 # # # # # # # # # # # # # # TMM DSS # # # # # # # # # # # # # # 
 name = "TMM_DSS"
@@ -141,7 +113,7 @@ meta$response <- gsub('AOM/DSS colon cancer induction', '0', meta$response)
 meta$response <- gsub('DSS colon colitis induction', '1', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "DSS")
+meta <- dummy_app(meta, "DSS", name)
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -169,7 +141,7 @@ meta$response <- gsub('.*A.*', '0', meta$response)
 meta$response <- gsub('.*F.*', '1', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "TNBS")
+meta <- dummy_app(meta, "TNBS", name)
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -190,7 +162,7 @@ meta$response <- gsub('c57', '0', meta$response)
 meta$response <- gsub('IL10', '1', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "IL10")
+meta <- dummy_app(meta, "IL10", name)
 
 # Load in sequence abundances
 seqs <- readRDS(paste0(base_dir, "/Output/SeqTables/",name,"_seqtab_nochim.rds"))
@@ -228,7 +200,7 @@ pilot_meta$response <- gsub('DNR', '1', pilot_meta$response)
 current_meta$response <- NULL
 
 # Append the dummy variables
-pilot_meta <- dummy_app(pilot_meta, "DNR")
+pilot_meta <- dummy_app(pilot_meta, "DNR", name)
 current_meta$DNR <- 0
 current_meta$TNBS <- 0
 current_meta$AOMDSS <- 0
@@ -261,7 +233,7 @@ meta$response <- gsub('.*DSS.*', '1', meta$response)
 meta$response <- gsub('.*NoAbs.*', '0', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "DSS")
+meta <- dummy_app(meta, "DSS", name)
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -288,7 +260,7 @@ meta$response <- gsub('CONTROL', '0', meta$response)
 meta$response <- gsub('TNBS', '1', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "TNBS")
+meta <- dummy_app(meta, "TNBS", name)
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
@@ -315,7 +287,7 @@ meta$response <- gsub('Mock|Sodium tungstate|DSS\\+sodium tungstate', '0', meta$
 meta$response <- gsub('DSS', '1', meta$response)
 
 # Append the dummy variables
-meta <- dummy_app(meta, "DSS")
+meta <- dummy_app(meta, "DSS", name)
 
 # Save out as tab-delimited text file with the format name_processed.txt
 write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), sep="\t", quote=FALSE)
