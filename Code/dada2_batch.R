@@ -219,11 +219,11 @@ dada2_single <- function(name, trunc, EE){
 #dada2_single("UCSD_TNBS",240,2)
 #dada2("UMAA_DSS", 240, 170, 2, 2)
 #dada2_single("UTA_TNBS",300,2)
-dada2("UTS_DSS", 160, 230, 2, 2)
+#dada2("UTS_DSS", 160, 230, 2, 2)
 #dada2("TMM_AOMDSS_2014", 275, 200, 2, 2)
 #dada2("TMM_AOMDSS_2016", 290, 220, 2, 5)
 #dada2("TMM_DSS", 290, 200, 2, 5)
-
+dada2_single("UCSD_IL10", 150,3)
 
 # # # # # # # # # # # # # # # # # # # # # # # # 
 # Run for our data, which has already been filtered:

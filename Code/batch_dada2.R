@@ -51,15 +51,17 @@ single_read <- function(name){
 # # # # # # # # # # # # # # # # # # # # # # # # 
 # 2. QC/Filtering
 
-paired_filt <- function(name, sample.names, f_trunc, r_trunc, f_EE, r_EE){
+paired_filt <- function(name, sample.names, fnFs, fnRs, f_trunc, r_trunc, f_EE, r_EE){
   
   # Save an image to summarize quality profiles of the samples
   img_path = paste0(base_path,"Data/test_img")
   
-  pdf(paste0(img_path,"/QualityProfiles/",name,"_QP.pdf"))
-  for (sample in sample.names){
-    print(plotQualityProfile(c(paste0(path,"/", sample ,"_pass_1.fastq.gz"),
-                               paste0(path,"/", sample ,"_pass_2.fastq.gz"))
+  pdf(paste0(img_path,"/",name,"_QP.pdf"))
+  for (sam in as.character(unlist(sample.names))){
+    print(as.character(sam))
+    print(plotQualityProfile(
+           c(paste0(base_path,"Data/raw_16S/", name, "/", sam  ,"_pass_1.fastq.gz"),
+             paste0(base_path,"Data/raw_16S/", name, "/", sam  ,"_pass_2.fastq.gz"))
     ))
     }
   dev.off()
@@ -89,16 +91,16 @@ paired_filt <- function(name, sample.names, f_trunc, r_trunc, f_EE, r_EE){
   dev.off()
   
   # Return error variables
-  return(list(errF, errR))
+  return(list(errF, errR, filtFs, filtRs, out))
 }
 
-single_filt <- function(name, sample.names, trunc, EE){
+single_filt <- function(name, sample.names, fnFs, trunc, EE){
 
   img_path = paste0(base_path,"Data/test_img")
   pdf(paste0(img_path,"/QualityProfiles/",name,"_QP.pdf"))
   for (sample in sample.names){
     print(plotQualityProfile(
-      paste0(path,"/", sample ,"_pass_1.fastq.gz")
+      paste0(base_path,"Data/raw_16S/", name, "/", sample ,"_pass_1.fastq.gz")
     ))
   }
   dev.off()
@@ -121,7 +123,9 @@ single_filt <- function(name, sample.names, trunc, EE){
   dev.off()
   
   # Return error rates
-  return(errF)
+  return(list(errF, filtFs, out))
+  print("just after creation: ")
+  print(errF)
 }
 
 # # # # # # # # # # # # # # # # # # # # # # # # 
@@ -143,11 +147,11 @@ paired_inference <- function(filtFs, filtRs, errF, errR, sample.names){
   mergers <- mergePairs(dadaFs, derepFs, dadaRs, derepRs, verbose=TRUE)
   
   # return table input
-  return(mergers)
+  return(dadaFs, mergers)
 }
 
 single_inference <- function(filtFs, errF, sample.names){
-  
+   errF <- learnErrors(filtFs, multithread=TRUE)
   # Dereplication
   derepFs <- derepFastq(filtFs, verbose=TRUE)
   names(derepFs) <- sample.names
@@ -160,7 +164,7 @@ single_inference <- function(filtFs, errF, sample.names){
 # # # # # # # # # # # # # # # # # # # # # # # # 
 # 4. Create the tables
 
-get_tabs <- function(seqs, track_reads){
+get_tabs <- function(name, seqs, out, track_reads){
   
   out_path = paste0(base_path,"Output")
   silva_path = paste0(base_path,"Data/taxon")
@@ -173,11 +177,11 @@ get_tabs <- function(seqs, track_reads){
   # Track reads through pipeline
   getN <- function(x) sum(getUniques(x))
   if (track_reads == "full") {
-    track <- cbind(out, sapply(dadaFs, getN), rowSums(seqtab), rowSums(seqtab.nochim))
+    track <- cbind(out, sapply(seqs, getN), rowSums(seqtab), rowSums(seqtab.nochim))
     colnames(track) <- c("input", "filtered", "denoised", "tabled", "nonchim")
     
   } else if (track_reads == "full_single") {
-    track <- cbind(out, getN(dadaFs), rowSums(seqtab), rowSums(seqtab.nochim))
+    track <- cbind(out, getN(seqs), rowSums(seqtab), rowSums(seqtab.nochim))
     colnames(track) <- c("input", "filtered", "denoised", "tabled", "nonchim")
     
   } else if (track_reads == "part") {
@@ -202,33 +206,39 @@ dada_paired <- function(name, f_trunc, r_trunc, f_EE, r_EE){
   
   # Read in names
   name_list <- paired_read(name)
-  fnFs <- name_list[1]
-  fnRs <- name_list[2]
-  sample.names <- name_list[3]
+  fnFs <- unlist(name_list[1])
+  fnRs <- unlist(name_list[2])
+  sample.names <- unlist(name_list[3])
   
   # Filter data
-  error_list <- paired_filt(name, sample.names, f_trunc, r_trunc, f_EE, r_EE)
+  error_list <- paired_filt(name, sample.names, fnFs, fnRs, f_trunc, r_trunc, f_EE, r_EE)
   errF <- error_list[1]
   errR <- error_list[2]
-  
+  filtFs <- unlist(error_list[3])
+  filtRs <- unlist(error_list[4])
+  out <- error_list[5]
+
   # Inference and table creation
   seqs <- paired_inference(filtFs, filtRs, errF, errR, sample.names)
-  get_tabs(seqs, track_reads = "full")
+  get_tabs(name, seqs, out, track_reads = "full")
 }
 
 dada_single <- function(name, f_trunc, f_EE){
   
   # Read in names
   name_list <- single_read(name)
-  fnFs <- name_list[1]
-  sample.names <- name_list[2]
+  fnFs <- unlist(name_list[1])
+  sample.names <- unlist(name_list[2])
   
   # Filter data
-  errF <- single_filt(name, sample.names, f_trunc, f_EE)
-  
+  error_list <- single_filt(name, sample.names, fnFs, f_trunc, f_EE)
+  errF <- error_list[1]
+  filtFs <- unlist(error_list[2])
+  out <- error_list[3]
+
   # Inference and table creation
   seqs <- single_inference(filtFs, errF, sample.names)
-  get_tabs(seqs, track_reads = "full_single")
+  get_tabs(name, seqs, out, track_reads = "full_single")
 }
 
 dada_prefilt <- function(name){
@@ -250,18 +260,18 @@ dada_prefilt <- function(name){
   dev.off()
   
   seqs <- paired_inference(filtFs, filtRs, errF, errR, sample.names)
-  get_tabs(seqs, track_reads = "part")
+  get_tabs(name, seqs, out = NULL, track_reads = "part")
   
 }
 
 # # # # # # # # COMMANDS # # # # # # # # 
 
 #dada_paired("Baxter_AOMDSS", 190, 170, 2, 2)
-dada_paired("Helm_DSS", 200, 100, 2, 2)
+#dada_paired("Helm_DSS", 200, 100, 2, 2)
 #dada_single("UCSD_TNBS",240,2)
 #dada_paired("UMAA_DSS", 240, 170, 2, 2)
 #dada_single("UTA_TNBS",300,2)
 #dada_paired("UTS_DSS", 160, 230, 2, 2)
 #dada_paired("TMM_DSS", 290, 200, 2, 5)
 #dada_prefilt("UCSF_DNR")
-dada_paired("UCSD_IL10", 190,170,2,2)
+dada_single("UCSD_IL10", 150,3)
