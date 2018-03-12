@@ -4,6 +4,7 @@
 source("http://bioconductor.org/biocLite.R")
 
 install.packages("ggplot2",repos = "http://cran.us.r-project.org")
+install.packages("RAM",repos = "http://cran.us.r-project.org")
 biocLite("dada2")
 biocLite("ShortRead")
 biocLite("phyloseq")
