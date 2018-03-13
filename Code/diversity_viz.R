@@ -6,12 +6,12 @@ library(ggplot2)
 library(phyloseq)
 library(decontam)
 library(sva)
-library(RAM)
+#library(RAM)
 library(DECIPHER)
 library(phangorn)
 
-#base_path = "/pollard/home/mpittman/dada2/"
-base_path = "/Users/student/Documents/PollardRotation/dada2/"
+base_path = "/pollard/home/mpittman/dada2/"
+#base_path = "/Users/student/Documents/PollardRotation/dada2/"
 source(paste0(base_path,"Code/viz_functions.R"))
 options(tz="America/Los_Angeles")
 
@@ -105,9 +105,9 @@ phylo_viz <- function(name, var_list, base_path){
   debat = debatch(ps=decon, meta=meta, taxa=taxa)
   
   # Save RData
-  saveRDS(ps, file = paste0(base_path, "Output/RData/", name,"_ps.RData"))
-  saveRDS(decon, file = paste0(base_path, "Output/RData/", name,"_decon.RData"))
-  saveRDS(debat, file = paste0(base_path, "Output/RData/", name,"_debat.RData"))
+  saveRDS(ps, file = paste0(base_path, "Output/RData/", name,"_ps.rds"))
+  saveRDS(decon, file = paste0(base_path, "Output/RData/", name,"_decon.rds"))
+  saveRDS(debat, file = paste0(base_path, "Output/RData/", name,"_debat.rds"))
   
   # Visualizations for the three datasets
   
