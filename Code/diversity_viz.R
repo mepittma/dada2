@@ -8,115 +8,143 @@ library(decontam)
 library(sva)
 library(RAM)
 
+
 #base_path = "/pollard/home/mpittman/dada2/"
 base_path = "/Users/student/Documents/PollardRotation/dada2/"
+source(paste0(base_path,"Code/viz_functions.R"))
 options(tz="America/Los_Angeles")
-
-# Create a new column in metadata capturing all the co-variates
-#metadata$batch <- ""
-#for (var in var_list){
-#  metadata$batch <- paste(metadata$batch, var, sep = "_")
-#}
-
-cleanY = function(y, mod, svs) {
-  X = cbind(mod, svs)
-  Hat = solve(t(X) %*% X) %*% t(X)
-  beta = (Hat %*% t(y))
-  rm(Hat)
-  gc()
-  P = ncol(mod)
-  return(y - t(as.matrix(X[,-c(1:P)]) %*% beta[-c(1:P),]))
-}
 
 # Outline of what I want to do
 #c 1. Read in the dada2 output
 #c 2. Decontaminate
 #c 3. Remove batch effects
-# 4. Visualize the above three cases
-  # o. qplot histogram to show abundance discrepancies among datasets
-  # a. PCoA - Bray-Curtis and Unifrac
-    # i. with each dataset individually
-    # ii. with the combined datasets
-  # b. Major taxon abundance 
-    # i. with each dataset individually
-    # ii. with the combined datasets
+#c 4. Visualize the above three cases with individual datasets + joint, debatched datasets
+  #c a. PCoA - Bray-Curtis and Unifrac
+  #c b. Major taxon abundance 
 # 5. Visualize with just decontam/unbatched data
   # a. Tree of life with the combined datasets
-  # b. Heatmap
+  #c b. Heatmap
     # i. with each dataset individually, comparing across variables
-    # ii. with all datasets, comparing across 
+    # ii. with all datasets, comparing across IBD
 # 6. Feature matrices both with OTUs and taxa
 
 # read in the dada2 output
 name = "Baxter_AOMDSS"
+
 # Read in necessary data
 seq <- readRDS(paste0(base_path, "Output/SeqTables/", name, "_seqtab_nochim.rds"))
 taxa <- readRDS(paste0(base_path, "Output/Taxa/", name,"_taxa_silva_plus.rds"))
 meta <- read.table(paste0(base_path, "MetaData/", name, "_processed.txt"), sep = "\t", header = TRUE)
 var_list = c("collection_date","inoculum","response")
 
+# Get rid of empty taxonomy, add response factor column
 seq <- seq[which(row.names(seq) %in% row.names(meta)),]
-seq <- seq[,colSums(seq) > 0]
+seq <- as.data.frame(seq[,colSums(seq) > 0])
+meta$response_factor <- meta$response
+meta$response_factor <- gsub(1, "yes", meta$response_factor)
+meta$response_factor <- gsub(0, "no", meta$response_factor)
 
-# Create phyloseq object, decontaminate it
-ps = read_seqtab(seq,taxa,meta)
-decon = deco_ps(ps,taxa, paste0(base_path, "Output/Decontam/",name,"_LibrarySize.pdf"),
-                paste0(base_path, "Output/Decontam/", name, "_removedTaxa.tsv"))
-debatch = 
+# Create phylogenetic tree
+fitGR <- get_tree(seq)
+
+# Create phyloseq object, decontaminate it, debatch it
+ps = read_seqtab(seq,taxa,meta,fitGR)
+##decon = deco_ps(ps,taxa, paste0(base_path, "Output/Decontam/",name,"_LibrarySize.pdf"),
+##                paste0(base_path, "Output/Decontam/", name, "_removedTaxa.tsv"))
+##debat = debatch(seq, meta)
+
+# Desired visualizations
+PCoA(ps, var_list = c("collection_date","inoculum","response_factor"), name, 
+     suff="Uncorrected", base_path)
+heat_viz(ps, name, "Uncorrected", base_path)
+tree_viz(ps, name, var_list = c("collection_date","inoculum","response_factor"),
+         suff="Uncorrected", base_path)
 
 # # # # # # # # # # # # # # # # # # # # # # # # 
 # General functions
 
-# Create heatmap from matrix
+# Create heatmaps from matrix
+heat_viz <- function(ps, name, suff, base_path){
+  
+  out_path = paste0(base_path, "Output/PhyloSeq/Heatmap/",name,"_",suff,"_Heatmaps.pdf")
+  pdf(out_path)
+    
+  theme_set(theme_bw())
+  gpt <- subset_taxa(ps, Kingdom=="Bacteria")
+  gpt <- prune_taxa(names(sort(taxa_sums(gpt),TRUE)[1:50]), gpt)
+  
+  # Plot the heatmap
+  print(plot_heatmap(gpt, "NMDS", "bray", "response_factor", "Family", 
+                     low="#000033", high="#FF3300"))
+  
+  # Create dendrogram/heatmap from matrix
+  top_taxa <- as.data.frame(tax_table(gpt))
+  taxa_names(gpt) <- make.names(top_taxa$Family, unique=TRUE)
+  heatmap(otu_table(gpt))
+  
+  dev.off()
+  
+}
 
-# Create dendrogram/heatmap from matrix
+
 
 # Create taxa-tree from matrix
+tree_viz <- function(ps, name, var_list, suff, base_path){
+  
+  # Save out to file
+  out_path = paste0(base_path, "Output/PhyloSeq/AbundanceTree/",name,"_",suff,"_Trees.pdf")
+  pdf(out_path)
+  
+  # Select top50 taxa
+  physeq = prune_taxa(names(sort(taxa_sums(ps),TRUE)[1:50]), ps)
+  
+  # map color to taxonomic class
+  plot_tree(physeq, ladderize="left", color="Class", 
+            title = paste0(name, " Phylogenic tree (Class), ", suff ))
+  plot_tree(physeq, ladderize="left", color="Phylum",
+            title = paste0(name, " Phylogenic tree (Phylum), ", suff ))
+  
+  for (var in var_list){
+    
+    # map color to environmental factors
+    plot_tree(physeq, ladderize="left", color=var,
+              title = paste0(name, " Phylogenic tree by ", var, ", ", suff ))
+    
+  }
+  
+}
 
-# Create taxa heatmap from matrix
 
 # PCoA plot
-PCoA <- function(seq, meta, taxa, var_list, suff, base_path){
-  # This function takes as input sequence, metadata, and taxonomy information
+PCoA <- function(ps, var_list, name, suff, base_path){
   
-  stringsAsFactors = FALSE
+  out_path = paste0(base_path, "Output/PhyloSeq/PCoA/",name,"_",suff,"_PCoA.pdf")
+  pdf(out_path)
   
-  # Get meta matrix into proper form
-  meta_fact <- meta
-  meta_fact$response <- gsub('0', 'no', meta_fact$response)
-  meta_fact$response <- gsub('1', 'yes', meta_fact$response)
-  meta_fact$response <- as.factor(meta_fact$response)
+  for (var in var_list){
+    
+    if (var != "response_factor"){
+      ordu = ordinate(ps, "PCoA", "unifrac", weighted=TRUE)
+      p = plot_ordination(ps, ordu, color= var, 
+                            shape="response_factor")
+      p = p + geom_point(size=7, alpha=0.75)
+      p = p + scale_colour_brewer(type="qual", palette="Set1")
+      print(plot(p + ggtitle(paste0("MDS/PCoA on weighted-UniFrac distance, ", name," ", suff))))
+      
+    }
+    
+  }
   
-  # Add taxonomy column to the seq matrix
-  taxa<- as.data.frame(taxa)
-  taxa$taxonomy <- paste0("k__",taxa$Kingdom,"; ", 
-                          "p__",taxa$Phylum, "; ",
-                          "c__", taxa$Class, "; ",
-                          "o__", taxa$Order, "; ",
-                          "f__", taxa$Family, "; ",
-                          "g__", taxa$Genus)
-  seq_ <- t(seq)
-  tax_seq <- as.data.frame(cbind.data.frame(seq_, taxonomy = taxa$taxonomy[match(rownames(seq_), rownames(taxa))]))
-  
-  # Create and save the pcoa plot
-  out_file = paste0(base_path, "Output/PhyloSeq/",name,"_",suff,"_PCoA.pdf")
-  pdf(out_file)
-  pcoa.plot(tax_seq, is.OTU=TRUE, meta_fact, factors=c(Diet="inoculum", IBD="response"), 
-            rank=NULL, sample.labels = FALSE, main = paste0(name, " PCoA plot: ", suff))
   dev.off()
 }
+
+
 
 # # # # # # # # # # # # # # # # # # # # # # # # 
 # Dataset-specific functions
 
 #1. read in data and create phyloseq object
-read_seqtab <- function(seq,taxa,meta){
-  
-  ps <- phyloseq(otu_table(seq, taxa_are_rows=FALSE), 
-                 sample_data(meta), 
-                 tax_table(taxa))
-  return(ps)
-}
+
 
 #2. Visualizations
 viz_diversity <- function(ps, var_list, name, suff, base_path){
@@ -155,8 +183,6 @@ viz_diversity <- function(ps, var_list, name, suff, base_path){
   # 
   
 }
-
-viz_heatmaps <- function(ps)
 
 #3. Decontamination
 deco_ps <- function(ps, taxa, out_plot, out_tab){

@@ -9,6 +9,8 @@ biocLite("dada2")
 biocLite("ShortRead")
 biocLite("phyloseq")
 biocLite("sva")
+biocLite("DECIPHER")
+biocLite("phangorn")
 
 install.packages("devtools", dependencies = TRUE, repos = "http://cran.us.r-project.org")
 library(devtools)
