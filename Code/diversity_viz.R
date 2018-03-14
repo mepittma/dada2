@@ -67,7 +67,7 @@ debatch <- function(ps, meta, taxa){
   my_sv<-my_svseq$sv
   
   # Remove batch coefficients
-  if(len(my_sv) > 0) {
+  if(n.sv > 0) {
     clean_df <- cleanY(my_data,mod1,my_sv)
   } else{
     clean_df <- my_data
@@ -141,13 +141,13 @@ phylo_viz <- function(name, var_list, base_path){
 
 #Bax_list <- phylo_viz(name = "Baxter_AOMDSS", 
 #        var_list = c("collection_date","inoculum","response_factor"), base_path)
-Helm_list <- phylo_viz("Helm_DSS", c("collection_date","inoculum","response_factor"), base_path)
-TMM_list <- phylo_viz("TMM_DSS", c("collection_date","response_factor"), base_path)
-UCTN_list <- phylo_viz("UCSD_TNBS", c("collection_date","inoculum","response_factor"), base_path)
-UCIL_list <- phylo_viz("UCSD_IL10", c("collection_date","cage","gender","run",
-                                      "timepoint","response_factor"), base_path)
-UMAA_list <- phylo_viz("UMAA_DSS", c("collection_date","response_factor"), base_path)
-UTA_list <- phylo_viz("UTA_TNBS", c("collection_date","response_factor"), base_path)
-UTS_list <- phylo_viz("UTS_DSS", c("inoculum","response_factor"), base_path)
-UCSF_list <- phylo_viz("UCSF_DNR", c("response_factor","genotype"), base_path)
+#Helm_list <- phylo_viz("Helm_DSS", c("collection_date","inoculum","response_factor"), base_path)
+try(phylo_viz("TMM_DSS", c("collection_date","response_factor"), base_path),silent=FALSE)
+try(phylo_viz("UCSD_TNBS", c("collection_date","inoculum","response_factor"), base_path),silent=FALSE)
+try(phylo_viz("UCSD_IL10", c("collection_date","cage","gender","run",
+                                      "timepoint","response_factor"), base_path),silent=FALSE)
+try(phylo_viz("UMAA_DSS", c("collection_date","response_factor"), base_path),silent=FALSE)
+try(phylo_viz("UTA_TNBS", c("collection_date","response_factor"), base_path),silent=FALSE)
+try(phylo_viz("UTS_DSS", c("inoculum","response_factor"), base_path),silent=FALSE)
+try(phylo_viz("UCSF_DNR", c("response_factor","genotype"), base_path),silent=FALSE)
 
