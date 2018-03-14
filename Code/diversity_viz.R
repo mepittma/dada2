@@ -6,12 +6,11 @@ library(ggplot2)
 library(phyloseq)
 library(decontam)
 library(sva)
-#library(RAM)
 library(DECIPHER)
 library(phangorn)
 
-base_path = "/pollard/home/mpittman/dada2/"
-#base_path = "/Users/student/Documents/PollardRotation/dada2/"
+#base_path = "/pollard/home/mpittman/dada2/"
+base_path = "/Users/student/Documents/PollardRotation/dada2/"
 source(paste0(base_path,"Code/viz_functions.R"))
 options(tz="America/Los_Angeles")
 
@@ -116,7 +115,7 @@ phylo_viz <- function(name, var_list, base_path){
   
   for (i in 1:3){
     suff = unlist(suff_list[i])
-    ps_ = unlist(seq_list[i])
+    ps_ = seq_list[[i]]
     
     PCoA(ps_, var_list, name, suff, base_path)
     heat_viz(ps_, name, suff, base_path)

@@ -192,12 +192,10 @@ meta$response <- meta$genotype
 pilot_meta <- meta[which(meta$cohort == "Pilot"), ]
 current_meta <- meta[which(meta$cohort == "Current"),]
 
-# Create response column for the pilot metadata
+# Create response column for the metadata
 pilot_meta$response <- gsub('WT', '0', pilot_meta$response)
 pilot_meta$response <- gsub('DNR', '1', pilot_meta$response)
-
-# Remove response column from current data
-current_meta$response <- NULL
+current_meta$response <- "unknown"
 
 # Append the dummy variables
 pilot_meta <- dummy_app(pilot_meta, "DNR", name)
@@ -205,9 +203,16 @@ current_meta$DNR <- 0
 current_meta$TNBS <- 0
 current_meta$AOMDSS <- 0
 current_meta$DSS <- 0
+current_meta$IL10 <- 0
+current_meta$study <- name
 
-# Save out both
-write.table(pilot_meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), 
+# Combine and save out
+meta <- as.data.frame(rbind(pilot_meta, current_meta))
+
+# Save out group, individual
+write.table(meta, file=paste0(base_dir,"/MetaData/",name,"_processed.txt"), 
+              sep="\t", quote=FALSE)
+write.table(pilot_meta, file=paste0(base_dir,"/MetaData/",name,"_DNR_processed.txt"), 
             sep="\t", quote=FALSE)
 write.table(current_meta, file=paste0(base_dir,"/MetaData/",name,"_TEST_processed.txt"), 
             sep="\t", quote=FALSE)

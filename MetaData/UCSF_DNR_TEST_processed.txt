@@ -1,70 +1,70 @@
-Library_Name	genotype	cohort	DNR	TNBS	AOMDSS	DSS
-10-13	10_13	DNR	Current	0	0	0	0
-12-13	12_13	WT	Current	0	0	0	0
-14-13	14_13	WT	Current	0	0	0	0
-19-13	19_13	WT	Current	0	0	0	0
-21-13	21_13	WT	Current	0	0	0	0
-23-13	23_13	DNR	Current	0	0	0	0
-24-13	24_13	DNR	Current	0	0	0	0
-26-13	26_13	DNR	Current	0	0	0	0
-28-13	28_13	WT	Current	0	0	0	0
-29-13	29_13	WT	Current	0	0	0	0
-32-13	32_13	DNR	Current	0	0	0	0
-34-13	34_13	WT	Current	0	0	0	0
-36-13	36_13	WT	Current	0	0	0	0
-38-13	38_13	DNR	Current	0	0	0	0
-40-13	40_13	DNR	Current	0	0	0	0
-42-13	42_13	DNR	Current	0	0	0	0
-43-13	43_13	DNR	Current	0	0	0	0
-45-13	45_13	WT	Current	0	0	0	0
-47-13	47_13	WT	Current	0	0	0	0
-48-13	48_13	DNR	Current	0	0	0	0
-5-13	5_13	WT	Current	0	0	0	0
-6-13	6_13	WT	Current	0	0	0	0
-9-13	9_13	WT	Current	0	0	0	0
-10-27	10_27	DNR	Current	0	0	0	0
-12-27	12_27	WT	Current	0	0	0	0
-14-27	14_27	WT	Current	0	0	0	0
-19-27	19_27	WT	Current	0	0	0	0
-21-27	21_27	WT	Current	0	0	0	0
-23-27	23_27	DNR	Current	0	0	0	0
-24-27	24_27	DNR	Current	0	0	0	0
-26-27	26_27	DNR	Current	0	0	0	0
-28-27	28_27	WT	Current	0	0	0	0
-29-27	29_27	WT	Current	0	0	0	0
-32-27	32_27	DNR	Current	0	0	0	0
-34-27	34_27	WT	Current	0	0	0	0
-36-27	36_27	WT	Current	0	0	0	0
-38-27	38_27	DNR	Current	0	0	0	0
-40-27 	40_27 	DNR	Current	0	0	0	0
-42-27	42_27	DNR	Current	0	0	0	0
-43-27	43_27	DNR	Current	0	0	0	0
-45-27	45_27	WT	Current	0	0	0	0
-47-27	47_27	WT	Current	0	0	0	0
-48-27	48_27	DNR	Current	0	0	0	0
-5-27	5_27	WT	Current	0	0	0	0
-6-27	6_27	WT	Current	0	0	0	0
-9-27	9_27	WT	Current	0	0	0	0
-10-5	10_5	DNR	Current	0	0	0	0
-12-5	12_5	WT	Current	0	0	0	0
-14-5	14_5	WT	Current	0	0	0	0
-19-5	19_5	WT	Current	0	0	0	0
-21-5	21_5	WT	Current	0	0	0	0
-23-5	23_5	DNR	Current	0	0	0	0
-24-5	24_5	DNR	Current	0	0	0	0
-26-5	26_5	DNR	Current	0	0	0	0
-28-5	28_5	WT	Current	0	0	0	0
-29-5	29_5	WT	Current	0	0	0	0
-32-5	32_5	DNR	Current	0	0	0	0
-34-5	34_5	WT	Current	0	0	0	0
-36-5 	36_5 	WT	Current	0	0	0	0
-38-5	38_5	DNR	Current	0	0	0	0
-40-5	40_5	DNR	Current	0	0	0	0
-42-5	42_5	DNR	Current	0	0	0	0
-43-5	43_5	DNR	Current	0	0	0	0
-45-5	45_5	WT	Current	0	0	0	0
-47-5	47_5	WT	Current	0	0	0	0
-48-5	48_5	DNR	Current	0	0	0	0
-5-5	5_5	WT	Current	0	0	0	0
-6-5	6_5	WT	Current	0	0	0	0
-9-5	9_5	WT	Current	0	0	0	0
+Library_Name	genotype	cohort	response	DNR	TNBS	AOMDSS	DSS	IL10	study
+10-13	10_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+12-13	12_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+14-13	14_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+19-13	19_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+21-13	21_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+23-13	23_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+24-13	24_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+26-13	26_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+28-13	28_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+29-13	29_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+32-13	32_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+34-13	34_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+36-13	36_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+38-13	38_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+40-13	40_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+42-13	42_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+43-13	43_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+45-13	45_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+47-13	47_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+48-13	48_13	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+5-13	5_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+6-13	6_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+9-13	9_13	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+10-27	10_27	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+12-27	12_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+14-27	14_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+19-27	19_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+21-27	21_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+23-27	23_27	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+24-27	24_27	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+26-27	26_27	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+28-27	28_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+29-27	29_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+32-27	32_27	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+34-27	34_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+36-27	36_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+38-27	38_27	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+40-27 	40_27 	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+42-27	42_27	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+43-27	43_27	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+45-27	45_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+47-27	47_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+48-27	48_27	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+5-27	5_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+6-27	6_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+9-27	9_27	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+10-5	10_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+12-5	12_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+14-5	14_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+19-5	19_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+21-5	21_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+23-5	23_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+24-5	24_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+26-5	26_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+28-5	28_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+29-5	29_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+32-5	32_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+34-5	34_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+36-5 	36_5 	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+38-5	38_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+40-5	40_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+42-5	42_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+43-5	43_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+45-5	45_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+47-5	47_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+48-5	48_5	DNR	Current	unknown	0	0	0	0	0	UCSF_DNR
+5-5	5_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+6-5	6_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
+9-5	9_5	WT	Current	unknown	0	0	0	0	0	UCSF_DNR
