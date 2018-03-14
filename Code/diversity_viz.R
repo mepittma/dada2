@@ -9,8 +9,8 @@ library(sva)
 library(DECIPHER)
 library(phangorn)
 
-#base_path = "/pollard/home/mpittman/dada2/"
-base_path = "/Users/student/Documents/PollardRotation/dada2/"
+base_path = "/pollard/home/mpittman/dada2/"
+#base_path = "/Users/student/Documents/PollardRotation/dada2/"
 source(paste0(base_path,"Code/viz_functions.R"))
 options(tz="America/Los_Angeles")
 
@@ -67,8 +67,12 @@ debatch <- function(ps, meta, taxa){
   my_sv<-my_svseq$sv
   
   # Remove batch coefficients
-  clean_df <- cleanY(my_data,mod1,my_sv)
-  
+  if(len(my_sv) > 0) {
+    clean_df <- cleanY(my_data,mod1,my_sv)
+  } else{
+    clean_df <- my_data
+  }
+
   # Create a new phyloseq object
   new_seq = as.data.frame(t(clean_df))
   new_GF = get_tree(new_seq)
@@ -135,8 +139,8 @@ phylo_viz <- function(name, var_list, base_path){
 
 # # # # # # # # # # # VISUALIZATION CALLS # # # # # # # # # # # # # 
 
-Bax_list <- phylo_viz(name = "Baxter_AOMDSS", 
-        var_list = c("collection_date","inoculum","response_factor"), base_path)
+#Bax_list <- phylo_viz(name = "Baxter_AOMDSS", 
+#        var_list = c("collection_date","inoculum","response_factor"), base_path)
 Helm_list <- phylo_viz("Helm_DSS", c("collection_date","inoculum","response_factor"), base_path)
 TMM_list <- phylo_viz("TMM_DSS", c("collection_date","response_factor"), base_path)
 UCTN_list <- phylo_viz("UCSD_TNBS", c("collection_date","inoculum","response_factor"), base_path)

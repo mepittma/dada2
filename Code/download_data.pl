@@ -177,7 +177,7 @@ if ($ARGV[0] eq "-r") {
     download_data(\@run_list, $path);
 
 } elsif ($ARGV[0] eq "-il10") {
-    print("Just downloading new data for IL10 mice...")
+    print("Just downloading new data for IL10 mice...");
     my $base_dir = "/pollard/home/mpittman/dada2";
 
     # 1. Download the data from the UCSD IL10 study
