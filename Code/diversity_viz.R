@@ -10,7 +10,7 @@ library(DECIPHER)
 library(phangorn)
 
 base_path = "/pollard/home/mpittman/dada2/"
-#base_path = "/Users/student/Documents/PollardRotation/dada2/"
+base_path = "/Users/student/Documents/PollardRotation/dada2/"
 source(paste0(base_path,"Code/viz_functions.R"))
 options(tz="America/Los_Angeles")
 
@@ -67,7 +67,7 @@ debatch <- function(ps, meta, taxa){
   my_sv<-my_svseq$sv
   
   # Remove batch coefficients
-  if(n.sv > 0) {
+  if(my_n_sv > 0) {
     clean_df <- cleanY(my_data,mod1,my_sv)
   } else{
     clean_df <- my_data
@@ -139,11 +139,11 @@ phylo_viz <- function(name, var_list, base_path){
 
 # # # # # # # # # # # VISUALIZATION CALLS # # # # # # # # # # # # # 
 
-#Bax_list <- phylo_viz(name = "Baxter_AOMDSS", 
-#        var_list = c("collection_date","inoculum","response_factor"), base_path)
-#Helm_list <- phylo_viz("Helm_DSS", c("collection_date","inoculum","response_factor"), base_path)
-try(phylo_viz("TMM_DSS", c("collection_date","response_factor"), base_path),silent=FALSE)
-try(phylo_viz("UCSD_TNBS", c("collection_date","inoculum","response_factor"), base_path),silent=FALSE)
+Bax_list <- phylo_viz(name = "Baxter_AOMDSS", 
+        var_list = c("collection_date","inoculum","response_factor"), base_path)
+Helm_list <- phylo_viz("Helm_DSS", c("collection_date","inoculum","response_factor"), base_path)
+#try(phylo_viz("TMM_DSS", c("response_factor"), base_path),silent=FALSE)
+#try(phylo_viz("UCSD_TNBS", c("collection_date","inoculum","response_factor"), base_path),silent=FALSE)
 try(phylo_viz("UCSD_IL10", c("collection_date","cage","gender","run",
                                       "timepoint","response_factor"), base_path),silent=FALSE)
 try(phylo_viz("UMAA_DSS", c("collection_date","response_factor"), base_path),silent=FALSE)

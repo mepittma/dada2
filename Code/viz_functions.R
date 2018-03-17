@@ -123,10 +123,11 @@ tree_viz <- function(ps, name, var_list, suff, base_path){
   for (var in var_list){
     
     # map color to environmental factors
-    plot_tree(physeq, ladderize="left", color=var,
-              title = paste0(name, " Phylogenic tree by ", var, ", ", suff ))
+    print(plot_tree(physeq, ladderize="left", color=var,
+              title = paste0(name, " Phylogenic tree by ", var, ", ", suff )))
     
   }
+  dev.off()
   
 }
 
